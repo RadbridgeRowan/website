@@ -110,7 +110,7 @@ If you've just created the project locally and need to push it to a new GitHub r
 3.  **Set your Git username and email (globally or locally):**
     ```bash
     git config user.name "Your Name"
-    git config user.email "your.email@example.com"
+    git config user.email "email@email.com"
     ```
 4.  **Add all files and commit:**
     ```bash

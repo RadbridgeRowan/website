@@ -31,4 +31,35 @@
   .nav-link {
     @apply text-white hover:text-radbridge-gold transition duration-300;
   }
+
+  /* Filter chips for projects page */
+  .filter-chip {
+    @apply px-4 py-2 rounded-full text-sm font-medium border-2 border-gray-300 text-gray-600 hover:border-radbridge-blue hover:text-radbridge-blue transition duration-300 cursor-pointer;
+  }
+  
+  .filter-chip.active {
+    @apply bg-radbridge-blue text-white border-radbridge-blue;
+  }
+
+  /* Project badges */
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+  }
+  
+  .badge-economic-impact {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .badge-benefit-cost {
+    @apply bg-blue-100 text-blue-800;
+  }
+  
+  .badge-tool {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  /* Project card hover effects */
+  .project-card {
+    @apply transition duration-300 hover:shadow-xl;
+  }
 }

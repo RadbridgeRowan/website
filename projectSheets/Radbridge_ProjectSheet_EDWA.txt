@@ -1,0 +1,22 @@
+# Outdoor Recreation in the Upper American River Watershed
+
+**Client:** El Dorado Water Agency  
+**Location:** El Dorado County, CA  
+**Study Period:** Jan – Nov 2023
+
+## BACKGROUND
+The UARW is a key recreation asset. A detailed understanding of visitation helps resource planning and stakeholder engagement.
+
+## SCOPE OF WORK
+Assessed economic impact and benefits of recreation. Used geospatial, mobile data, and ML techniques for improved accuracy.
+
+## RESULTS
+- **Visitor Days:** ~7M total, 4.5M on public lands
+- **Economic Impact:** $348M spend, 3,100 jobs, $136M wages, $25M taxes
+- **Tourist Spending:** 53% of visits, 84% of expenditures
+- **Non-market Benefits:** $660M consumer surplus
+
+**Contact:**  
+Rebecca Guo (EDWA) - rebecca.guo@edcgov.us  
+Johnny Mojica (Radbridge) - johnny@radbridge.com  
+[www.radbridge.com](http://www.radbridge.com)

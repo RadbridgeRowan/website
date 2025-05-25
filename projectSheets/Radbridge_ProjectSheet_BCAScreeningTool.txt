@@ -1,0 +1,23 @@
+# BCA Screening and Fund Matching Tool
+
+**Client:** The Freshwater Trust  
+**Location:** California  
+**Study Period:** Sep 2022 – May 2022
+
+## BACKGROUND
+Investments in degraded watersheds require planning at the watershed scale for maximum impact.
+
+## SCOPE OF WORK
+Radbridge developed an Excel-based tool, piloted in the Cosumnes Watershed. It features cost-benefit data for 12 actions and a fund matching module.
+
+## RESULTS
+- **Target Setting:** Watershed-level resilience goals
+- **Optimization:** Least-cost portfolio generation
+- **BCA:** Calculates BCR of portfolios
+- **Equity Screen:** Investments in disadvantaged communities
+- **Fund Matching:** State, federal, and local funding recommendations
+
+**Contact:**  
+Tim Wigington (Freshwater Trust) - tim@thefreshwatertrust.org  
+Rowan Schmidt (Radbridge) - rowan@radbridge.com  
+[www.radbridge.com](http://www.radbridge.com)

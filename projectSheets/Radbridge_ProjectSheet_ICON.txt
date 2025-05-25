@@ -1,0 +1,23 @@
+# Economic Benefits of ICON Access Points
+
+**Client:** Iowa Confluence (ICON) Water Trails  
+**Location:** Des Moines, IA  
+**Study Period:** Feb – Nov 2023
+
+## BACKGROUND
+Central Iowa’s waterway access points, managed by ICON Water Trails, play a crucial role in regional economic growth and community enrichment. With nearly 87% of Iowans prioritizing water-based recreation, ICON’s sites offer outdoor recreation opportunities and stimulate local businesses. However, 10% of Iowans are unaware of local opportunities, representing untapped potential.
+
+## SCOPE OF WORK
+The goal was to estimate the economic benefits of ICON’s access points and project potential benefits from new ones. The analysis included consumer spending, job creation, and tax contributions, as well as non-market benefits like physical activity and consumer surplus. Visitation was estimated using a machine learning model combining observed and mobile data.
+
+## RESULTS
+- **Visitation:** 252,000 visits; 31% non-local
+- **Economic Impact:** $11M+ in spending, 112 jobs, $3.4M in wages
+- **Tax Contributions:** $1.3M in state, county, and city taxes
+- **Non-market Benefits:** $12.7M in consumer surplus
+- **Health Benefits:** $16.7M reduction in healthcare costs
+
+**Contact:**  
+Cole Miller (ICON) - cole@iconwatertrails.com  
+Johnny Mojica (Radbridge) - johnny@radbridge.com  
+[www.radbridge.com](http://www.radbridge.com)

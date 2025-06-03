@@ -8,242 +8,429 @@
     <meta name="description" content="Learn about Radbridge's mission, team, and our approach to community resilience and health.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/src/style.css">
+    <style>
+      .about-sidebar {
+        min-height: calc(100vh - 120px);
+      }
+      .about-content {
+        min-height: calc(100vh - 120px);
+      }
+    </style>
   </head>
-  <body class="font-sans">
+  <body class="font-ibm">
     <!-- Navigation -->
-    <nav class="bg-radbridge-blue py-6 px-4 sm:px-6 lg:px-8">
-      <div class="container-custom flex justify-between items-center">
+    <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
+      <div class="container-custom flex items-center justify-between">
         <div class="text-white text-xl font-semibold">
-          <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-8"></a>
+          <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
         </div>
         <div class="hidden md:flex space-x-8">
           <a href="./services.html" class="nav-link">Services</a>
-          <div class="relative">
-            <a href="./index.html#tools" class="nav-link">Tools ▼</a>
-          </div>
           <a href="./projects.html" class="nav-link">Projects</a>
-          <a href="./index.html#contact" class="nav-link">Contact</a>
+          <a href="./tools.html" class="nav-link">Tools</a>
           <a href="./about.html" class="nav-link text-radbridge-gold">About</a>
-        </div>
-        <div class="md:hidden">
-          <button class="text-white">☰</button>
         </div>
       </div>
     </nav>
 
     <!-- Breadcrumb -->
-    <div class="bg-gray-100 py-4">
-      <div class="container-custom">
-        <nav class="text-sm">
-          <a href="./index.html" class="text-radbridge-blue hover:underline">Home</a>
-          <span class="mx-2 text-gray-500">/</span>
-          <span class="text-gray-700">About us</span>
+    <div class="bg-light-grey relative z-20 -mt-8 max-w-[90%] mx-auto shadow-md">
+      <div class="container-custom flex justify-between items-stretch pr-0">
+        <nav class="text-sm py-3">
+          <a href="index.html" class="text-radbridge-blue font-medium hover:underline">Home</a>
+          <span class="mx-2 text-gray-600">/</span>
+          <span class="text-gray-800 font-medium">About</span>
         </nav>
+        <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm">
+          Contact us →
+        </a>
       </div>
     </div>
 
-    <!-- Hero Section with Bridge Image -->
-    <section class="relative h-96 bg-cover bg-center" style="background-image: url('assets/images/Hero_AboutUs_unsplash_cristofer-maximilian.jpg'); background-size: cover; background-position: center;">
-      <div class="absolute inset-0 bg-radbridge-blue bg-opacity-70">
-        <div class="container-custom h-full flex items-center">
-          <div class="text-white">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">About us</h1>
-          </div>
+    <!-- Dashboard Container -->
+    <div class="flex bg-white -mt-6">
+      <!-- Left Sidebar -->
+      <div class="about-sidebar w-80 bg-white border-r border-gray-100 flex-shrink-0">
+        <div class="px-6 py-12">
+          <nav class="space-y-3">
+            <button 
+              onclick="showSection('approach')" 
+              id="approach-nav"
+              class="about-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            >
+              <div class="text-radbridge-blue">
+                <i class="fas fa-bullseye h-6 w-6"></i>
+              </div>
+              <div>
+                <div class="font-medium text-radbridge-blue">Approach</div>
+                <div class="text-sm text-radbridge-blue text-opacity-80">Our mission and vision</div>
+              </div>
+            </button>
+            
+            <button 
+              onclick="showSection('team')" 
+              id="team-nav"
+              class="about-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            >
+              <div class="text-radbridge-blue">
+                <i class="fas fa-users h-6 w-6"></i>
+              </div>
+              <div>
+                <div class="font-medium text-radbridge-blue">Team</div>
+                <div class="text-sm text-radbridge-blue text-opacity-80">Meet our leadership</div>
+              </div>
+            </button>
+            
+            <button 
+              onclick="showSection('highlights')" 
+              id="highlights-nav"
+              class="about-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            >
+              <div class="text-radbridge-blue">
+                <i class="fas fa-star h-6 w-6"></i>
+              </div>
+              <div>
+                <div class="font-medium text-radbridge-blue">Highlights</div>
+                <div class="text-sm text-radbridge-blue text-opacity-80">Our achievements</div>
+              </div>
+            </button>
+            
+            <button 
+              onclick="showSection('contact')" 
+              id="contact-nav"
+              class="about-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            >
+              <div class="text-radbridge-blue">
+                <i class="fas fa-envelope h-6 w-6"></i>
+              </div>
+              <div>
+                <div class="font-medium text-radbridge-blue">Contact</div>
+                <div class="text-sm text-radbridge-blue text-opacity-80">Get in touch</div>
+              </div>
+            </button>
+          </nav>
         </div>
       </div>
-    </section>
 
-    <!-- Mission Section -->
-    <section class="section-padding">
-      <div class="container-custom max-w-4xl">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
-          Our mission is to leverage technology to accelerate investments in community resilience and health.
-        </h2>
-        <div class="text-lg text-gray-700 space-y-6">
-          <p>
-            Our vision is a world in which technology simplifies and streamlines the resilience journey, enabling community leaders to automate processes and focus on the things that matter most. Building resilience is an exciting journey and an opportunity to engage and rally the community around a shared vision. But let's face it, it's also a complex process with many moving parts and administrative requirements that can slow your momentum and throw you off course. We believe the path to community resilience depends on:
-          </p>
-          
-          <div class="grid md:grid-cols-2 gap-8 my-8">
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-3"></div>
-                <div>
-                  <h3 class="font-semibold mb-2">Setting bold yet achievable goals</h3>
-                  <p class="text-gray-600">tied to physical outcomes that can be quantified.</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-3"></div>
-                <div>
-                  <h3 class="font-semibold mb-2">Developing a well-defined portfolio</h3>
-                  <p class="text-gray-600">of investments aimed at achieving those goals.</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-3"></div>
-                <div>
-                  <h3 class="font-semibold mb-2">Conducting rigorous analysis</h3>
-                  <p class="text-gray-600">that yields actionable insights for decision making.</p>
-                </div>
-              </div>
+      <!-- Main Content Area -->
+      <div class="about-content flex-1 overflow-y-auto">
+        <!-- Approach Content -->
+        <div id="approach-content" class="about-content-section">
+          <!-- Hero Image -->
+          <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_AboutUs_unsplash_cristofer-maximilian.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h1 class="text-4xl font-bold mb-2">Our Approach</h1>
+              <p class="text-xl">Mission and Vision for Community Resilience</p>
+            </div>
+          </div>
+
+          <div class="p-8">
+            <!-- Mission Statement -->
+            <div class="max-w-4xl mb-12">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">Our mission is to leverage technology to accelerate investments in community resilience and health.</h2>
+              <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                Our vision is a world in which technology simplifies and streamlines the resilience journey, enabling community leaders to automate processes and focus on the things that matter most. Building resilience is an exciting journey and an opportunity to engage and rally the community around a shared vision. But let's face it, it's also a complex process with many moving parts and administrative requirements that can slow your momentum and throw you off course.
+              </p>
             </div>
             
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-3"></div>
-                <div>
-                  <h3 class="font-semibold mb-2">Building or using best-in-class technology</h3>
-                  <p class="text-gray-600">to streamline workflows and processes.</p>
+            <!-- Core Principles -->
+            <div class="bg-gray-50 p-8 rounded-lg">
+              <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">We believe the path to community resilience depends on:</h3>
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div class="w-8 h-8 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4 flex items-center justify-center">
+                      <i class="fas fa-target text-white text-sm"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2 text-gray-800">Setting bold yet achievable goals</h4>
+                      <p class="text-gray-600">tied to physical outcomes that can be quantified.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="w-8 h-8 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4 flex items-center justify-center">
+                      <i class="fas fa-briefcase text-white text-sm"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2 text-gray-800">Developing a well-defined portfolio</h4>
+                      <p class="text-gray-600">of investments aimed at achieving those goals.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="w-8 h-8 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4 flex items-center justify-center">
+                      <i class="fas fa-chart-line text-white text-sm"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2 text-gray-800">Conducting rigorous analysis</h4>
+                      <p class="text-gray-600">that yields actionable insights for decision making.</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-3"></div>
-                <div>
-                  <h3 class="font-semibold mb-2">Making decisive investments at scale</h3>
-                  <p class="text-gray-600">with appropriate funding/finance mechanisms.</p>
+                
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div class="w-8 h-8 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4 flex items-center justify-center">
+                      <i class="fas fa-cogs text-white text-sm"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2 text-gray-800">Building or using best-in-class technology</h4>
+                      <p class="text-gray-600">to streamline workflows and processes.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="w-8 h-8 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4 flex items-center justify-center">
+                      <i class="fas fa-dollar-sign text-white text-sm"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2 text-gray-800">Making decisive investments at scale</h4>
+                      <p class="text-gray-600">with appropriate funding/finance mechanisms.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Leadership Section -->
-    <section class="section-padding bg-radbridge-blue text-white">
-      <div class="container-custom">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Leadership</h2>
+        <!-- Team Content -->
+        <div id="team-content" class="about-content-section hidden">
+          <!-- Hero Image -->
+          <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_AboutUs_unsplash_cristofer-maximilian.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h1 class="text-4xl font-bold mb-2">Our Team</h1>
+              <p class="text-xl">Meet the leaders driving community resilience</p>
+            </div>
+          </div>
+
+          <div class="p-8">
+            <div class="max-w-6xl mx-auto">
+              <h2 class="text-2xl font-bold text-gray-800 mb-12 text-center">Leadership</h2>
+              
+              <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- Rowan Schmidt -->
+                <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+                  <div class="text-center mb-6">
+                    <img src="assets/images/Headshot_Rowan.jpg" alt="Rowan Schmidt" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold mb-2">Rowan Schmidt</h3>
+                    <p class="text-radbridge-gold mb-4 font-medium">Chief Executive Officer</p>
+                  </div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Rowan has been working to advance community resilience for more than a decade, with an emphasis on holistic solutions for more effective and equitable outcomes. Areas of experience include benefit-cost analysis, federal policy, tool development, and funding and finance mechanisms.
+                  </p>
+                </div>
+
+                <!-- Johnny Mojica -->
+                <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+                  <div class="text-center mb-6">
+                    <img src="assets/images/Headshot_Johnny.jpg" alt="Johnny Mojica" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold mb-2">Johnny Mojica</h3>
+                    <p class="text-radbridge-gold mb-4 font-medium">Chief Operating Officer</p>
+                  </div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Johnny specializes in benefit-cost analysis, economic impact analysis, and grant application support for investments in community resilience and health. Areas of expertise include hazard mitigation (fire, drought, flood), nature-based solutions, FEMA policy, outdoor recreation, and big data.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-12">
+                <!-- Alex Vlas -->
+                <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+                  <div class="text-center mb-6">
+                    <img src="assets/images/Headshot_Alex.jpg" alt="Alex Vlas" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold mb-2">Alex Vlas</h3>
+                    <p class="text-radbridge-gold mb-4 font-medium">Senior Software Developer</p>
+                  </div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Alex is a software developer and technology leader with over 17 years of experience specializing in full-stack development, cloud solutions, and team management. As a former CTO at Assure and Equilibo, he has spearheaded the development of innovative platforms, built and scaled engineering teams, and delivered impactful solutions in fintech and e-commerce.
+                  </p>
+                </div>
+
+                <!-- Justin George -->
+                <div class="bg-white border border-gray-200 p-8 rounded-lg shadow-sm">
+                  <div class="text-center mb-6">
+                    <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Justin George</h3>
+                    <p class="text-radbridge-gold mb-4 font-medium">Senior Software Developer</p>
+                  </div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Justin brings over 11 years of experience specializing in scalable, full-stack solutions using technologies like TypeScript, Node, and cloud-based architectures. He has a proven track record of leading engineering teams, mentoring developers, and delivering innovative products at companies like Airship Housing, Sonnet AI, and IntraCorp.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights Content -->
+        <div id="highlights-content" class="about-content-section hidden">
+          <!-- Hero Image -->
+          <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_AboutUs_unsplash_cristofer-maximilian.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h1 class="text-4xl font-bold mb-2">Team Highlights</h1>
+              <p class="text-xl">Our proven track record and expertise</p>
+            </div>
+          </div>
+
+          <div class="p-8">
+            <div class="max-w-4xl mx-auto">
+              <h2 class="text-2xl font-bold text-gray-800 mb-12 text-center">Our Achievements & Expertise</h2>
+              
+              <div class="space-y-8">
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                  <div class="w-12 h-12 bg-radbridge-gold rounded-full flex-shrink-0 mr-6 flex items-center justify-center">
+                    <i class="fas fa-trophy text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">$40M+ in FEMA Funding Secured</h3>
+                    <p class="text-lg text-gray-600">
+                      Proven track record of assisting government clients in securing over $40M in FEMA funding.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                  <div class="w-12 h-12 bg-radbridge-blue rounded-full flex-shrink-0 mr-6 flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Green Infrastructure Expertise</h3>
+                    <p class="text-lg text-gray-600">
+                      Expertise in green infrastructure and nature-based hazard mitigation solutions.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                  <div class="w-12 h-12 bg-radbridge-gold rounded-full flex-shrink-0 mr-6 flex items-center justify-center">
+                    <i class="fas fa-handshake text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Diverse Client Portfolio</h3>
+                    <p class="text-lg text-gray-600">
+                      Extensive experience serving a wide variety of clients, including local, state, and federal government agencies, engineering firms, and nonprofit organizations.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                  <div class="w-12 h-12 bg-radbridge-blue rounded-full flex-shrink-0 mr-6 flex items-center justify-center">
+                    <i class="fas fa-users text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Community Partnership</h3>
+                    <p class="text-lg text-gray-600">
+                      Experience partnering with numerous community-based organizations representing disadvantaged communities.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                  <div class="w-12 h-12 bg-radbridge-gold rounded-full flex-shrink-0 mr-6 flex items-center justify-center">
+                    <i class="fas fa-cog text-white text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Customized Solutions</h3>
+                    <p class="text-lg text-gray-600">
+                      Customized approach designed to address each client's unique challenges.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA -->
+              <div class="text-center mt-12">
+                <h3 class="text-2xl font-bold mb-4 text-gray-800">
+                  Want to get to know us better?
+                </h3>
+                <p class="text-lg text-gray-600 mb-8">
+                  Contact us to start the discussion.
+                </p>
+                <a href="index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+                  Contact us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Content -->
+        <div id="contact-content" class="about-content-section hidden">
+          <!-- Hero Image -->
+          <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_AboutUs_unsplash_cristofer-maximilian.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <h1 class="text-4xl font-bold mb-2">Contact Us</h1>
+              <p class="text-xl">Get in touch with our team</p>
+            </div>
+          </div>
+
+          <div class="p-8">
+            <div class="max-w-4xl mx-auto text-center">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+              <p class="text-lg text-gray-600 mb-8">
+                Contact information and form will be added here.
+              </p>
+              
+              <!-- Placeholder for contact content -->
+              <div class="bg-gray-50 p-12 rounded-lg">
+                <i class="fas fa-envelope text-6xl text-radbridge-blue mb-4"></i>
+                <p class="text-lg text-gray-600">
+                  Contact form and information coming soon.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showSection(sectionName) {
+        // Hide all content sections
+        const contentSections = document.querySelectorAll('.about-content-section');
+        contentSections.forEach(section => section.classList.add('hidden'));
         
-        <div class="grid md:grid-cols-2 gap-12 mb-16">
-          <!-- Rowan Schmidt -->
-          <div class="text-center">
-            <img src="assets/images/Headshot_Rowan.jpg" alt="Rowan Schmidt" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
-            <h3 class="text-xl font-semibold mb-2">Rowan Schmidt</h3>
-            <p class="text-radbridge-gold mb-4">Chief Executive Officer</p>
-            <p class="text-gray-200">
-              Rowan has been working to advance community resilience for more than a decade, with an emphasis on holistic solutions for more effective and equitable outcomes. Areas of experience include benefit-cost analysis, federal policy, tool development, and funding and finance mechanisms.
-            </p>
-          </div>
-
-          <!-- Johnny Mojica -->
-          <div class="text-center">
-            <img src="assets/images/Headshot_Johnny.jpg" alt="Johnny Mojica" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
-            <h3 class="text-xl font-semibold mb-2">Johnny Mojica</h3>
-            <p class="text-radbridge-gold mb-4">Chief Operating Officer</p>
-            <p class="text-gray-200">
-              Johnny specializes in benefit-cost analysis, economic impact analysis, and grant application support for investments in community resilience and health. Areas of expertise include hazard mitigation (fire, drought, flood), nature-based solutions, FEMA policy, outdoor recreation, and big data.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-12">
-          <!-- Alex Vlas -->
-          <div class="text-center">
-            <img src="assets/images/Headshot_Alex.jpg" alt="Alex Vlas" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
-            <h3 class="text-xl font-semibold mb-2">Alex Vlas</h3>
-            <p class="text-radbridge-gold mb-4">Senior Software Developer</p>
-            <p class="text-gray-200">
-              Alex is a software developer and technology leader with over 17 years of experience specializing in full-stack development, cloud solutions, and team management. As a former CTO at Assure and Equilibo, he has spearheaded the development of innovative platforms, built and scaled engineering teams, and delivered impactful solutions in fintech and e-commerce.
-            </p>
-          </div>
-
-          <!-- Justin George -->
-          <div class="text-center">
-            <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-6"></div>
-            <h3 class="text-xl font-semibold mb-2">Justin George</h3>
-            <p class="text-radbridge-gold mb-4">Senior Software Developer</p>
-            <p class="text-gray-200">
-              Justin brings over 11 years of experience specializing in scalable, full-stack solutions using technologies like TypeScript, Node, and cloud-based architectures. He has a proven track record of leading engineering teams, mentoring developers, and delivering innovative products at companies like Airship Housing, Sonnet AI, and IntraCorp.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Highlights -->
-    <section class="section-padding">
-      <div class="container-custom">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Team Highlights</h2>
+        // Show selected content
+        document.getElementById(sectionName + '-content').classList.remove('hidden');
         
-        <div class="space-y-6 max-w-4xl mx-auto">
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4"></div>
-            <p class="text-lg text-gray-700">
-              Proven track record of assisting government clients in securing over $40M in FEMA funding.
-            </p>
-          </div>
-          
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4"></div>
-            <p class="text-lg text-gray-700">
-              Expertise in green infrastructure and nature-based hazard mitigation solutions.
-            </p>
-          </div>
-          
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4"></div>
-            <p class="text-lg text-gray-700">
-              Extensive experience serving a wide variety of clients, including local, state, and federal government agencies, engineering firms, and nonprofit organizations.
-            </p>
-          </div>
-          
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4"></div>
-            <p class="text-lg text-gray-700">
-              Experience partnering with numerous community-based organizations representing disadvantaged communities.
-            </p>
-          </div>
-          
-          <div class="flex items-start">
-            <div class="w-6 h-6 bg-radbridge-gold rounded-full flex-shrink-0 mt-1 mr-4"></div>
-            <p class="text-lg text-gray-700">
-              Customized approach designed to address each client's unique challenges.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+        // Update navigation styles
+        const navItems = document.querySelectorAll('.about-nav-item');
+        navItems.forEach(item => {
+          item.classList.remove('bg-radbridge-blue', 'text-white');
+          item.classList.add('hover:bg-gray-200');
+          // Reset text colors for inactive items
+          const title = item.querySelector('div > div:first-child');
+          const subtitle = item.querySelector('div > div:last-child');
+          if (title) title.classList.add('text-gray-800');
+          if (subtitle) subtitle.classList.add('text-gray-600');
+        });
+        
+        // Highlight selected navigation item
+        const selectedNav = document.getElementById(sectionName + '-nav');
+        selectedNav.classList.add('bg-radbridge-blue', 'text-white');
+        selectedNav.classList.remove('hover:bg-gray-200');
+        // Set text colors for active item
+        const activeTitle = selectedNav.querySelector('div > div:first-child');
+        const activeSubtitle = selectedNav.querySelector('div > div:last-child');
+        if (activeTitle) activeTitle.classList.remove('text-gray-800');
+        if (activeSubtitle) activeSubtitle.classList.remove('text-gray-600');
+      }
 
-    <!-- CTA Section -->
-    <section class="section-padding bg-gray-50">
-      <div class="container-custom text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Want to get to know us better?
-        </h2>
-        <p class="text-xl text-gray-600 mb-8">
-          Contact us to start the discussion.
-        </p>
-        <a href="./index.html#contact" class="btn-primary inline-block">
-          Contact us
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="container-custom">
-        <div class="text-center mb-8">
-          <div class="text-xl font-semibold mb-4">radbridge</div>
-        </div>
-        <div class="flex flex-wrap justify-center space-x-8 mb-8">
-          <a href="./services.html" class="hover:text-radbridge-gold transition duration-300">Services</a>
-          <a href="./index.html#parkbeat" class="hover:text-radbridge-gold transition duration-300">Parkbeat</a>
-          <a href="./index.html#grantspan" class="hover:text-radbridge-gold transition duration-300">GrantSpan</a>
-          <a href="./projects.html" class="hover:text-radbridge-gold transition duration-300">Projects</a>
-          <a href="./index.html#contact" class="hover:text-radbridge-gold transition duration-300">Contact</a>
-          <a href="./about.html" class="hover:text-radbridge-gold transition duration-300">About</a>
-        </div>
-        <div class="text-center text-gray-400">
-          © 2023 Radbridge Incorporated.
-        </div>
-      </div>
-    </footer>
+      // Initialize with Approach selected
+      document.addEventListener('DOMContentLoaded', function() {
+        showSection('approach');
+      });
+    </script>
 
     <script type="module" src="/src/main.js"></script>
   </body>

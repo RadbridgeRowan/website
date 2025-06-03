@@ -1,363 +1,678 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects - Radbridge</title>
-    <meta name="description" content="Explore our portfolio of resilience projects - from economic impact analysis to innovative tools that drive community investment.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css">
-  </head>
-  <body class="font-sans">
-    <div id="app">
-      <!-- Navigation -->
-      <nav class="bg-radbridge-blue py-6 px-4 sm:px-6 lg:px-8">
-        <div class="container-custom flex justify-between items-center">
-          <div class="text-white text-xl font-semibold">
-            <a href="./index.html">
-              <img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-8">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Radbridge</title>
+  <meta name="description" content="Explore our portfolio of resilience projects - from economic impact analysis to innovative tools that drive community investment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .tool-sidebar {
+      min-height: calc(100vh - 120px);
+    }
+    .tool-content {
+      min-height: calc(100vh - 120px);
+    }
+    .filter-section {
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+    .filter-chip {
+      font-size: 0.875rem; /* 14px */
+      font-weight: 500; /* Medium weight for better readability */
+      transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      padding-top: 0.625rem; /* 10px */
+      padding-bottom: 0.625rem; /* 10px */
+    }
+    .filter-chip:hover {
+      background-color: #f3f4f6; /* Light gray hover for non-selected */
+      border-color: #d1d5db;
+    }
+    .filter-chip.bg-radbridge-blue {
+        /* When selected, Radbridge blue background, white text */
+        background-color: #1e5a9b; /* Radbridge Blue */
+        border-color: #1e5a9b;
+        color: white;
+    }
+    .filter-chip.bg-radbridge-blue:hover {
+      background-color: #1e5a9b; /* Keep Radbridge Blue on hover when selected - no change */
+      border-color: #1e5a9b;
+    }
+    .filter-chip .fa-filter,
+    .filter-chip .fa-times {
+        transition: color 0.2s ease-in-out;
+    }
+    .dropdown-menu {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .dropdown-item {
+      font-size: 0.875rem;
+      transition: background-color 0.15s ease-in-out;
+      padding: 0.5rem 0.75rem;
+    }
+    .project-nav-item.hidden {
+      display: none;
+    }
+    /* Add new styles for project navigation items */
+    .project-nav-item {
+      transition: all 0.3s ease-in-out;
+    }
+    .project-nav-item:hover {
+      background-opacity: 0.25 !important;
+    }
+    .project-nav-item.selected {
+      background-opacity: 0.35 !important;
+    }
+  </style>
+</head>
+<body class="font-ibm">
+  <!-- Navigation -->
+  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
+    <div class="container-custom flex items-center justify-between">
+      <div class="text-white text-xl font-semibold">
+        <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="./services.html" class="nav-link">Services</a>
+        <a href="./projects.html" class="nav-link text-radbridge-gold">Projects</a>
+        <a href="./tools.html" class="nav-link">Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="bg-light-grey relative z-20 -mt-8 max-w-[90%] mx-auto shadow-md">
+    <div class="container-custom flex justify-between items-stretch pr-0">
+      <nav class="text-sm py-3">
+        <a href="./index.html" class="text-radbridge-blue font-medium hover:underline">Home</a>
+        <span class="mx-2 text-gray-600">/</span>
+        <span class="text-gray-800 font-medium">Projects</span>
+      </nav>
+      <a href="./index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm">
+        Contact us →
+      </a>
+    </div>
+  </div>
+
+  <!-- Dashboard Container -->
+  <div class="flex bg-white -mt-6">
+    <!-- Left Sidebar -->
+    <div class="tool-sidebar w-100 bg-white border-r border-gray-100 flex-shrink-0">
+      <div class="px-6 py-12">
+        <!-- Filters Section -->
+        <div class="filter-section">
+          <h3 class="text-sm font-bold text-gray-700 mb-4">Filters</h3>
+          <div class="space-y-2">
+            <!-- Project Type Dropdown -->
+            <div class="relative">
+              <button id="project-type-button" title="Filter by Project Type" class="filter-chip w-full text-left px-4 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-between" onclick="toggleDropdown('project-type-dropdown')">
+                <div class="flex items-center">
+                  <i class="fas fa-filter text-gray-400 mr-2"></i>
+                  <span id="project-type-label">Project Type</span>
+                </div>
+                <i id="project-type-clear" class="fas fa-times text-gray-400 hidden hover:text-gray-600 ml-2"></i>
+              </button>
+              <div id="project-type-dropdown" class="dropdown-menu hidden absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+                <div class="p-2 space-y-1">
+                  <button class="dropdown-item w-full text-left px-3 py-2 rounded hover:bg-gray-100" data-value="economic-impact">Economic Impact Analysis</button>
+                  <button class="dropdown-item w-full text-left px-3 py-2 rounded hover:bg-gray-100" data-value="benefit-cost">Benefit-Cost Analysis</button>
+                  <button class="dropdown-item w-full text-left px-3 py-2 rounded hover:bg-gray-100" data-value="tool-development">Tool Development</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sector Dropdown -->
+            <div class="relative">
+              <button id="sector-button" title="Filter by Sector" class="filter-chip w-full text-left px-4 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-between" onclick="toggleDropdown('sector-dropdown')">
+                 <div class="flex items-center">
+                  <i class="fas fa-filter text-gray-400 mr-2"></i>
+                  <span id="sector-label">Sector</span>
+                </div>
+                <i id="sector-clear" class="fas fa-times text-gray-400 hidden hover:text-gray-600 ml-2"></i>
+              </button>
+              <div id="sector-dropdown" class="dropdown-menu hidden absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+                <div class="p-2 space-y-1">
+                  <button class="dropdown-item w-full text-left px-3 py-2 rounded hover:bg-gray-100" data-value="outdoor-recreation">Outdoor Recreation</button>
+                  <button class="dropdown-item w-full text-left px-3 py-2 rounded hover:bg-gray-100" data-value="resilience">Community Resilience</button>
+                  <button class="dropdown-item w-full text-left px-3 py-2 rounded hover:bg-gray-100" data-value="water-management">Water Management</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Navigation -->
+        <nav class="space-y-3">
+          <button 
+            onclick="showProject('zone7')" 
+            id="zone7-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="benefit-cost resilience"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-water h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Arroyo Mocho Flood</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Zone 7 Water Agency</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('riversport')" 
+            id="riversport-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="economic-impact outdoor-recreation"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-mountain h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">RIVERSPORT Assessment</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Riversport Foundation</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('icon')" 
+            id="icon-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="economic-impact outdoor-recreation water-management"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-route h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">ICON Water Trails</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Iowa Confluence</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('bca-tool')" 
+            id="bca-tool-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="tool-development resilience water-management"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-tools h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">BCA Screening Tool</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">The Freshwater Trust</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('edwa')" 
+            id="edwa-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="economic-impact outdoor-recreation water-management"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-chart-line h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Upper American River</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">El Dorado Water Agency</div>
+            </div>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="tool-content flex-1 overflow-y-auto">
+      <!-- Zone 7 Project -->
+      <div id="zone7-content" class="tool-content-section">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-radbridge-blue text-white px-3 py-1 rounded-full text-sm font-medium">Benefit-Cost Analysis</span>
+              <span class="text-white/80 text-sm">2022</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-2">Arroyo Mocho Flood Risk Reduction</h1>
+            <p class="text-xl opacity-90">Zone 7 Water Agency • Alameda County, CA</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Advanced flood modeling combined with comprehensive economic analysis to demonstrate cost-effectiveness of flood protection infrastructure.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              This project achieved BCR >1.0 for all alternatives while quantifying travel time savings and environmental benefits, providing Zone 7 Water Agency with robust economic justification for critical flood protection investments.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Scope</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Advanced flood modeling and risk assessment</li>
+                <li>• Comprehensive benefit-cost analysis</li>
+                <li>• Travel time and accessibility impact quantification</li>
+                <li>• Environmental co-benefits assessment</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Outcomes</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• BCR >1.0 achieved for all alternatives</li>
+                <li>• Quantified travel time savings</li>
+                <li>• Environmental benefits documented</li>
+                <li>• Economic justification established</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <a href="./index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More About This Project
             </a>
           </div>
-          <div class="hidden md:flex space-x-8">
-            <a href="./index.html#services" class="nav-link">Services</a>
-            <div class="relative">
-              <a href="./index.html#tools" class="nav-link">Tools ▼</a>
+        </div>
+      </div>
+
+      <!-- RIVERSPORT Project -->
+      <div id="riversport-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-radbridge-blue text-white px-3 py-1 rounded-full text-sm font-medium">Economic Impact</span>
+              <span class="text-white/80 text-sm">2022</span>
             </div>
-            <a href="./projects.html" class="nav-link text-radbridge-gold">Projects</a>
-            <a href="./index.html#contact" class="nav-link">Contact</a>
-            <a href="./about.html" class="nav-link">About</a>
-          </div>
-          <div class="md:hidden">
-            <button class="text-white">☰</button>
+            <h1 class="text-4xl font-bold mb-2">RIVERSPORT Economic Assessment</h1>
+            <p class="text-xl opacity-90">Riversport Foundation • Oklahoma City, OK</p>
           </div>
         </div>
-      </nav>
 
-      <!-- Filters Section -->
-      <section class="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div class="container-custom py-6">
-          <div class="flex flex-wrap gap-4 items-center justify-between">
-            <div class="flex flex-wrap gap-3">
-              <span class="text-sm font-medium text-gray-700 flex items-center">Filter by:</span>
-              <button class="filter-chip active" data-filter="all">All Projects</button>
-              <button class="filter-chip" data-filter="economic-impact">Economic Impact</button>
-              <button class="filter-chip" data-filter="benefit-cost">Benefit-Cost</button>
-              <button class="filter-chip" data-filter="tool-development">Tool Development</button>
+        <div class="p-8">
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Comprehensive analysis of unique adventure parks combining market and non-market impacts.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              This innovative study quantified tourism benefits, educational value, and healthcare cost reductions through innovative recreation programming, providing a holistic view of adventure park economic impact.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Analysis Framework</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Market impact assessment</li>
+                <li>• Non-market benefit quantification</li>
+                <li>• Tourism economic analysis</li>
+                <li>• Educational value measurement</li>
+              </ul>
             </div>
-            <div class="flex flex-wrap gap-3">
-              <button class="filter-chip" data-filter="outdoor-recreation">Outdoor Recreation</button>
-              <button class="filter-chip" data-filter="community-resilience">Community Resilience</button>
-              <button class="filter-chip" data-filter="water-management">Water Management</button>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Findings</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Significant tourism revenue generation</li>
+                <li>• Measurable educational benefits</li>
+                <li>• Healthcare cost reduction impacts</li>
+                <li>• Community wellness improvements</li>
+              </ul>
             </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <a href="./index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More About This Project
+            </a>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Projects Grid -->
-      <section class="section-padding bg-gray-50">
-        <div class="container-custom">
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-            
-            <!-- Zone 7 Project -->
-            <div class="project-card card" data-categories="benefit-cost community-resilience">
-              <div class="mb-4">
-                <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&w=400&h=200&fit=crop" alt="Flood risk reduction infrastructure" class="w-full h-48 object-cover rounded-lg">
-              </div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="badge badge-benefit-cost">Benefit-Cost Analysis</span>
-                <span class="text-sm text-gray-500">2022</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Arroyo Mocho Flood Risk Reduction</h3>
-              <p class="text-sm text-gray-600 mb-3">Zone 7 Water Agency • Alameda County, CA</p>
-              <p class="text-gray-700 mb-4">Advanced flood modeling combined with comprehensive economic analysis to demonstrate cost-effectiveness of flood protection infrastructure, achieving BCR >1.0 for all alternatives while quantifying travel time savings and environmental benefits.</p>
-              <div class="space-y-2 mb-4">
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>All alternatives achieved BCR >1.0</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>Enhanced local mobility & reduced emissions</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>Property tax base expansion potential</span>
-                </div>
-              </div>
-              <button class="btn-secondary w-full" onclick="toggleDetails(this)">View Details</button>
-              <div class="project-details hidden mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600 mb-2"><strong>Study Period:</strong> Apr – Nov 2022</p>
-                <p class="text-sm text-gray-600 mb-2"><strong>Innovation:</strong> Integrated FEMA-compliant methodology with advanced flood modeling to quantify multi-benefit outcomes including infrastructure protection and fiscal impacts.</p>
-                <p class="text-sm text-gray-600"><strong>Contact:</strong> James Gregory (ESA) - jgregory@esassoc.com</p>
-              </div>
+      <!-- ICON Project -->
+      <div id="icon-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-radbridge-blue text-white px-3 py-1 rounded-full text-sm font-medium">Economic Impact</span>
+              <span class="text-white/80 text-sm">2023</span>
             </div>
-
-            <!-- Riversport Project -->
-            <div class="project-card card" data-categories="economic-impact outdoor-recreation">
-              <div class="mb-4">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&w=400&h=200&fit=crop" alt="Adventure sports and recreation" class="w-full h-48 object-cover rounded-lg">
-              </div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="badge badge-economic-impact">Economic Impact</span>
-                <span class="text-sm text-gray-500">2022</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">RIVERSPORT Economic Assessment</h3>
-              <p class="text-sm text-gray-600 mb-3">Riversport Foundation • Oklahoma City, OK</p>
-              <p class="text-gray-700 mb-4">Comprehensive analysis of unique adventure parks combining market and non-market impacts, quantifying tourism benefits, educational value, and healthcare cost reductions through innovative recreation programming.</p>
-              <div class="space-y-2 mb-4">
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>$21.2M economic boost, 142 jobs created</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>$665K healthcare cost reduction</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>2,700 students, $170K educational value</span>
-                </div>
-              </div>
-              <button class="btn-secondary w-full" onclick="toggleDetails(this)">View Details</button>
-              <div class="project-details hidden mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600 mb-2"><strong>Study Period:</strong> April - Dec 2022</p>
-                <p class="text-sm text-gray-600 mb-2"><strong>Innovation:</strong> First comprehensive analysis to quantify both economic and health benefits of adventure recreation facilities, establishing new benchmarks for recreation impact assessment.</p>
-                <p class="text-sm text-gray-600"><strong>Contact:</strong> Brian Trusty (PROS) - brian@prosconsulting.com</p>
-              </div>
-            </div>
-
-            <!-- ICON Project -->
-            <div class="project-card card" data-categories="economic-impact outdoor-recreation water-management">
-              <div class="mb-4">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&w=400&h=200&fit=crop" alt="Water trails and kayaking" class="w-full h-48 object-cover rounded-lg">
-              </div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="badge badge-economic-impact">Economic Impact</span>
-                <span class="text-sm text-gray-500">2023</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">ICON Water Trails Economic Benefits</h3>
-              <p class="text-sm text-gray-600 mb-3">Iowa Confluence Water Trails • Des Moines, IA</p>
-              <p class="text-gray-700 mb-4">Machine learning-powered analysis combining observed and mobile data to estimate visitation and economic impact of water access points, revealing significant untapped potential in Iowa's water recreation market.</p>
-              <div class="space-y-2 mb-4">
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>$11M+ spending, 112 jobs, $1.3M taxes</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>$16.7M healthcare cost reduction</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>$12.7M consumer surplus identified</span>
-                </div>
-              </div>
-              <button class="btn-secondary w-full" onclick="toggleDetails(this)">View Details</button>
-              <div class="project-details hidden mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600 mb-2"><strong>Study Period:</strong> Feb – Nov 2023</p>
-                <p class="text-sm text-gray-600 mb-2"><strong>Innovation:</strong> First application of machine learning to combine observed and mobile data for water recreation visitation estimation, revealing 10% market awareness gap representing significant growth potential.</p>
-                <p class="text-sm text-gray-600"><strong>Contact:</strong> Cole Miller (ICON) - cole@iconwatertrails.com</p>
-              </div>
-            </div>
-
-            <!-- BCA Screening Tool -->
-            <div class="project-card card" data-categories="tool-development community-resilience water-management">
-              <div class="mb-4">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=400&h=200&fit=crop" alt="Data analysis and watershed planning" class="w-full h-48 object-cover rounded-lg">
-              </div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="badge badge-tool">Tool Development</span>
-                <span class="text-sm text-gray-500">2022</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">BCA Screening & Fund Matching Tool</h3>
-              <p class="text-sm text-gray-600 mb-3">The Freshwater Trust • California</p>
-              <p class="text-gray-700 mb-4">Excel-based optimization tool that revolutionizes watershed investment planning by generating least-cost portfolios, calculating benefit-cost ratios, and matching projects with appropriate funding sources while prioritizing equity.</p>
-              <div class="space-y-2 mb-4">
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>Watershed-scale optimization & targeting</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>Automated fund matching recommendations</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>Equity screening for disadvantaged communities</span>
-                </div>
-              </div>
-              <button class="btn-secondary w-full" onclick="toggleDetails(this)">View Details</button>
-              <div class="project-details hidden mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600 mb-2"><strong>Study Period:</strong> Sep 2022 – May 2023</p>
-                <p class="text-sm text-gray-600 mb-2"><strong>Innovation:</strong> First integrated tool to combine watershed-scale optimization, benefit-cost analysis, equity screening, and automated fund matching in a single platform, piloted in the Cosumnes Watershed.</p>
-                <p class="text-sm text-gray-600"><strong>Contact:</strong> Tim Wigington (Freshwater Trust) - tim@thefreshwatertrust.org</p>
-              </div>
-            </div>
-
-            <!-- EDWA Project -->
-            <div class="project-card card" data-categories="economic-impact outdoor-recreation water-management">
-              <div class="mb-4">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&w=400&h=200&fit=crop" alt="Mountain watershed recreation" class="w-full h-48 object-cover rounded-lg">
-              </div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="badge badge-economic-impact">Economic Impact</span>
-                <span class="text-sm text-gray-500">2023</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Upper American River Watershed Recreation</h3>
-              <p class="text-sm text-gray-600 mb-3">El Dorado Water Agency • El Dorado County, CA</p>
-              <p class="text-gray-700 mb-4">Advanced geospatial and machine learning analysis revealing the massive scale of watershed recreation, with innovative techniques providing unprecedented accuracy in visitation estimation and economic impact assessment.</p>
-              <div class="space-y-2 mb-4">
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>~7M visitor days, $348M economic impact</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>3,100 jobs supported, $25M in taxes</span>
-                </div>
-                <div class="flex items-center text-sm">
-                  <span class="w-2 h-2 bg-radbridge-gold rounded-full mr-2"></span>
-                  <span>$660M consumer surplus quantified</span>
-                </div>
-              </div>
-              <button class="btn-secondary w-full" onclick="toggleDetails(this)">View Details</button>
-              <div class="project-details hidden mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600 mb-2"><strong>Study Period:</strong> Jan – Nov 2023</p>
-                <p class="text-sm text-gray-600 mb-2"><strong>Innovation:</strong> Breakthrough application of geospatial analysis and machine learning to mobile data, achieving unprecedented accuracy in large-scale watershed recreation assessment and revealing tourism dominance (84% of expenditures).</p>
-                <p class="text-sm text-gray-600"><strong>Contact:</strong> Rebecca Guo (EDWA) - rebecca.guo@edcgov.us</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- No Results Message -->
-          <div id="no-results" class="hidden text-center py-12">
-            <div class="text-gray-400 text-6xl mb-4">🔍</div>
-            <h3 class="text-xl font-semibold text-gray-600 mb-2">No projects match your filters</h3>
-            <p class="text-gray-500">Try adjusting your filters or <button class="text-radbridge-blue hover:underline" onclick="clearFilters()">view all projects</button></p>
+            <h1 class="text-4xl font-bold mb-2">ICON Water Trails Economic Benefits</h1>
+            <p class="text-xl opacity-90">Iowa Confluence Water Trails • Des Moines, IA</p>
           </div>
         </div>
-      </section>
 
-      <!-- CTA Section -->
-      <section class="section-padding bg-radbridge-blue text-white">
-        <div class="container-custom text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Ready to start your next resilience project?
-          </h2>
-          <p class="text-xl mb-8 opacity-90">
-            Let's discuss how our innovative approaches can advance your community's resilience goals.
-          </p>
-          <a href="./index.html#contact" class="btn-primary inline-block">
-            Start the Conversation
-          </a>
-        </div>
-      </section>
+        <div class="p-8">
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Machine learning-powered analysis combining observed and mobile data to estimate visitation and economic impact.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              This cutting-edge study revealed significant untapped potential in Iowa's water recreation market using advanced data analytics and ML algorithms to provide unprecedented accuracy in visitation estimation.
+            </p>
+          </div>
 
-      <!-- Footer -->
-      <footer class="bg-gray-900 text-white py-12">
-        <div class="container-custom">
-          <div class="text-center mb-8">
-            <div class="text-xl font-semibold mb-4">radbridge</div>
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Methodology</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Machine learning algorithms</li>
+                <li>• Mobile data integration</li>
+                <li>• Observed visitation data</li>
+                <li>• Economic impact modeling</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Insights</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Untapped market potential identified</li>
+                <li>• Precise visitation estimates</li>
+                <li>• Water access point optimization</li>
+                <li>• Investment prioritization guidance</li>
+              </ul>
+            </div>
           </div>
-          <div class="flex flex-wrap justify-center space-x-8 mb-8">
-            <a href="./index.html#services" class="hover:text-radbridge-gold transition duration-300">Services</a>
-            <a href="./index.html#parkbeat" class="hover:text-radbridge-gold transition duration-300">Parkbeat</a>
-            <a href="./index.html#grantspan" class="hover:text-radbridge-gold transition duration-300">GrantSpan</a>
-            <a href="./projects.html" class="hover:text-radbridge-gold transition duration-300">Projects</a>
-            <a href="./index.html#contact" class="hover:text-radbridge-gold transition duration-300">Contact</a>
-            <a href="./about.html" class="hover:text-radbridge-gold transition duration-300">About</a>
-          </div>
-          <div class="text-center text-gray-400">
-            © 2023 Radbridge Incorporated.
+
+          <div class="text-center mt-12">
+            <a href="./index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More About This Project
+            </a>
           </div>
         </div>
-      </footer>
+      </div>
+
+      <!-- BCA Tool Project -->
+      <div id="bca-tool-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-radbridge-blue text-white px-3 py-1 rounded-full text-sm font-medium">Tool Development</span>
+              <span class="text-white/80 text-sm">2022</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-2">BCA Screening & Fund Matching Tool</h1>
+            <p class="text-xl opacity-90">The Freshwater Trust • California</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Excel-based optimization tool that revolutionizes watershed investment planning.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              This innovative tool generates least-cost portfolios, calculates benefit-cost ratios, and matches projects with appropriate funding sources while prioritizing equity in watershed management decisions.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tool Features</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Least-cost portfolio generation</li>
+                <li>• Benefit-cost ratio calculations</li>
+                <li>• Funding source matching</li>
+                <li>• Equity prioritization</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Impact</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Optimized investment strategies</li>
+                <li>• Improved funding efficiency</li>
+                <li>• Enhanced decision-making</li>
+                <li>• Equitable resource allocation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <a href="./index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More About This Project
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDWA Project -->
+      <div id="edwa-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-radbridge-blue text-white px-3 py-1 rounded-full text-sm font-medium">Economic Impact</span>
+              <span class="text-white/80 text-sm">2023</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-2">Upper American River Watershed Recreation</h1>
+            <p class="text-xl opacity-90">El Dorado Water Agency • El Dorado County, CA</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Advanced geospatial and machine learning analysis revealing the massive scale of watershed recreation.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              This groundbreaking study used innovative techniques to provide unprecedented accuracy in visitation estimation and economic impact assessment for one of California's premier watershed recreation areas.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Technical Approach</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Advanced geospatial analysis</li>
+                <li>• Machine learning models</li>
+                <li>• Multi-source data integration</li>
+                <li>• Precision visitation modeling</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Results</h3>
+              <ul class="text-lg text-gray-600 leading-relaxed space-y-2">
+                <li>• Unprecedented accuracy achieved</li>
+                <li>• Massive recreation scale revealed</li>
+                <li>• Economic impact quantified</li>
+                <li>• Management insights provided</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mt-12">
+            <a href="./index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More About This Project
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
-    <script>
-      // Project filtering functionality
-      function filterProjects() {
-        const activeFilters = Array.from(document.querySelectorAll('.filter-chip.active'))
-          .map(chip => chip.dataset.filter)
-          .filter(filter => filter !== 'all');
-        
-        const projectCards = document.querySelectorAll('.project-card');
-        const noResults = document.getElementById('no-results');
-        let visibleCount = 0;
+  </div>
 
-        projectCards.forEach(card => {
-          const categories = card.dataset.categories.split(' ');
-          const shouldShow = activeFilters.length === 0 || 
-                           activeFilters.some(filter => categories.includes(filter));
-          
-          if (shouldShow) {
-            card.style.display = 'block';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
+  <script>
+    // Global filter state - single selection for each filter type
+    let activeProjectType = null;
+    let activeSector = null;
+
+    // Handle dropdown toggling
+    function toggleDropdown(dropdownId) {
+      const dropdown = document.getElementById(dropdownId);
+      const allDropdowns = document.querySelectorAll('.dropdown-menu');
+      
+      // Close all other dropdowns
+      allDropdowns.forEach(d => {
+        if (d.id !== dropdownId) {
+          d.classList.add('hidden');
+        }
+      });
+      
+      // Toggle current dropdown
+      dropdown.classList.toggle('hidden');
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      const isFilterButton = event.target.closest('.filter-chip');
+      const isDropdownMenu = event.target.closest('.dropdown-menu');
+      if (!isFilterButton && !isDropdownMenu) {
+        document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
+          dropdown.classList.add('hidden');
+        });
+      }
+    });
+
+    function updateFilterChip(type, value, label) {
+      const buttonLabel = document.getElementById(`${type}-label`);
+      const button = document.getElementById(`${type}-button`);
+      const filterIcon = button.querySelector('.fa-filter');
+      const clearIcon = document.getElementById(`${type}-clear`);
+      
+      if (value) {
+        buttonLabel.textContent = label;
+        button.classList.add('bg-radbridge-blue', 'text-white', 'border-radbridge-blue');
+        button.classList.remove('bg-white', 'border-gray-200');
+        filterIcon.classList.add('text-white');
+        filterIcon.classList.remove('text-gray-400');
+        clearIcon.classList.remove('hidden');
+        clearIcon.classList.add('text-white', 'hover:text-gray-200');
+        clearIcon.classList.remove('text-gray-400', 'hover:text-gray-600');
+      } else {
+        buttonLabel.textContent = type === 'project-type' ? 'Project Type' : 'Sector';
+        button.classList.remove('bg-radbridge-blue', 'text-white', 'border-radbridge-blue');
+        button.classList.add('bg-white', 'border-gray-200');
+        filterIcon.classList.remove('text-white');
+        filterIcon.classList.add('text-gray-400');
+        clearIcon.classList.add('hidden');
+        clearIcon.classList.remove('text-white', 'hover:text-gray-200');
+        clearIcon.classList.add('text-gray-400', 'hover:text-gray-600');
+      }
+    }
+
+    function filterProjects() {
+      const projectNavItems = document.querySelectorAll('.project-nav-item');
+      let visibleProjects = [];
+      
+      projectNavItems.forEach(item => {
+        const categories = item.getAttribute('data-categories').split(' ');
+        
+        const matchesProjectType = !activeProjectType || categories.includes(activeProjectType);
+        const matchesSector = !activeSector || categories.includes(activeSector);
+        
+        if (matchesProjectType && matchesSector) {
+          item.classList.remove('hidden');
+          visibleProjects.push(item.id.replace('-nav', ''));
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+      
+      const currentlySelected = document.querySelector('.project-nav-item.bg-radbridge-blue');
+      if (currentlySelected && currentlySelected.classList.contains('hidden') && visibleProjects.length > 0) {
+        showProject(visibleProjects[0]);
+      } else if (visibleProjects.length === 0 && document.querySelectorAll('.project-nav-item:not(.hidden)').length === 0) {
+        document.querySelectorAll('.tool-content-section').forEach(section => {
+          section.classList.add('hidden');
+        });
+      } else if (visibleProjects.length > 0 && !document.getElementById(visibleProjects[0] + '-content').classList.contains('hidden')) {
+        // If the first visible project is already shown, do nothing to avoid flicker
+      } else if (visibleProjects.length > 0) {
+        showProject(visibleProjects[0]);
+      }
+    }
+
+    function showProject(projectName) {
+      const contentSections = document.querySelectorAll('.tool-content-section');
+      contentSections.forEach(section => section.classList.add('hidden'));
+      
+      const projectToShow = document.getElementById(projectName + '-content');
+      if (projectToShow) projectToShow.classList.remove('hidden');
+      
+      const navItems = document.querySelectorAll('.project-nav-item');
+      navItems.forEach(item => {
+        // Reset all items to default state
+        item.classList.remove('selected');
+        item.classList.remove('bg-opacity-35');
+        item.classList.add('bg-opacity-15', 'hover:bg-opacity-25');
+        
+        // Keep text and icons blue for all states
+        const icon = item.querySelector('div:first-child');
+        const textElements = item.querySelectorAll('div > div');
+        
+        if(icon) {
+          icon.classList.remove('text-white');
+          icon.classList.add('text-radbridge-blue');
+        }
+        textElements.forEach(el => {
+          el.classList.remove('text-white', 'text-opacity-80');
+          el.classList.add('text-radbridge-blue');
+          if(el.classList.contains('text-sm')) {
+            el.classList.add('text-opacity-80');
           }
         });
-
-        // Show/hide no results message
-        if (visibleCount === 0) {
-          noResults.classList.remove('hidden');
-        } else {
-          noResults.classList.add('hidden');
-        }
+      });
+      
+      const selectedNav = document.getElementById(projectName + '-nav');
+      if (selectedNav) {
+        // Add selected state styling
+        selectedNav.classList.add('selected', 'bg-opacity-35');
+        selectedNav.classList.remove('bg-opacity-15', 'hover:bg-opacity-25');
       }
+    }
 
-      function clearFilters() {
-        document.querySelectorAll('.filter-chip').forEach(chip => {
-          chip.classList.remove('active');
-        });
-        document.querySelector('[data-filter="all"]').classList.add('active');
-        filterProjects();
-      }
-
-      function toggleDetails(button) {
-        const details = button.nextElementSibling;
-        const isHidden = details.classList.contains('hidden');
-        
-        if (isHidden) {
-          details.classList.remove('hidden');
-          button.textContent = 'Hide Details';
-        } else {
-          details.classList.add('hidden');
-          button.textContent = 'View Details';
-        }
-      }
-
-      // Initialize filter functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.filter-chip').forEach(chip => {
-          chip.addEventListener('click', function() {
-            const filter = this.dataset.filter;
-            
-            if (filter === 'all') {
-              // Clear all other filters
-              document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-              this.classList.add('active');
-            } else {
-              // Remove 'all' filter if it's active
-              document.querySelector('[data-filter="all"]').classList.remove('active');
-              // Toggle this filter
-              this.classList.toggle('active');
-              
-              // If no filters are active, activate 'all'
-              const activeFilters = document.querySelectorAll('.filter-chip.active:not([data-filter="all"])');
-              if (activeFilters.length === 0) {
-                document.querySelector('[data-filter="all"]').classList.add('active');
-              }
-            }
-            
-            filterProjects();
-          });
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('#project-type-dropdown .dropdown-item').forEach(item => {
+        item.addEventListener('click', function() {
+          const value = this.getAttribute('data-value');
+          const label = this.textContent;
+          
+          activeProjectType = value; // Always set, even if same, to refresh label
+          updateFilterChip('project-type', value, label);
+          
+          toggleDropdown('project-type-dropdown');
+          filterProjects();
         });
       });
-    </script>
-  </body>
+
+      document.querySelectorAll('#sector-dropdown .dropdown-item').forEach(item => {
+        item.addEventListener('click', function() {
+          const value = this.getAttribute('data-value');
+          const label = this.textContent;
+
+          activeSector = value; // Always set
+          updateFilterChip('sector', value, label);
+          
+          toggleDropdown('sector-dropdown');
+          filterProjects();
+        });
+      });
+
+      // Event listeners for clear buttons
+      document.getElementById('project-type-clear').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent dropdown from toggling
+        activeProjectType = null;
+        updateFilterChip('project-type', null);
+        filterProjects();
+        document.getElementById('project-type-dropdown').classList.add('hidden');
+      });
+
+      document.getElementById('sector-clear').addEventListener('click', function(event) {
+        event.stopPropagation();
+        activeSector = null;
+        updateFilterChip('sector', null);
+        filterProjects();
+        document.getElementById('sector-dropdown').classList.add('hidden');
+      });
+
+      // Initial project display
+      if (document.querySelectorAll('.project-nav-item:not(.hidden)').length > 0) {
+        const firstVisibleProject = document.querySelector('.project-nav-item:not(.hidden)').id.replace('-nav', '');
+        showProject(firstVisibleProject);
+      } else {
+         filterProjects(); // This will handle showing the first available or hiding all content
+      }
+    });
+  </script>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html> 

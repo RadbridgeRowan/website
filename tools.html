@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools - Radbridge</title>
+  <meta name="description" content="Explore Radbridge's suite of data-driven tools for parks management and community resilience funding.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .tool-sidebar {
+      min-height: calc(100vh - 120px);
+    }
+    .tool-content {
+      min-height: calc(100vh - 120px);
+    }
+  </style>
+</head>
+<body class="font-ibm">
+  <!-- Navigation -->
+  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
+    <div class="container-custom flex items-center justify-between">
+      <div class="text-white text-xl font-semibold">
+        <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="./services.html" class="nav-link">Services</a>
+        <a href="./projects.html" class="nav-link">Projects</a>
+        <a href="./tools.html" class="nav-link text-radbridge-gold">Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="bg-light-grey relative z-20 -mt-8 max-w-[90%] mx-auto shadow-md">
+    <div class="container-custom flex justify-between items-stretch pr-0">
+      <nav class="text-sm py-3">
+        <a href="index.html" class="text-radbridge-blue font-medium hover:underline">Home</a>
+        <span class="mx-2 text-gray-600">/</span>
+        <span class="text-gray-800 font-medium">Tools</span>
+      </nav>
+      <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm">
+        Contact us →
+      </a>
+    </div>
+  </div>
+
+  <!-- Dashboard Container -->
+  <div class="flex bg-white -mt-6">
+    <!-- Left Sidebar -->
+    <div class="tool-sidebar w-80 bg-white border-r border-gray-100 flex-shrink-0">
+      <div class="px-6 py-12">
+        <nav class="space-y-3">
+          <button 
+            onclick="showTool('parkbeat')" 
+            id="parkbeat-nav"
+            class="tool-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-hiking h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Parkbeat</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Data-driven insights for parks</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showTool('grantspan')" 
+            id="grantspan-nav"
+            class="tool-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-hand-holding-dollar h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">GrantSpan</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Community resilience funding</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showTool('climatedata')" 
+            id="climatedata-nav"
+            class="tool-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-cloud-sun-rain h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Climate Data Download</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Access NASA climate data</div>
+            </div>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="tool-content flex-1 overflow-y-auto">
+      <!-- Parkbeat Content -->
+      <div id="parkbeat-content" class="tool-content-section">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-bottom relative" style="background-image: url('assets/images/Hero_Parkbeat_Unsplash_kelly-sikkema.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">Parkbeat</h1>
+            <p class="text-xl">Data-driven insights for parks and open space managers</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Parkbeat harnesses big data to generate actionable insights, dynamic visualizations, and predictive analytics on visitation and economic benefits associated with recreational lands.</h2>
+          </div>
+          
+          <!-- Content Sections -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Parks and Open Space: Our Recreation Infrastructure</h3>
+              <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                America's open spaces and public lands encompass millions of acres of public lands for recreational use, ranging from urban parks to vast wilderness. These natural environments, critical recreation infrastructure, also provide various vital co-benefits and ecosystem services like water supply and air quality.
+              </p>
+            </div>
+            <div>
+              <img src="assets/images/Parkbeat_content_image1_placeholder.jpg" alt="Person walking on a path in a park" class="rounded-lg shadow-lg">
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <img src="assets/images/Parkbeat_dashboard_placeholder.jpg" alt="Parkbeat dashboard example" class="rounded-lg shadow-lg">
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">Challenges for Parks and Open Space Managers</h3>
+              <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                Data is key for park and open space managers, but it also poses challenges when it comes to quantifying and understanding recreational use of their lands and the economic impact of visitation. Parkbeat technology helps park managers deserve a more sophisticated toolkit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <div class="bg-gray-50 p-8 rounded-lg">
+            <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Features</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full mx-auto mb-3 flex items-center justify-center text-lg font-semibold">V</div>
+                <h4 class="font-semibold mb-2">Visitation Data</h4>
+                <p class="text-sm text-gray-600">Visualize visitation estimates from various perspectives</p>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full mx-auto mb-3 flex items-center justify-center text-lg font-semibold">E</div>
+                <h4 class="font-semibold mb-2">Economic Impact</h4>
+                <p class="text-sm text-gray-600">Analyze economic impact of recreational lands</p>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full mx-auto mb-3 flex items-center justify-center text-lg font-semibold">P</div>
+                <h4 class="font-semibold mb-2">Predictive Analytics</h4>
+                <p class="text-sm text-gray-600">Project future visitation with ML algorithms</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="parkbeat.html" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Learn More
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Request Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GrantSpan Content -->
+      <div id="grantspan-content" class="tool-content-section hidden">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">GrantSpan</h1>
+            <p class="text-xl">Find and secure funding for community resilience</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">GrantSpan streamlines investments in community resilience by simplifying funding program identification, matching, and grant application development.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Despite increased funding opportunities, funding programs can be intricate and difficult to navigate, particularly for new and emerging resilience practitioners. GrantSpan is a platform tailored for both applicants and funding program administrators.
+            </p>
+          </div>
+          
+          <!-- Features and Benefits -->
+          <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Key Features</h3>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <div class="w-6 h-6 bg-radbridge-gold rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">F</div>
+                  <div>
+                    <h4 class="font-semibold">Fund Matching</h4>
+                    <p class="text-sm text-gray-600">Database-driven matching engine for quick project-funder fit determination</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-6 h-6 bg-radbridge-gold rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">A</div>
+                  <div>
+                    <h4 class="font-semibold">Application Support</h4>
+                    <p class="text-sm text-gray-600">Streamlined application development with data-driven insights</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Benefits</h3>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <div class="w-6 h-6 bg-radbridge-blue rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">T</div>
+                  <div>
+                    <h4 class="font-semibold">Time & Cost Savings</h4>
+                    <p class="text-sm text-gray-600">Saves valuable time and money for applicants and funders</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-6 h-6 bg-radbridge-blue rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">E</div>
+                  <div>
+                    <h4 class="font-semibold">Equity & Accessibility</h4>
+                    <p class="text-sm text-gray-600">Levels the playing field for disadvantaged communities</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Challenge -->
+          <div class="bg-radbridge-blue/5 p-8 rounded-lg mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              The US federal government alone hosts hundreds of funding programs – each with distinct goals, requirements, and language, presenting a challenge for local applicants who cannot become experts in all programs, particularly if agency staff are already short on time and resources.
+            </p>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="grantspan.html" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Learn More
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Request Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Climate Data Download Content -->
+      <div id="climatedata-content" class="tool-content-section hidden">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-bottom relative" style="background-image: url('assets/images/paxson-woelber-nv7WX42LKjU-unsplash.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">Climate Data Download</h1>
+            <p class="text-xl">Access NASA CMIP6 climate data for any location in just a few clicks</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Access and download climate projection data from NASA's NEX-GDDP-CMIP6 archive through an intuitive interface designed for researchers and practitioners.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Our platform simplifies the process of accessing complex climate data, enabling better climate-aware decision-making for researchers, building energy modelers, HVAC engineers, and planners.
+            </p>
+          </div>
+
+          <!-- Key Features -->
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-map-location-dot text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Location Selection</h3>
+              <p class="text-gray-600">Select precise locations using an interactive map or coordinates for site-specific data.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-sliders text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Customizable Data</h3>
+              <p class="text-gray-600">Choose from multiple climate variables, models, and scenarios for comprehensive analysis.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-file-csv text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Ready-to-Use Output</h3>
+              <p class="text-gray-600">Receive processed data in organized CSV files with appropriate unit conversions.</p>
+            </div>
+          </div>
+
+          <!-- Use Cases -->
+          <div class="bg-radbridge-blue/5 p-8 rounded-lg mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">Common Applications</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="flex items-start gap-4">
+                <i class="fas fa-building text-radbridge-blue text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Building Design & Analysis</h4>
+                  <p class="text-gray-600">Support climate-aware HVAC sizing and energy performance simulations.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fas fa-solar-panel text-radbridge-blue text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Renewable Energy Systems</h4>
+                  <p class="text-gray-600">Model PV systems and assess wind resources under future climate conditions.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fas fa-chart-line text-radbridge-blue text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Climate Impact Research</h4>
+                  <p class="text-gray-600">Conduct detailed climate impact analysis and risk assessment studies.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fas fa-city text-radbridge-blue text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Urban Planning</h4>
+                  <p class="text-gray-600">Support long-term infrastructure planning and climate resilience strategies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="climatedata.html" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Learn More
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Request Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTool(toolName) {
+      // Hide all tool content sections
+      const contentSections = document.querySelectorAll('.tool-content-section');
+      contentSections.forEach(section => section.classList.add('hidden'));
+      
+      // Show selected tool content
+      document.getElementById(toolName + '-content').classList.remove('hidden');
+      
+      // Update navigation styles
+      const navItems = document.querySelectorAll('.tool-nav-item');
+      navItems.forEach(item => {
+        item.classList.remove('bg-radbridge-blue', 'text-white');
+        item.classList.add('hover:bg-gray-200');
+        // Reset text colors for inactive items
+        const title = item.querySelector('div > div:first-child');
+        const subtitle = item.querySelector('div > div:last-child');
+        if (title) title.classList.add('text-gray-800');
+        if (subtitle) subtitle.classList.add('text-gray-600');
+      });
+      
+      // Highlight selected navigation item
+      const selectedNav = document.getElementById(toolName + '-nav');
+      selectedNav.classList.add('bg-radbridge-blue', 'text-white');
+      selectedNav.classList.remove('hover:bg-gray-200');
+      // Set text colors for active item
+      const activeTitle = selectedNav.querySelector('div > div:first-child');
+      const activeSubtitle = selectedNav.querySelector('div > div:last-child');
+      if (activeTitle) activeTitle.classList.remove('text-gray-800');
+      if (activeSubtitle) activeSubtitle.classList.remove('text-gray-600');
+    }
+
+    // Initialize with Parkbeat selected
+    document.addEventListener('DOMContentLoaded', function() {
+      showTool('parkbeat');
+    });
+  </script>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html> 

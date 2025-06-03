@@ -13,47 +13,48 @@
   </head>
   <body class="font-sans">
     <div id="app">
-      <!-- Navigation -->
-      <nav class="bg-radbridge-blue py-6 px-4 sm:px-6 lg:px-8">
-        <div class="container-custom flex justify-between items-center">
-          <div class="text-white text-xl font-semibold">
-            <img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-8">
-          </div>
-          <div class="hidden md:flex space-x-8">
-            <a href="./#services" class="nav-link">Services</a>
-            <div class="relative">
-              <a href="./#tools" class="nav-link">Tools ▼</a>
-            </div>
-            <a href="./projects.html" class="nav-link">Projects</a>
-            <a href="./#contact" class="nav-link">Contact</a>
-            <a href="./about.html" class="nav-link">About</a>
-          </div>
-          <div class="md:hidden">
-            <button class="text-white">☰</button>
-          </div>
-        </div>
-      </nav>
+     <!-- Navigation -->
+  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
+    <div class="container-custom flex items-center justify-between">
+      <div class="text-white text-xl font-semibold">
+        <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="./services.html" class="nav-link">Services</a>
+        <a href="./projects.html" class="nav-link">Projects</a>
+        <a href="./tools.html" class="nav-link">Tools</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
 
       <!-- Hero Section -->
-      <section class="hero-bg min-h-screen flex items-center" style="background-image: url('assets/images/Hero_Home_RowanMJ.png'); background-size: cover; background-position: center;">
-        <div class="container-custom text-center text-white">
-          <h1 class="text-5xl md:text-6xl font-bold mb-6">
-            Resilience. Automated.
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            We help partners define, measure, and invest in resilience
-          </p>
+      <section class="relative bg-cover bg-center py-12 md:py-20 w-full min-h-[70vh] flex items-center" style="background-image: url('/assets/images/simon-berger-twukN12EN7c-unsplash.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent"></div>
+        <div class="container-custom w-full px-4 sm:px-6 lg:px-8 relative">
+          <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-radbridge-blue">Resilience, Automated.</h1>
+            <p class="text-lg md:text-xl mb-6 text-gray-700">
+              We help partners define, measure, and invest in resilience.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#contact" class="inline-block bg-radbridge-blue hover:bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition text-lg cursor-pointer">Get Started</a>
+              <a href="services.html" class="inline-block bg-white hover:bg-gray-50 text-radbridge-gold border-2 border-radbridge-gold font-semibold px-6 py-3 rounded-lg shadow transition text-lg cursor-pointer">Learn More</a>
+            </div>
+          </div>
         </div>
+        <div class="absolute left-0 right-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
       </section>
 
       <!-- Main Content Section -->
       <section class="section-padding bg-gray-50">
         <div class="container-custom">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            We work with public and private partners to advance community resilience and health through data-driven solutions, innovative technology, and deep sector knowledge
+          </h2>
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                We work with public and private partners to advance community resilience and health through data-driven solutions, innovative technology, and deep sector knowledge
-              </h2>
               <div class="space-y-4 text-gray-700">
                 <p>
                   Our mission at Radbridge is to accelerate and expand investments in community resilience. We do this by combining data, technology, and domain-specific expertise to bridge gaps between communication and their resilience goals. We empower clients and partners – and the communities they serve – through economic impact analysis, benefit-cost analysis, grant application support, and software solutions.
@@ -189,12 +190,12 @@
             <div class="text-xl font-semibold mb-4">radbridge</div>
           </div>
           <div class="flex flex-wrap justify-center space-x-8 mb-8">
-            <a href="./#services" class="hover:text-radbridge-gold transition duration-300">Services</a>
-            <a href="./#parkbeat" class="hover:text-radbridge-gold transition duration-300">Parkbeat</a>
-            <a href="./#grantspan" class="hover:text-radbridge-gold transition duration-300">GrantSpan</a>
-            <a href="./projects.html" class="hover:text-radbridge-gold transition duration-300">Projects</a>
-            <a href="./#contact" class="hover:text-radbridge-gold transition duration-300">Contact</a>
-            <a href="./about.html" class="hover:text-radbridge-gold transition duration-300">About</a>
+            <a href="../radbridge-website#services" class="hover:text-radbridge-gold transition duration-300">Services</a>
+            <a href="../radbridge-website#parkbeat" class="hover:text-radbridge-gold transition duration-300">Parkbeat</a>
+            <a href="../radbridge-website#grantspan" class="hover:text-radbridge-gold transition duration-300">GrantSpan</a>
+            <a href="projects.html" class="hover:text-radbridge-gold transition duration-300">Projects</a>
+            <a href="../radbridge-website#contact" class="hover:text-radbridge-gold transition duration-300">Contact</a>
+            <a href="about.html" class="hover:text-radbridge-gold transition duration-300">About</a>
           </div>
           <div class="text-center text-gray-400">
             © 2023 Radbridge Incorporated.

@@ -5,48 +5,582 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Consulting Services - Radbridge</title>
+  <meta name="description" content="Radbridge provides comprehensive consulting services including economic impact analysis, benefit-cost analysis, FEMA hazard mitigation, and custom solutions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .service-sidebar {
+      min-height: calc(100vh - 120px);
+    }
+    .service-content {
+      min-height: calc(100vh - 120px);
+    }
+  </style>
 </head>
-<body class="font-sans">
+<body class="font-ibm">
   <!-- Navigation -->
-  <nav class="bg-radbridge-blue py-6 px-4 sm:px-6 lg:px-8">
-    <div class="container-custom flex justify-between items-center">
+  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
+    <div class="container-custom flex items-center justify-between">
       <div class="text-white text-xl font-semibold">
-        <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-8"></a>
+        <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
       </div>
       <div class="hidden md:flex space-x-8">
         <a href="./services.html" class="nav-link text-radbridge-gold">Services</a>
-        <a href="./index.html#tools" class="nav-link">Tools ▼</a>
         <a href="./projects.html" class="nav-link">Projects</a>
-        <a href="./index.html#contact" class="nav-link">Contact</a>
+        <a href="./tools.html" class="nav-link">Tools</a>
         <a href="./about.html" class="nav-link">About</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="relative h-96" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg'); background-size: cover; background-position: center;">
-    <div class="absolute inset-0 bg-radbridge-blue bg-opacity-70">
-      <div class="container-custom h-full flex items-center">
-        <div class="text-white">
-          <h1 class="text-5xl font-bold mb-4">Consulting Services</h1>
-          <p class="text-xl">Customized support to advance your resilience goals</p>
+  <!-- Breadcrumb -->
+  <div class="bg-light-grey relative z-20 -mt-8 max-w-[90%] mx-auto shadow-md">
+    <div class="container-custom flex justify-between items-stretch pr-0">
+      <nav class="text-sm py-3">
+        <a href="index.html" class="text-radbridge-blue font-medium hover:underline">Home</a>
+        <span class="mx-2 text-gray-600">/</span>
+        <span class="text-gray-800 font-medium">Services</span>
+      </nav>
+      <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm">
+        Contact us →
+      </a>
+    </div>
+  </div>
+
+  <!-- Dashboard Container -->
+  <div class="flex bg-white -mt-6">
+    <!-- Left Sidebar -->
+    <div class="service-sidebar w-80 bg-white border-r border-gray-100 flex-shrink-0">
+      <div class="px-6 py-12">
+        <nav class="space-y-3">
+          <button 
+            onclick="showService('economic-impact')" 
+            id="economic-impact-nav"
+            class="service-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-chart-line h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Economic Impact Analysis</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Tourism, recreation & resilience</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showService('benefit-cost')" 
+            id="benefit-cost-nav"
+            class="service-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-balance-scale h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Benefit-Cost Analysis</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Project evaluation & ROI</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showService('fema-hazard')" 
+            id="fema-hazard-nav"
+            class="service-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-shield-alt h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">FEMA Hazard Mitigation</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Risk reduction & resilience</div>
+            </div>
+          </button>
+
+          <button 
+            onclick="showService('other-services')" 
+            id="other-services-nav"
+            class="service-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-cogs h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Other Services</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Custom solutions & training</div>
+            </div>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="service-content flex-1 overflow-y-auto">
+      <!-- Economic Impact Analysis Content -->
+      <div id="economic-impact-content" class="service-content-section">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">Economic Impact Analysis</h1>
+            <p class="text-xl">Quantifying the economic value of investments and activities</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">We help public and private clients understand the economic impacts of their investments, from tourism and recreation to resilience and infrastructure projects.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Our economic impact analysis provides decision-makers with the quantitative evidence needed to secure funding, justify investments, and communicate value to stakeholders.
+            </p>
+          </div>
+          
+          <!-- Services Offered -->
+          <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-hiking text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Tourism & Outdoor Recreation</h3>
+              <p class="text-gray-600 mb-4">Visitation analysis and economic impact assessment for parks, trails, and recreational facilities.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Visitor spending surveys</li>
+                <li>• Regional economic modeling</li>
+                <li>• Job creation estimates</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-shield-alt text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Resilience Investments</h3>
+              <p class="text-gray-600 mb-4">Economic analysis of climate adaptation and disaster risk reduction projects.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Avoided damage calculations</li>
+                <li>• Co-benefit quantification</li>
+                <li>• Return on investment analysis</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Consumer Spending</h3>
+              <p class="text-gray-600 mb-4">Custom surveys and analysis to understand spending patterns and economic flows.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Survey design and implementation</li>
+                <li>• Spending pattern analysis</li>
+                <li>• Local economic multipliers</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Methodology -->
+          <div class="bg-radbridge-blue/5 p-8 rounded-lg mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Methodology</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              We use industry-standard tools like IMPLAN and BEA RIMS II multipliers, combined with primary data collection and advanced statistical analysis to provide robust, defensible economic impact estimates.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+              <div class="flex items-start gap-3">
+                <i class="fas fa-database text-radbridge-blue text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Data-Driven Analysis</h4>
+                  <p class="text-gray-600">Comprehensive data collection and statistical modeling for accurate impact estimates.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-chart-bar text-radbridge-blue text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Industry Standards</h4>
+                  <p class="text-gray-600">Following best practices and peer-reviewed methodologies for credible results.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Get Started
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefit-Cost Analysis Content -->
+      <div id="benefit-cost-content" class="service-content-section hidden">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">Benefit-Cost Analysis</h1>
+            <p class="text-xl">Evaluating project value and return on investment</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Our benefit-cost analysis services help clients make informed investment decisions by quantifying project benefits against their costs.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Whether you're seeking FEMA mitigation funding, evaluating infrastructure investments, or assessing nature-based solutions, we provide rigorous analysis that meets federal standards and supports decision-making.
+            </p>
+          </div>
+          
+          <!-- Services Offered -->
+          <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-gold text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-home text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">FEMA Hazard Mitigation</h3>
+              <p class="text-gray-600 mb-4">Comprehensive BCA for FEMA mitigation grant applications using approved methodologies.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• FEMA BCA Toolkit compliance</li>
+                <li>• Hazard modeling and damage assessment</li>
+                <li>• Grant application support</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-gold text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-leaf text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Nature-Based Solutions</h3>
+              <p class="text-gray-600 mb-4">Evaluating green infrastructure and ecosystem-based adaptation projects.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Ecosystem service valuation</li>
+                <li>• Co-benefit quantification</li>
+                <li>• Life-cycle cost analysis</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-gold text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-road text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Traditional Infrastructure</h3>
+              <p class="text-gray-600 mb-4">Analysis of conventional infrastructure and engineered solutions.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Infrastructure investment analysis</li>
+                <li>• Risk reduction valuation</li>
+                <li>• Comparative analysis</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Standards and Compliance -->
+          <div class="bg-radbridge-gold/5 p-8 rounded-lg mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Standards & Compliance</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Our benefit-cost analyses adhere to federal guidelines including FEMA's BCA standards, OMB Circular A-94, and other relevant frameworks to ensure compliance and credibility.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+              <div class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-radbridge-gold text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">FEMA BCA Toolkit</h4>
+                  <p class="text-gray-600">Certified expertise in FEMA's benefit-cost analysis toolkit and methodologies.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-certificate text-radbridge-gold text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Federal Standards</h4>
+                  <p class="text-gray-600">Compliance with OMB guidelines and federal economic analysis requirements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Get Started
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEMA Hazard Mitigation Content -->
+      <div id="fema-hazard-content" class="service-content-section hidden">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">FEMA Hazard Mitigation</h1>
+            <p class="text-xl">Reducing risk and building community resilience</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">We support communities in developing successful FEMA hazard mitigation projects that reduce risk and build long-term resilience.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Our team has extensive experience with FEMA's hazard mitigation programs, from benefit-cost analysis to technical guidance and the incorporation of innovative nature-based solutions.
+            </p>
+          </div>
+          
+          <!-- Services Offered -->
+          <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-calculator text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Benefit-Cost Analysis</h3>
+              <p class="text-gray-600 mb-4">FEMA-compliant BCA using approved methodologies and tools.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• BCA Toolkit expertise</li>
+                <li>• Damage-frequency analysis</li>
+                <li>• Avoided loss calculations</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-hands-helping text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Technical Support</h3>
+              <p class="text-gray-600 mb-4">Guidance, project review, and technical assistance throughout the application process.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Application development</li>
+                <li>• Project scoping and design</li>
+                <li>• Documentation support</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-seedling text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Nature-Based Solutions</h3>
+              <p class="text-gray-600 mb-4">Integration of green infrastructure and ecosystem-based approaches.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Green infrastructure design</li>
+                <li>• Ecosystem service benefits</li>
+                <li>• Multi-benefit quantification</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FEMA Programs -->
+          <div class="bg-radbridge-blue/5 p-8 rounded-lg mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">FEMA Grant Programs</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              We support applications across FEMA's suite of mitigation programs, each with specific requirements and opportunities.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-building text-radbridge-blue text-xl mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold mb-2">Building Resilient Infrastructure</h4>
+                    <p class="text-gray-600">BRIC program support for large-scale resilience projects.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-map text-radbridge-blue text-xl mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold mb-2">Hazard Mitigation Grant Program</h4>
+                    <p class="text-gray-600">Post-disaster mitigation funding and project development.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-users text-radbridge-blue text-xl mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold mb-2">Flood Mitigation Assistance</h4>
+                    <p class="text-gray-600">FMA program applications and flood risk reduction projects.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fas fa-chart-line text-radbridge-blue text-xl mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold mb-2">Pre-Disaster Mitigation</h4>
+                    <p class="text-gray-600">Strategic planning and proactive risk reduction initiatives.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Get Started
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Services Content -->
+      <div id="other-services-content" class="service-content-section hidden">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">Other Services</h1>
+            <p class="text-xl">Custom solutions and professional development</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Beyond our core services, we offer a range of specialized solutions to meet diverse client needs and build organizational capacity.</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              From policy development to custom software solutions, we leverage our expertise to support clients across the full spectrum of resilience and sustainability challenges.
+            </p>
+          </div>
+          
+          <!-- Services Grid -->
+          <div class="grid lg:grid-cols-2 gap-8 mb-16">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-gold text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-file-alt text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Policy Development & Review</h3>
+              <p class="text-gray-600 mb-4">Strategic policy analysis and development to support organizational goals and regulatory compliance.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Policy research and analysis</li>
+                <li>• Regulatory compliance assessment</li>
+                <li>• Strategic planning support</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-gold text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-code text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Custom Software Solutions</h3>
+              <p class="text-gray-600 mb-4">Tailored software development to address specific organizational needs and workflows.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Web application development</li>
+                <li>• Data management systems</li>
+                <li>• Integration solutions</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-gold text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-robot text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">AI & Automation Solutions</h3>
+              <p class="text-gray-600 mb-4">Leveraging artificial intelligence and automation to improve efficiency and decision-making.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Process automation</li>
+                <li>• Machine learning applications</li>
+                <li>• Data analytics platforms</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="w-12 h-12 bg-radbridge-gold text-white rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-chalkboard-teacher text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Workshops & Training</h3>
+              <p class="text-gray-600 mb-4">Professional development programs to build internal capacity and technical expertise.</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Technical training programs</li>
+                <li>• Capacity building workshops</li>
+                <li>• Knowledge transfer sessions</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Approach -->
+          <div class="bg-radbridge-gold/5 p-8 rounded-lg mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Approach</h3>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              We work closely with clients to understand their unique challenges and develop customized solutions that deliver measurable results and sustainable value.
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 mt-6">
+              <div class="text-center">
+                <i class="fas fa-lightbulb text-radbridge-gold text-3xl mb-3"></i>
+                <h4 class="font-semibold mb-2">Innovation</h4>
+                <p class="text-gray-600">Creative solutions using cutting-edge technology and methodologies.</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-handshake text-radbridge-gold text-3xl mb-3"></i>
+                <h4 class="font-semibold mb-2">Collaboration</h4>
+                <p class="text-gray-600">Close partnership throughout the project lifecycle.</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-target text-radbridge-gold text-3xl mb-3"></i>
+                <h4 class="font-semibold mb-2">Results</h4>
+                <p class="text-gray-600">Focus on delivering measurable outcomes and lasting impact.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Get Started
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Main Content -->
-  <section class="section-padding">
-    <div class="container-custom">
-      <h2 class="text-3xl font-bold mb-8 text-center">
-        We empower public and private clients – and the communities they serve – through economic impact analysis, benefit-cost analysis, grant application support, and customized software solutions.
-      </h2>
-    </div>
-  </section>
+  <script>
+    function showService(serviceName) {
+      // Hide all service content sections
+      const contentSections = document.querySelectorAll('.service-content-section');
+      contentSections.forEach(section => section.classList.add('hidden'));
+      
+      // Show selected service content
+      document.getElementById(serviceName + '-content').classList.remove('hidden');
+      
+      // Update navigation styles
+      const navItems = document.querySelectorAll('.service-nav-item');
+      navItems.forEach(item => {
+        item.classList.remove('bg-radbridge-blue', 'text-white');
+        item.classList.add('hover:bg-gray-200');
+        // Reset text colors for inactive items
+        const title = item.querySelector('div > div:first-child');
+        const subtitle = item.querySelector('div > div:last-child');
+        if (title) title.classList.add('text-gray-800');
+        if (subtitle) subtitle.classList.add('text-gray-600');
+      });
+      
+      // Highlight selected navigation item
+      const selectedNav = document.getElementById(serviceName + '-nav');
+      selectedNav.classList.add('bg-radbridge-blue', 'text-white');
+      selectedNav.classList.remove('hover:bg-gray-200');
+      // Set text colors for active item
+      const activeTitle = selectedNav.querySelector('div > div:first-child');
+      const activeSubtitle = selectedNav.querySelector('div > div:last-child');
+      if (activeTitle) activeTitle.classList.remove('text-gray-800');
+      if (activeSubtitle) activeSubtitle.classList.remove('text-gray-600');
+    }
+
+    // Initialize with Economic Impact Analysis selected
+    document.addEventListener('DOMContentLoaded', function() {
+      showService('economic-impact');
+    });
+  </script>
 
   <script type="module" src="/src/main.js"></script>
 </body>

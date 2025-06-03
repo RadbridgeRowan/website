@@ -66,14 +66,14 @@
       transition: all 0.3s ease-in-out;
     }
     .project-nav-item:hover {
-      background-opacity: 0.25 !important;
+      /* background-opacity: 0.25; */ /* This was removed in a previous step, ensuring it's gone */
     }
     .project-nav-item.selected {
-      background-opacity: 0.35 !important;
+      /* background-opacity: 0.25; */ /* This was removed in a previous step, ensuring it's gone */
     }
   </style>
 </head>
-<body class="font-ibm">
+<body class="font-lato">
   <!-- Navigation -->
   <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
     <div class="container-custom flex items-center justify-between">
@@ -117,7 +117,7 @@
               <button id="project-type-button" title="Filter by Project Type" class="filter-chip w-full text-left px-4 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-between" onclick="toggleDropdown('project-type-dropdown')">
                 <div class="flex items-center">
                   <i class="fas fa-filter text-gray-400 mr-2"></i>
-                  <span id="project-type-label">Project Type</span>
+                  <span id="project-type-label">Service</span>
                 </div>
                 <i id="project-type-clear" class="fas fa-times text-gray-400 hidden hover:text-gray-600 ml-2"></i>
               </button>
@@ -589,33 +589,70 @@
       
       const navItems = document.querySelectorAll('.project-nav-item');
       navItems.forEach(item => {
-        // Reset all items to default state
-        item.classList.remove('selected');
-        item.classList.remove('bg-opacity-35');
-        item.classList.add('bg-opacity-15', 'hover:bg-opacity-25');
-        
-        // Keep text and icons blue for all states
-        const icon = item.querySelector('div:first-child');
-        const textElements = item.querySelectorAll('div > div');
-        
-        if(icon) {
-          icon.classList.remove('text-white');
-          icon.classList.add('text-radbridge-blue');
+        // ===== INACTIVE STATE =====
+        // 1. Remove styles associated with the active state or solid blue background
+        item.classList.remove('bg-radbridge-blue', 'text-white');
+        // Remove any specific opacity classes that might have been for active/selected states if they were added by previous logic
+        item.classList.remove('bg-opacity-25', 'bg-opacity-35'); 
+
+        // 2. Add/ensure styles for inactive state (mimicking tools.html)
+        item.classList.add('hover:bg-gray-200'); // Inactive hover from tools.html
+        // Note: 'bg-opacity-15' and 'hover:bg-opacity-25' are on the item from its base HTML.
+        // After removing 'bg-radbridge-blue', 'bg-opacity-15' will apply to the parent's background.
+
+        // 3. Reset text colors for children of inactive items
+        const iconContainer = item.querySelector('div:first-child'); // The div wrapping the icon
+        const titleEl = item.querySelector('div:nth-child(2) > div:first-child');
+        const subtitleEl = item.querySelector('div:nth-child(2) > div:last-child');
+
+        if (iconContainer) {
+          iconContainer.classList.remove('text-white'); // Remove white if it was active
+          iconContainer.classList.add('text-radbridge-blue'); // Ensure icon's container is blue text
         }
-        textElements.forEach(el => {
-          el.classList.remove('text-white', 'text-opacity-80');
-          el.classList.add('text-radbridge-blue');
-          if(el.classList.contains('text-sm')) {
-            el.classList.add('text-opacity-80');
-          }
-        });
+        if (titleEl) {
+          titleEl.classList.remove('text-white');    // Remove white if it was active
+          titleEl.classList.remove('text-radbridge-blue'); // Remove its original blue
+          titleEl.classList.add('text-gray-800');    // Set title to gray
+        }
+        if (subtitleEl) {
+          subtitleEl.classList.remove('text-white');   // Remove white if it was active
+          subtitleEl.classList.remove('text-radbridge-blue', 'text-opacity-80'); // Remove its original blue and blue-specific opacity
+          subtitleEl.classList.add('text-gray-600');   // Set subtitle to gray
+        }
       });
       
       const selectedNav = document.getElementById(projectName + '-nav');
       if (selectedNav) {
-        // Add selected state styling
-        selectedNav.classList.add('selected', 'bg-opacity-35');
-        selectedNav.classList.remove('bg-opacity-15', 'hover:bg-opacity-25');
+        // ===== ACTIVE STATE for selectedNav =====
+        // 1. Add active styles to the button itself
+        selectedNav.classList.add('bg-radbridge-blue', 'text-white'); // Makes button bg blue, default text white for itself
+        selectedNav.classList.remove('hover:bg-gray-200');          // Remove inactive hover style from button
+
+        // 2. For children (title, subtitle), remove any gray text color they might have from being inactive.
+        //    Their original HTML classes (e.g., text-radbridge-blue) will then take precedence over the parent button's text-white.
+        //    The icon's container (div:first-child) inherently has text-radbridge-blue from HTML and is never made gray,
+        //    so it will also correctly remain blue, overriding the button's text-white.
+        
+        const activeTitleEl = selectedNav.querySelector('div:nth-child(2) > div:first-child');
+        const activeSubtitleEl = selectedNav.querySelector('div:nth-child(2) > div:last-child');
+
+        if (activeTitleEl) {
+          activeTitleEl.classList.remove('text-gray-800'); // Remove gray, allowing its own text-radbridge-blue to show
+          // Ensure text-radbridge-blue is present (it should be from HTML, but this is a safeguard)
+          activeTitleEl.classList.add('text-radbridge-blue'); 
+        }
+        if (activeSubtitleEl) {
+          activeSubtitleEl.classList.remove('text-gray-600'); // Remove gray, allowing its own text-radbridge-blue to show
+          // Ensure text-radbridge-blue and text-opacity-80 are present (they should be from HTML)
+          activeSubtitleEl.classList.add('text-radbridge-blue', 'text-opacity-80'); 
+        }
+        
+        // Ensure the icon container specifically has text-radbridge-blue and not text-white
+        const activeIconContainer = selectedNav.querySelector('div:first-child');
+        if (activeIconContainer) {
+            activeIconContainer.classList.remove('text-white'); // Remove if accidentally inherited
+            activeIconContainer.classList.add('text-radbridge-blue'); // Ensure blue
+        }
       }
     }
 

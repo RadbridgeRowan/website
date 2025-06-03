@@ -21,7 +21,7 @@
     }
   </style>
 </head>
-<body class="font-ibm">
+<body class="font-lato">
   <!-- Navigation -->
   <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
     <div class="container-custom flex items-center justify-between">
@@ -96,6 +96,20 @@
             <div>
               <div class="font-medium text-radbridge-blue">Climate Data Download</div>
               <div class="text-sm text-radbridge-blue text-opacity-80">Access NASA climate data</div>
+            </div>
+          </button>
+
+          <button 
+            onclick="showTool('gsiimpact')" 
+            id="gsiimpact-nav"
+            class="tool-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-leaf h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">GSI Impact Calculator</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Green stormwater infrastructure benefits</div>
             </div>
           </button>
         </nav>
@@ -352,6 +366,121 @@
             </a>
             <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
               Request Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GSI Impact Calculator Content -->
+      <div id="gsiimpact-content" class="tool-content-section hidden">
+        <!-- Hero Image -->
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GSI_placeholder.jpg');">
+          <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <h1 class="text-4xl font-bold mb-2">GSI Impact Calculator</h1>
+            <p class="text-xl">Quantify the multiple benefits of green stormwater infrastructure</p>
+          </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Main Description -->
+          <div class="max-w-4xl mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+              A powerful web application developed in partnership with The Nature Conservancy to evaluate the economic, social, and environmental impacts of green stormwater infrastructure projects.
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Built by Radbridge for The Nature Conservancy in Pennsylvania, this interactive calculator helps stakeholders quantify and monetize the multiple benefits of GSI projects at the block level. Based on research funded by the Water Research Foundation, the tool provides credible information for planning and advocacy.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">
+              Visit the calculator at <a href="https://app.gsiimpacthub.org" class="text-radbridge-blue hover:underline" target="_blank" rel="noopener noreferrer">app.gsiimpacthub.org</a> or learn more at <a href="https://gsiimpacthub.org" class="text-radbridge-blue hover:underline" target="_blank" rel="noopener noreferrer">gsiimpacthub.org</a>.
+            </p>
+          </div>
+
+          <!-- Benefit Categories -->
+          <div class="bg-gray-50 p-8 rounded-lg mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">Comprehensive Benefit Analysis</h3>
+            <p class="text-lg text-gray-600 mb-6">The calculator covers 12 major categories of benefits with over 40 subcategories, providing a holistic view of GSI impact:</p>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-coins text-radbridge-gold"></i>
+                  <span>Avoided Infrastructure Costs</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-wrench text-radbridge-gold"></i>
+                  <span>Avoided Replacement Costs</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-bolt text-radbridge-gold"></i>
+                  <span>Energy Savings</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-water text-radbridge-gold"></i>
+                  <span>Water Supply</span>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-wind text-radbridge-gold"></i>
+                  <span>Air Quality</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-home text-radbridge-gold"></i>
+                  <span>Property Values</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-tree text-radbridge-gold"></i>
+                  <span>Ecosystem Benefits</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-temperature-high text-radbridge-gold"></i>
+                  <span>Heat Stress Reduction</span>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-person-hiking text-radbridge-gold"></i>
+                  <span>Recreation Benefits</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-droplet text-radbridge-gold"></i>
+                  <span>Water Quality</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-briefcase text-radbridge-gold"></i>
+                  <span>Green Jobs</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fas fa-seedling text-radbridge-gold"></i>
+                  <span>Carbon Sequestration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Features -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-radbridge-blue/5 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Early Planning Support</h3>
+              <p class="text-gray-600">
+                Designed for use early in the GSI planning process, the calculator helps evaluate projects at a city block level or multiple block scale, providing rapid but defensible benefit calculations with minimal user inputs.
+              </p>
+            </div>
+            <div class="bg-radbridge-blue/5 p-6 rounded-lg">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">Customizable Analysis</h3>
+              <p class="text-gray-600">
+                Users can input specific data and customize scenarios to reflect local conditions, enabling informed decision-making for GSI implementation in their communities.
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-12">
+            <a href="https://app.gsiimpacthub.org" target="_blank" rel="noopener noreferrer" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
+              Try the Calculator
+            </a>
+            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+              Learn More
             </a>
           </div>
         </div>

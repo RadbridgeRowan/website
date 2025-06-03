@@ -8,10 +8,10 @@
     <meta name="description" content="We help partners define, measure, and invest in resilience through data-driven solutions, innovative technology, and deep sector knowledge.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
   </head>
-  <body class="font-sans">
+  <body class="font-lato">
     <div id="app">
      <!-- Navigation -->
   <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
@@ -30,7 +30,7 @@
 
 
       <!-- Hero Section -->
-      <section class="relative bg-cover bg-center py-12 md:py-20 w-full min-h-[70vh] flex items-center" style="background-image: url('/assets/images/simon-berger-twukN12EN7c-unsplash.jpg');">
+      <section class="relative bg-cover bg-bottom py-12 md:py-20 w-full min-h-[70vh] flex items-center" style="background-image: url('/assets/images/simon-berger-twukN12EN7c-unsplash.jpg');">
         <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent"></div>
         <div class="container-custom w-full px-4 sm:px-6 lg:px-8 relative">
           <div class="max-w-2xl">
@@ -39,8 +39,8 @@
               We help partners define, measure, and invest in resilience.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" class="inline-block bg-radbridge-blue hover:bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition text-lg cursor-pointer">Get Started</a>
-              <a href="services.html" class="inline-block bg-white hover:bg-gray-50 text-radbridge-gold border-2 border-radbridge-gold font-semibold px-6 py-3 rounded-lg shadow transition text-lg cursor-pointer">Learn More</a>
+              <a href="#main-content" class="inline-block bg-radbridge-blue hover:bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition text-lg cursor-pointer">Learn More</a>
+              <button onclick="openContactModal()" class="inline-block bg-white hover:bg-gray-50 text-radbridge-gold border-2 border-radbridge-gold font-semibold px-6 py-3 rounded-lg shadow transition text-lg cursor-pointer">Contact Us</button>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
       </section>
 
       <!-- Main Content Section -->
-      <section class="section-padding bg-gray-50">
+      <section id="main-content" class="section-padding bg-gray-50">
         <div class="container-custom">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             We work with public and private partners to advance community resilience and health through data-driven solutions, innovative technology, and deep sector knowledge
@@ -168,21 +168,6 @@
         </div>
       </section>
 
-      <!-- CTA Section -->
-      <section class="section-padding">
-        <div class="container-custom text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Want to get to know us better?
-          </h2>
-          <p class="text-xl text-gray-600 mb-8">
-            Contact us to start the discussion.
-          </p>
-          <a href="#contact" class="btn-primary inline-block">
-            Contact us
-          </a>
-        </div>
-      </section>
-
       <!-- Footer -->
       <footer class="bg-gray-900 text-white py-12">
         <div class="container-custom">
@@ -198,10 +183,40 @@
             <a href="about.html" class="hover:text-radbridge-gold transition duration-300">About</a>
           </div>
           <div class="text-center text-gray-400">
-            © 2023 Radbridge Incorporated.
+            © 2025 Radbridge Incorporated.
           </div>
         </div>
       </footer>
+    </div>
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-radbridge-blue">Contact Us</h3>
+          <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close contact form">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea name="message" id="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition hover:bg-radbridge-blue/90">
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

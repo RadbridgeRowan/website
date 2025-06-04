@@ -19,6 +19,15 @@
     .tool-content {
       min-height: calc(100vh - 120px);
     }
+    
+    /* Hide scrollbar for mobile navigation */
+    .scrollbar-hide {
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      scrollbar-width: none;  /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+    }
   </style>
 </head>
 <body class="font-lato">
@@ -28,11 +37,24 @@
       <div class="text-white text-xl font-semibold">
         <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
       </div>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-white hover:text-radbridge-gold p-2 z-50" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
       <div class="hidden md:flex space-x-8">
         <a href="./services.html" class="nav-link">Services</a>
         <a href="./projects.html" class="nav-link">Projects</a>
         <a href="./tools.html" class="nav-link text-radbridge-gold">Tools</a>
         <a href="./about.html" class="nav-link">About</a>
+      </div>
+    </div>
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-[96px] left-0 right-0 bg-radbridge-blue shadow-lg z-50 transition-all duration-300 ease-in-out">
+      <div class="px-4 py-4 space-y-3">
+        <a href="./services.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Services</a>
+        <a href="./projects.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Projects</a>
+        <a href="./tools.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Tools</a>
+        <a href="./about.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">About</a>
       </div>
     </div>
   </nav>
@@ -51,10 +73,53 @@
     </div>
   </div>
 
+  <!-- Mobile Navigation - Horizontal Tabs (visible only on mobile) -->
+  <div class="md:hidden bg-white border-b border-gray-200 relative z-10">
+    <div class="px-4 py-4">
+      <div class="flex overflow-x-auto space-x-3 scrollbar-hide">
+        <button 
+          onclick="showTool('parkbeat')" 
+          id="parkbeat-nav-mobile"
+          class="tool-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue text-white border border-radbridge-blue flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-hiking text-sm"></i>
+          <span class="font-medium text-sm">Parkbeat</span>
+        </button>
+        
+        <button 
+          onclick="showTool('grantspan')" 
+          id="grantspan-nav-mobile"
+          class="tool-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-hand-holding-dollar text-sm"></i>
+          <span class="font-medium text-sm">GrantSpan</span>
+        </button>
+        
+        <button 
+          onclick="showTool('climatedata')" 
+          id="climatedata-nav-mobile"
+          class="tool-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-cloud-sun-rain text-sm"></i>
+          <span class="font-medium text-sm">Climate Data</span>
+        </button>
+
+        <button 
+          onclick="showTool('gsiimpact')" 
+          id="gsiimpact-nav-mobile"
+          class="tool-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-leaf text-sm"></i>
+          <span class="font-medium text-sm">GSI Impact</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Dashboard Container -->
-  <div class="flex bg-white -mt-6">
-    <!-- Left Sidebar -->
-    <div class="tool-sidebar w-80 bg-white border-r border-gray-100 flex-shrink-0">
+  <div class="dashboard-container flex bg-white -mt-6">
+    <!-- Left Sidebar (hidden on mobile, visible on desktop) -->
+    <div class="tool-sidebar w-80 bg-white border-r border-gray-100 flex-shrink-0 hidden md:block">
       <div class="px-6 py-12">
         <nav class="space-y-3">
           <button 
@@ -398,7 +463,7 @@
       // Show selected tool content
       document.getElementById(toolName + '-content').classList.remove('hidden');
       
-      // Update navigation styles
+      // Update desktop navigation styles
       const navItems = document.querySelectorAll('.tool-nav-item');
       navItems.forEach(item => {
         item.classList.remove('bg-radbridge-blue', 'text-white');
@@ -410,15 +475,31 @@
         if (subtitle) subtitle.classList.add('text-gray-600');
       });
       
-      // Highlight selected navigation item
+      // Highlight selected desktop navigation item
       const selectedNav = document.getElementById(toolName + '-nav');
-      selectedNav.classList.add('bg-radbridge-blue', 'text-white');
-      selectedNav.classList.remove('hover:bg-gray-200');
-      // Set text colors for active item
-      const activeTitle = selectedNav.querySelector('div > div:first-child');
-      const activeSubtitle = selectedNav.querySelector('div > div:last-child');
-      if (activeTitle) activeTitle.classList.remove('text-gray-800');
-      if (activeSubtitle) activeSubtitle.classList.remove('text-gray-600');
+      if (selectedNav) {
+        selectedNav.classList.add('bg-radbridge-blue', 'text-white');
+        selectedNav.classList.remove('hover:bg-gray-200');
+        // Set text colors for active item
+        const activeTitle = selectedNav.querySelector('div > div:first-child');
+        const activeSubtitle = selectedNav.querySelector('div > div:last-child');
+        if (activeTitle) activeTitle.classList.remove('text-gray-800');
+        if (activeSubtitle) activeSubtitle.classList.remove('text-gray-600');
+      }
+      
+      // Update mobile navigation styles
+      const mobileNavItems = document.querySelectorAll('.tool-nav-item-mobile');
+      mobileNavItems.forEach(item => {
+        item.classList.remove('bg-radbridge-blue', 'text-white', 'border-radbridge-blue');
+        item.classList.add('bg-white', 'text-gray-700', 'border-gray-300', 'hover:bg-gray-50');
+      });
+      
+      // Highlight selected mobile navigation item
+      const selectedMobileNav = document.getElementById(toolName + '-nav-mobile');
+      if (selectedMobileNav) {
+        selectedMobileNav.classList.remove('bg-white', 'text-gray-700', 'border-gray-300', 'hover:bg-gray-50');
+        selectedMobileNav.classList.add('bg-radbridge-blue', 'text-white', 'border-radbridge-blue');
+      }
     }
 
     // Initialize with Parkbeat selected

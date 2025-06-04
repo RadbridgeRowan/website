@@ -16,6 +16,8 @@ window.closeContactModal = () => {
 
 // Simple smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM Content Loaded');
+  
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -29,12 +31,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Mobile menu toggle (basic implementation)
-  const mobileMenuButton = document.querySelector('.md\\:hidden button');
-  if (mobileMenuButton) {
-    mobileMenuButton.addEventListener('click', function() {
-      // This would expand the mobile menu
-      console.log('Mobile menu clicked');
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  console.log('Mobile Menu Button:', mobileMenuButton);
+  console.log('Mobile Menu:', mobileMenu);
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      console.log('Mobile menu button clicked');
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+      if (isExpanded) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+      } else {
+        mobileMenu.classList.remove('hidden');
+        mobileMenuButton.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+      }
+    });
+
+    // Prevent menu from closing when clicking inside the menu
+    mobileMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+      }
     });
   }
 
@@ -42,6 +72,12 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeContactModal();
+      // Also close mobile menu when pressing ESC
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+      }
     }
   });
 

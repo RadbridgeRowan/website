@@ -71,6 +71,15 @@
     .project-nav-item.selected {
       /* background-opacity: 0.25; */ /* This was removed in a previous step, ensuring it's gone */
     }
+    
+    /* Hide scrollbar for mobile navigation */
+    .scrollbar-hide {
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      scrollbar-width: none;  /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
+    }
   </style>
 </head>
 <body class="font-lato">
@@ -80,11 +89,24 @@
       <div class="text-white text-xl font-semibold">
         <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
       </div>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-white hover:text-radbridge-gold p-2 z-50" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
       <div class="hidden md:flex space-x-8">
         <a href="./services.html" class="nav-link">Services</a>
         <a href="./projects.html" class="nav-link text-radbridge-gold">Projects</a>
         <a href="./tools.html" class="nav-link">Tools</a>
         <a href="./about.html" class="nav-link">About</a>
+      </div>
+    </div>
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-[96px] left-0 right-0 bg-radbridge-blue shadow-lg z-50 transition-all duration-300 ease-in-out">
+      <div class="px-4 py-4 space-y-3">
+        <a href="./services.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Services</a>
+        <a href="./projects.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Projects</a>
+        <a href="./tools.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Tools</a>
+        <a href="./about.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">About</a>
       </div>
     </div>
   </nav>
@@ -103,10 +125,98 @@
     </div>
   </div>
 
+  <!-- Mobile Navigation - Horizontal Tabs (visible only on mobile) -->
+  <div class="md:hidden bg-white border-b border-gray-200 relative z-10">
+    <div class="px-4 py-4">
+      <div class="flex overflow-x-auto space-x-3 scrollbar-hide">
+        <button 
+          onclick="showProject('zone7')" 
+          id="zone7-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue text-white border border-radbridge-blue flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-water text-sm"></i>
+          <span class="font-medium text-sm">Zone 7</span>
+        </button>
+        
+        <button 
+          onclick="showProject('riversport')" 
+          id="riversport-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-mountain text-sm"></i>
+          <span class="font-medium text-sm">RIVERSPORT</span>
+        </button>
+        
+        <button 
+          onclick="showProject('icon')" 
+          id="icon-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-route text-sm"></i>
+          <span class="font-medium text-sm">ICON</span>
+        </button>
+
+        <button 
+          onclick="showProject('bca-tool')" 
+          id="bca-tool-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-tools text-sm"></i>
+          <span class="font-medium text-sm">BCA Tool</span>
+        </button>
+
+        <button 
+          onclick="showProject('edwa')" 
+          id="edwa-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-chart-line text-sm"></i>
+          <span class="font-medium text-sm">EDWA</span>
+        </button>
+
+        <button 
+          onclick="showProject('nevada')" 
+          id="nevada-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-map-marked-alt text-sm"></i>
+          <span class="font-medium text-sm">Nevada</span>
+        </button>
+
+        <button 
+          onclick="showProject('gsi')" 
+          id="gsi-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-laptop-code text-sm"></i>
+          <span class="font-medium text-sm">GSI</span>
+        </button>
+
+        <button 
+          onclick="showProject('nbs-fema')" 
+          id="nbs-fema-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-leaf text-sm"></i>
+          <span class="font-medium text-sm">NBS FEMA</span>
+        </button>
+
+        <button 
+          onclick="showProject('fema-policy')" 
+          id="fema-policy-nav-mobile"
+          class="project-nav-item-mobile flex-shrink-0 px-4 py-3 rounded-lg transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 flex items-center gap-2 min-w-max"
+        >
+          <i class="fas fa-file-contract text-sm"></i>
+          <span class="font-medium text-sm">FEMA Policy</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Dashboard Container -->
   <div class="flex bg-white -mt-6">
-    <!-- Left Sidebar -->
-    <div class="tool-sidebar w-100 bg-white border-r border-gray-100 flex-shrink-0">
+    <!-- Left Sidebar (hidden on mobile, visible on desktop) -->
+    <div class="tool-sidebar w-100 bg-white border-r border-gray-100 flex-shrink-0 hidden md:block">
       <div class="px-6 py-12">
         <!-- Filters Section -->
         <div class="filter-section">
@@ -222,8 +332,68 @@
               <i class="fas fa-chart-line h-6 w-6"></i>
             </div>
             <div>
-              <div class="font-medium text-radbridge-blue">Upper American River</div>
+              <div class="font-medium text-radbridge-blue">Upper American River Recreation</div>
               <div class="text-sm text-radbridge-blue text-opacity-80">El Dorado Water Agency</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('nevada')" 
+            id="nevada-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="economic-impact outdoor-recreation"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-map-marked-alt h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Nevada Statewide Outdoor Recreation</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Nevada Division of Outdoor Recreation</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('gsi')" 
+            id="gsi-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="tool-development water-management resilience"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-laptop-code h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">GSI Impact Calculator</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">The Nature Conservancy (PA)</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('nbs-fema')" 
+            id="nbs-fema-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="benefit-cost resilience"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-leaf h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">Nature-Based Solutions</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">The Nature Conservancy (CA)</div>
+            </div>
+          </button>
+          
+          <button 
+            onclick="showProject('fema-policy')" 
+            id="fema-policy-nav"
+            class="project-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-15 hover:bg-opacity-25 border-l-4 border-radbridge-blue flex items-center gap-3"
+            data-categories="benefit-cost resilience"
+          >
+            <div class="text-radbridge-blue">
+              <i class="fas fa-file-contract h-6 w-6"></i>
+            </div>
+            <div>
+              <div class="font-medium text-radbridge-blue">FEMA BCA Policy Support</div>
+              <div class="text-sm text-radbridge-blue text-opacity-80">Federal Emergency Management Agency</div>
             </div>
           </button>
         </nav>
@@ -242,7 +412,7 @@
         <div class="container-custom relative z-10 -mt-28">
             <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
                 <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Arroyo Mocho Flood Risk Reduction</h1>
-                <p class="text-base font-lato">Zone 7 Water Agency • Alameda County, CA • Apr-Nov 2022</p>
+                <p class="text-base font-lato">Zone 7 Water Agency • Alameda County, CA • 2022</p>
             </div>
         </div>
 
@@ -287,7 +457,7 @@
             <!-- Deliverables Card -->
             <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
-                <i class="fas fa-file-chart-line text-white text-lg"></i>
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
               </div>
               <h4 class="text-lg font-semibold text-gray-900 mb-3">Deliverables</h4>
               <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
@@ -313,7 +483,7 @@
         <div class="container-custom relative z-10 -mt-28">
             <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
                 <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">RIVERSPORT Economic Assessment</h1>
-                <p class="text-base font-lato">Riversport Foundation • Oklahoma City, OK • April-Dec 2022</p>
+                <p class="text-base font-lato">Riversport Foundation • Oklahoma City, OK • 2022</p>
             </div>
         </div>
 
@@ -358,7 +528,7 @@
             <!-- Deliverables Card -->
             <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
-                <i class="fas fa-file-chart-line text-white text-lg"></i>
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
               </div>
               <h4 class="text-lg font-semibold text-gray-900 mb-3">Key Results</h4>
               <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
@@ -384,7 +554,7 @@
         <div class="container-custom relative z-10 -mt-28">
             <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
                 <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">ICON Water Trails Economic Benefits</h1>
-                <p class="text-base font-lato">Iowa Confluence Water Trails • Des Moines, IA • Feb-Nov 2023</p>
+                <p class="text-base font-lato">Iowa Confluence Water Trails • Des Moines, IA • 2023</p>
             </div>
         </div>
 
@@ -429,7 +599,7 @@
             <!-- Deliverables Card -->
             <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
-                <i class="fas fa-file-chart-line text-white text-lg"></i>
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
               </div>
               <h4 class="text-lg font-semibold text-gray-900 mb-3">Key Results</h4>
               <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
@@ -455,7 +625,7 @@
         <div class="container-custom relative z-10 -mt-28">
             <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
                 <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">BCA Screening & Fund Matching Tool</h1>
-                <p class="text-base font-lato">The Freshwater Trust • California • Sep 2022-May 2023</p>
+                <p class="text-base font-lato">The Freshwater Trust • California • 2022-2023</p>
             </div>
         </div>
 
@@ -500,7 +670,7 @@
             <!-- Deliverables Card -->
             <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
-                <i class="fas fa-file-chart-line text-white text-lg"></i>
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
               </div>
               <h4 class="text-lg font-semibold text-gray-900 mb-3">Tool Features</h4>
               <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
@@ -526,7 +696,7 @@
         <div class="container-custom relative z-10 -mt-28">
             <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
                 <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Upper American River Watershed Recreation</h1>
-                <p class="text-base font-lato">El Dorado Water Agency • El Dorado County, CA • Jan-Nov 2023</p>
+                <p class="text-base font-lato">El Dorado Water Agency • El Dorado County, CA • 2023</p>
             </div>
         </div>
 
@@ -571,7 +741,7 @@
             <!-- Deliverables Card -->
             <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
-                <i class="fas fa-file-chart-line text-white text-lg"></i>
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
               </div>
               <h4 class="text-lg font-semibold text-gray-900 mb-3">Key Results</h4>
               <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
@@ -581,6 +751,290 @@
                 <li>• Tourists: 53% of visits, 84% of spending</li>
                 <li>• $660M in non-market benefits (consumer surplus)</li>
                 <li>• Comprehensive watershed recreation assessment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nevada Outdoor Recreation Project -->
+      <div id="nevada-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Statewide Analysis of Outdoor Recreation</h1>
+                <p class="text-base font-lato">Nevada Division of Outdoor Recreation • Nevada • 2024-Present</p>
+            </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Two Column Layout -->
+          <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            <!-- Left Column - Text Content -->
+            <div>
+              <p class="text-gray-800 text-lg font-semibold mb-4">Radbridge, in collaboration with UNR and NDOR, is leading a comprehensive assessment of the economic impacts of visitor spending across Nevada's diverse recreational landscapes.</p>
+              <p class="text-gray-700 mb-4">
+                <strong>Context:</strong> Nevada's vast and dispersed public lands, including areas managed by the Bureau of Land Management (BLM), often lack accurate visitor counts, presenting unique challenges for economic analysis. The state needed a comprehensive assessment that addresses both local and tourist expenditures across all recreation providers to provide a complete picture of the outdoor recreation economy.
+              </p>
+              <p class="text-gray-700">
+                <strong>Objectives:</strong> Integrate advanced methodologies including mobile location data to fill gaps in traditional visitation metrics, conduct visitor spending surveys to develop accurate spending profiles, and create a transparent and replicable system for tracking and monitoring outdoor recreation economic impacts in collaboration with key stakeholders.
+              </p>
+            </div>
+
+            <!-- Right Column - Image -->
+            <div class="relative h-auto rounded-xl overflow-hidden">
+              <img src="assets/images/mike-benna-SBiVq9eWEtQ-unsplash.jpg" alt="Nevada outdoor recreation landscape" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <h2 class="text-base font-semibold text-gray-600 mb-3">Project Details</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Approach Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-blue to-radbridge-blue/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-microscope text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Approach</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Mobile location data integration to fill visitation gaps</li>
+                <li>• Visitor spending surveys for accurate spending profiles</li>
+                <li>• Collaborative analysis with University of Nevada, Reno (UNR)</li>
+                <li>• Multi-stakeholder partnership (NDOR, State Parks, UNR)</li>
+                <li>• Comprehensive coverage of all recreation providers</li>
+                <li>• Local and tourist expenditure analysis across dispersed sites</li>
+              </ul>
+            </div>
+
+            <!-- Deliverables Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Expected Outcomes</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Well-structured system for monitoring economic impacts</li>
+                <li>• Detailed understanding of outdoor recreation contributions</li>
+                <li>• Transparent and replicable tracking methodology</li>
+                <li>• Foundation for policy decisions and resource allocations</li>
+                <li>• Support for advocacy efforts and grant applications</li>
+                <li>• Framework for securing infrastructure funding</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GSI Impact Calculator Project -->
+      <div id="gsi-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1574263867128-0945a2a8b57e?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">GSI Impact Calculator</h1>
+                <p class="text-base font-lato">The Nature Conservancy in Pennsylvania • 2023-Present</p>
+            </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Two Column Layout -->
+          <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            <!-- Left Column - Text Content -->
+            <div>
+              <p class="text-gray-800 text-lg font-semibold mb-4">Radbridge partnered with The Nature Conservancy to develop an interactive web application that evaluates the economic, social, and environmental impacts of green stormwater infrastructure projects.</p>
+              <p class="text-gray-700 mb-4">
+                <strong>Context:</strong> Green stormwater infrastructure (GSI) projects provide multiple benefits beyond traditional stormwater management, but quantifying these triple-bottom-line impacts was challenging for practitioners and decision-makers. A comprehensive assessment tool was needed to support GSI project development and funding decisions.
+              </p>
+              <p class="text-gray-700">
+                <strong>Objectives:</strong> Transform a large triple-bottom-line Excel tool into an accessible interactive web application, make GSI impact assessment available to broader audiences, and provide comprehensive economic, social, and environmental impact evaluation capabilities through user-friendly web interfaces.
+              </p>
+            </div>
+
+            <!-- Right Column - Image -->
+            <div class="relative h-auto rounded-xl overflow-hidden">
+              <img src="assets/images/mike-benna-SBiVq9eWEtQ-unsplash.jpg" alt="Green stormwater infrastructure" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <h2 class="text-base font-semibold text-gray-600 mb-3">Project Details</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Approach Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-blue to-radbridge-blue/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-microscope text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Approach</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Web application development and user experience design</li>
+                <li>• Triple-bottom-line impact assessment framework</li>
+                <li>• Excel-to-web platform migration and optimization</li>
+                <li>• Interactive user interface and visualization tools</li>
+                <li>• Economic, social, and environmental impact modeling</li>
+                <li>• Companion website development and resource creation</li>
+              </ul>
+            </div>
+
+            <!-- Deliverables Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Deliverables</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Interactive web application at app.gsiimpacthub.org</li>
+                <li>• Comprehensive impact assessment capabilities</li>
+                <li>• Economic, social, and environmental evaluation tools</li>
+                <li>• User-friendly interface for GSI project assessment</li>
+                <li>• Companion website at gsiimpacthub.org</li>
+                <li>• Resource library and implementation guidance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nature-Based Solutions FEMA Project -->
+      <div id="nbs-fema-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Advancing Nature-Based Solutions</h1>
+                <p class="text-base font-lato">The Nature Conservancy in California • FEMA Region 9 • 2019-Present</p>
+            </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Two Column Layout -->
+          <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            <!-- Left Column - Text Content -->
+            <div>
+              <p class="text-gray-800 text-lg font-semibold mb-4">Radbridge has provided ongoing support to The Nature Conservancy since 2019 to advance the use of nature-based solutions for hazard mitigation in California and FEMA Region 9.</p>
+              <p class="text-gray-700 mb-4">
+                <strong>Context:</strong> Nature-based solutions (NBS) offer effective hazard mitigation while providing co-benefits, but their integration into FEMA programs required specialized technical assistance and policy development. Local partners needed support to develop competitive FEMA subapplications that incorporate NBS approaches.
+              </p>
+              <p class="text-gray-700">
+                <strong>Objectives:</strong> Provide technical assistance to subapplicants with benefit-cost analyses for NBS hazard mitigation projects, develop policy recommendations for FEMA, create tools and resources for high-quality FEMA subapplications, and support successful federal funding awards for nature-based hazard mitigation.
+              </p>
+            </div>
+
+            <!-- Right Column - Image -->
+            <div class="relative h-auto rounded-xl overflow-hidden">
+              <img src="assets/images/mike-benna-SBiVq9eWEtQ-unsplash.jpg" alt="Nature-based solutions for hazard mitigation" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <h2 class="text-base font-semibold text-gray-600 mb-3">Project Details</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Approach Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-blue to-radbridge-blue/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-microscope text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Approach</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Technical assistance for NBS benefit-cost analyses</li>
+                <li>• FEMA subapplication development and support</li>
+                <li>• Policy recommendation development for federal agencies</li>
+                <li>• Tools and resource creation for local partners</li>
+                <li>• Multi-year partnership and capacity building</li>
+                <li>• Hazard mitigation project identification and development</li>
+              </ul>
+            </div>
+
+            <!-- Deliverables Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Key Results</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Technical assistance to multiple subapplicants</li>
+                <li>• BCA support for successful $37M Sonoma County award</li>
+                <li>• FEMA policy recommendations and guidance</li>
+                <li>• Tools and resources for local partner support</li>
+                <li>• Ongoing capacity building since 2019</li>
+                <li>• Enhanced NBS integration in hazard mitigation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEMA Policy Support Project -->
+      <div id="fema-policy-content" class="tool-content-section hidden">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=800&h=400&fit=crop');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">FEMA BCA Policy Support for Green Infrastructure</h1>
+                <p class="text-base font-lato">Federal Emergency Management Agency • 2022</p>
+            </div>
+        </div>
+
+        <div class="p-8">
+          <!-- Two Column Layout -->
+          <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            <!-- Left Column - Text Content -->
+            <div>
+              <p class="text-gray-800 text-lg font-semibold mb-4">Radbridge conducted research and analysis for FEMA that supported the development of pre-calculated values and 2022 guidance for green infrastructure in FEMA's BCA Toolkit.</p>
+              <p class="text-gray-700 mb-4">
+                <strong>Context:</strong> FEMA has increasingly recognized the value of investing in nature-based solutions for mitigating impacts of natural hazards including flood, wildfire, drought, and heat. New policies and functionality within the agency's BCA Toolkit required robust research and analysis to support implementation.
+              </p>
+              <p class="text-gray-700">
+                <strong>Objectives:</strong> Conduct comprehensive research and analysis to support FEMA's green infrastructure policies, develop pre-calculated values for the BCA Toolkit, create guidance materials for 2022 policy updates, and enhance FEMA's capacity to evaluate nature-based solutions for hazard mitigation.
+              </p>
+            </div>
+
+            <!-- Right Column - Image -->
+            <div class="relative h-auto rounded-xl overflow-hidden">
+              <img src="assets/images/mike-benna-SBiVq9eWEtQ-unsplash.jpg" alt="Green infrastructure policy development" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <h2 class="text-base font-semibold text-gray-600 mb-3">Project Details</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Approach Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-blue to-radbridge-blue/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-microscope text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Approach</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Comprehensive research and analysis for FEMA</li>
+                <li>• Pre-calculated value development for BCA Toolkit</li>
+                <li>• Green infrastructure benefit quantification</li>
+                <li>• Policy guidance development and documentation</li>
+                <li>• Multi-hazard mitigation assessment (flood, wildfire, drought, heat)</li>
+                <li>• BCA Toolkit functionality enhancement support</li>
+              </ul>
+            </div>
+
+            <!-- Deliverables Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-clipboard-check text-white text-lg"></i>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Deliverables</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• Pre-calculated values for FEMA's BCA Toolkit</li>
+                <li>• 2022 green infrastructure guidance materials</li>
+                <li>• Research and analysis supporting policy development</li>
+                <li>• Enhanced BCA Toolkit functionality support</li>
+                <li>• Multi-hazard mitigation value documentation</li>
+                <li>• Policy implementation support for federal agency</li>
               </ul>
             </div>
           </div>
@@ -736,6 +1190,7 @@
       const projectToShow = document.getElementById(projectName + '-content');
       if (projectToShow) projectToShow.classList.remove('hidden');
       
+      // Update desktop navigation styles
       const navItems = document.querySelectorAll('.project-nav-item');
       navItems.forEach(item => {
         // ===== INACTIVE STATE =====
@@ -770,6 +1225,7 @@
         }
       });
       
+      // Highlight selected desktop navigation item
       const selectedNav = document.getElementById(projectName + '-nav');
       if (selectedNav) {
         // ===== ACTIVE STATE for selectedNav =====
@@ -802,6 +1258,20 @@
             activeIconContainer.classList.remove('text-white'); // Remove if accidentally inherited
             activeIconContainer.classList.add('text-radbridge-blue'); // Ensure blue
         }
+      }
+      
+      // Update mobile navigation styles
+      const mobileNavItems = document.querySelectorAll('.project-nav-item-mobile');
+      mobileNavItems.forEach(item => {
+        item.classList.remove('bg-radbridge-blue', 'text-white', 'border-radbridge-blue');
+        item.classList.add('bg-white', 'text-gray-700', 'border-gray-300', 'hover:bg-gray-50');
+      });
+      
+      // Highlight selected mobile navigation item
+      const selectedMobileNav = document.getElementById(projectName + '-nav-mobile');
+      if (selectedMobileNav) {
+        selectedMobileNav.classList.remove('bg-white', 'text-gray-700', 'border-gray-300', 'hover:bg-gray-50');
+        selectedMobileNav.classList.add('bg-radbridge-blue', 'text-white', 'border-radbridge-blue');
       }
     }
 

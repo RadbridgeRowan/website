@@ -20,11 +20,25 @@
       <div class="text-white text-xl font-semibold">
         <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
       </div>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-white hover:text-radbridge-gold p-2 z-50" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <!-- Desktop Navigation -->
       <div class="hidden md:flex space-x-8">
         <a href="./services.html" class="nav-link">Services</a>
         <a href="./projects.html" class="nav-link">Projects</a>
         <a href="./tools.html" class="nav-link">Tools</a>
         <a href="./about.html" class="nav-link">About</a>
+      </div>
+    </div>
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-[96px] left-0 right-0 bg-radbridge-blue shadow-lg z-50 transition-all duration-300 ease-in-out">
+      <div class="px-4 py-4 space-y-3">
+        <a href="./services.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Services</a>
+        <a href="./projects.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Projects</a>
+        <a href="./tools.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Tools</a>
+        <a href="./about.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">About</a>
       </div>
     </div>
   </nav>
@@ -40,8 +54,8 @@
               We help partners define, measure, and invest in resilience.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#main-content" class="inline-block bg-radbridge-blue hover:bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-lg shadow transition text-base cursor-pointer">Learn More</a>
-              <button onclick="openContactModal()" class="inline-block bg-radbridge-gold hover:bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-lg shadow transition text-base cursor-pointer">Contact Us</button>
+              <a href="#main-content" class="inline-block bg-radbridge-blue hover:bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-lg shadow transition text-base cursor-pointer text-center">Learn More</a>
+              <button onclick="openContactModal()" class="inline-block bg-radbridge-gold hover:bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-lg shadow transition text-base cursor-pointer text-center">Contact Us</button>
             </div>
           </div>
         </div>

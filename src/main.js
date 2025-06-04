@@ -55,23 +55,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-// Navbar scroll behavior
-const navbar = document.querySelector('.navbar');
-const scrollThreshold = 50; // Change this value to adjust when the navbar changes color
-
-function updateNavbar() {
-  if (window.scrollY > scrollThreshold) {
-    navbar.classList.remove('navbar-transparent');
-    navbar.classList.add('navbar-scrolled');
-  } else {
-    navbar.classList.add('navbar-transparent');
-    navbar.classList.remove('navbar-scrolled');
-  }
-}
-
-// Initial check
-updateNavbar();
-
-// Add scroll event listener
-window.addEventListener('scroll', updateNavbar);

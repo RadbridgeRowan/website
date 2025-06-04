@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulting Services - Radbridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="font-lato">
+  <!-- Navigation -->
+  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
+    <div class="container-custom flex gap-16 items-center">
+      <div class="text-white text-xl font-semibold">
+        <a href="./index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="./services.html" class="nav-link text-radbridge-gold">Services</a>
+        <div class="relative group">
+          <a href="./index.html#tools" class="nav-link">Tools ▼</a>
+          <div class="absolute hidden group-hover:block bg-radbridge-blue shadow-lg py-2 rounded-md mt-1 w-48">
+            <a href="./parkbeat.html" class="block px-4 py-2 text-sm text-white hover:bg-radbridge-gold">Parkbeat</a>
+            <a href="./grantspan.html" class="block px-4 py-2 text-sm text-white hover:bg-radbridge-gold">GrantSpan</a>
+          </div>
+        </div>
+        <a href="./projects.html" class="nav-link">Projects</a>
+        <a href="./index.html#contact" class="nav-link">Contact</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 relative z-20 -mt-8 max-w-[90%] mx-auto">
+    <div class="container-custom flex justify-between items-stretch pr-0">
+      <nav class="text-sm py-3">
+        <a href="./index.html" class="text-radbridge-blue hover:underline">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-gray-700">Consulting Services</span>
+      </nav>
+      <a href="./index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm">
+        Contact us →
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section IMAGE ONLY -->
+  <section class="relative h-96 -mt-6" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg'); background-size: cover; background-position: center;">
+    <!-- Intentionally empty -->
+  </section>
+  
+  <!-- Title Box Section -->
+  <div class="container-custom relative z-10 -mt-48">
+      <div class="bg-radbridge-blue/90 text-white p-16 shadow-lg rounded-md max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 font-lato">Consulting Services</h1>
+          <p class="text-xl font-lato">Customized support to advance your goals</p>
+      </div>
+  </div>
+
+  <!-- Main Content -->
+  <section class="section-padding">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold mb-8 text-center font-lato">
+        We empower public and private clients – and the communities they serve – through economic impact analysis, benefit-cost analysis, grant application support, and customized software solutions.
+      </h2>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html> 

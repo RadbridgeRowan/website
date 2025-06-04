@@ -45,9 +45,9 @@
         <span class="mx-2 text-gray-600">/</span>
         <span class="text-gray-800 font-medium">Services</span>
       </nav>
-      <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm">
+      <button onclick="openContactModal()" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm cursor-pointer">
         Contact us →
-      </a>
+      </button>
     </div>
   </div>
 
@@ -121,12 +121,16 @@
       <!-- Economic Impact Analysis Content -->
       <div id="economic-impact-content" class="service-content-section">
         <!-- Hero Image -->
-        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/AdobeStock_311308769_compressed.jpg');">
           <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <h1 class="text-4xl font-bold mb-2">Economic Impact Analysis</h1>
-            <p class="text-xl">Quantifying the economic value of investments and activities</p>
-          </div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Economic Impact Analysis</h1>
+                <p class="text-base font-lato">Quantifying the economic value of investments and activities</p>
+            </div>
         </div>
 
         <div class="p-8">
@@ -219,12 +223,16 @@
       <!-- Benefit-Cost Analysis Content -->
       <div id="benefit-cost-content" class="service-content-section hidden">
         <!-- Hero Image -->
-        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/AdobeStock_311308769_compressed.jpg');">
           <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <h1 class="text-4xl font-bold mb-2">Benefit-Cost Analysis</h1>
-            <p class="text-xl">Evaluating project value and return on investment</p>
-          </div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Benefit-Cost Analysis</h1>
+                <p class="text-base font-lato">Evaluating project value and return on investment</p>
+            </div>
         </div>
 
         <div class="p-8">
@@ -317,12 +325,16 @@
       <!-- FEMA Hazard Mitigation Content -->
       <div id="fema-hazard-content" class="service-content-section hidden">
         <!-- Hero Image -->
-        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/AdobeStock_311308769_compressed.jpg');">
           <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <h1 class="text-4xl font-bold mb-2">FEMA Hazard Mitigation</h1>
-            <p class="text-xl">Reducing risk and building community resilience</p>
-          </div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">FEMA Hazard Mitigation</h1>
+                <p class="text-base font-lato">Reducing risk and building community resilience</p>
+            </div>
         </div>
 
         <div class="p-8">
@@ -433,12 +445,16 @@
       <!-- Other Services Content -->
       <div id="other-services-content" class="service-content-section hidden">
         <!-- Hero Image -->
-        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/Hero_GrantSpan_unsplash_kevin-bree.jpg');">
+        <div class="h-64 bg-cover bg-center relative" style="background-image: url('assets/images/AdobeStock_311308769_compressed.jpg');">
           <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <h1 class="text-4xl font-bold mb-2">Other Services</h1>
-            <p class="text-xl">Custom solutions and professional development</p>
-          </div>
+        </div>
+
+        <!-- New Floating Title Box -->
+        <div class="container-custom relative z-10 -mt-28">
+            <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
+                <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Other Services</h1>
+                <p class="text-base font-lato">Custom solutions and professional development</p>
+            </div>
         </div>
 
         <div class="p-8">
@@ -541,6 +557,37 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold text-radbridge-blue">Contact Us</h3>
+        <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close contact form">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <form action="https://formspree.io/f/xwpbkgyo" method="POST" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea name="message" id="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition hover:bg-radbridge-blue/90">
+          Send Message
+        </button>
+      </form>
     </div>
   </div>
 

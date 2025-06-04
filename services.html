@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLPW1XP7RK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HLPW1XP7RK');
+  </script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -194,94 +203,92 @@
         <div class="container-custom relative z-10 -mt-28">
             <div class="bg-radbridge-blue/90 text-white p-8 shadow-lg rounded-md max-w-xl">
                 <h1 class="text-2xl md:text-3xl font-bold mb-4 font-lato">Economic Impact Analysis</h1>
-                <p class="text-base font-lato">Quantifying the economic value of investments and activities</p>
+                <p class="text-base font-lato">Data science and economic modeling for outdoor recreation and infrastructure investments</p>
             </div>
         </div>
 
         <div class="p-8">
-          <!-- Main Description -->
-          <div class="max-w-4xl mb-12">
-            <h2 class="text-lg md:text-xl font-bold text-gray-900 mb-8">We help public and private clients understand the economic impacts of their investments, from tourism and recreation to resilience and infrastructure projects.</h2>
-            <p class="text-gray-700">
-              Our economic impact analysis provides decision-makers with the quantitative evidence needed to secure funding, justify investments, and communicate value to stakeholders.
-            </p>
+          <!-- Two Column Layout -->
+          <div class="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            <!-- Left Column - Text Content -->
+            <div>
+              <p class="text-gray-800 text-lg font-semibold mb-4">Radbridge leverages advanced methodologies including machine learning, geospatial analysis, and mobile location data to quantify economic impacts of outdoor recreation, restoration projects, and infrastructure investments.</p>
+              <p class="text-gray-700 mb-4">
+                We combine cutting-edge data science with traditional economic analysis to provide comprehensive assessments that capture both market and non-market benefits. Our innovative approaches overcome challenges of sparse visitation data by integrating mobile location analytics with observed data and robust economic modeling.
+              </p>
+              <p class="text-gray-700">
+                Our methodologies provide a defensible analysis that aim to incorporate the latest advances in spatial analytics and machine learning. We also quantify non-market benefits including consumer surplus, healthcare cost reductions, and ecosystem services alongside traditional economic multiplier effects.
+              </p>
+            </div>
+
+            <!-- Right Column - Image -->
+            <div class="relative h-auto rounded-xl overflow-hidden">
+              <img src="assets/images/mike-benna-SBiVq9eWEtQ-unsplash.jpg" alt="Economic impact analysis visualization" class="w-full h-full object-cover">
+            </div>
           </div>
-          
-          <!-- Services Offered -->
-          <div class="grid lg:grid-cols-3 gap-8 mb-16">
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
-                <i class="fas fa-hiking text-xl"></i>
+
+          <h2 class="text-base font-semibold text-gray-600 mb-3">Our Approach</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-16">
+            <!-- Data Science & Analytics Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-blue to-radbridge-blue/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-brain text-white text-lg"></i>
               </div>
-              <h3 class="text-xl font-bold mb-3">Tourism & Outdoor Recreation</h3>
-              <p class="text-gray-600 mb-4">Visitation analysis and economic impact assessment for parks, trails, and recreational facilities.</p>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Visitor spending surveys</li>
-                <li>• Regional economic modeling</li>
-                <li>• Job creation estimates</li>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Data Science & Analytics</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• <strong>Mobile & sensor-based visitation capture:</strong> Acquire and clean anonymized mobile-location, trail counter, and other sensor feeds</li>
+                <li>• <strong>Geospatial data fusion & processing:</strong> Integrate land-manager boundaries, trail networks, amenities, and environmental layers</li>
+                <li>• <strong>Machine-learning demand modeling:</strong> Use ML algorithms to fill data gaps, predict visit counts, and create time-series forecasts</li>
+                <li>• <strong>Visitor segmentation & trip profiling:</strong> Classify visits as local vs. non-local, attach trip distance, dwell time, and activity type</li>
+                <li>• <strong>Statistical QA/QC & validation:</strong> Apply cross-validation, hold-out testing, and benchmark comparisons for defensible estimates</li>
               </ul>
             </div>
-            
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
-                <i class="fas fa-shield-alt text-xl"></i>
+
+            <!-- Economic Impact Assessment Card -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-radbridge-gold to-radbridge-gold/80 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-chart-line text-white text-lg"></i>
               </div>
-              <h3 class="text-xl font-bold mb-3">Resilience Investments</h3>
-              <p class="text-gray-600 mb-4">Economic analysis of climate adaptation and disaster risk reduction projects.</p>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Avoided damage calculations</li>
-                <li>• Co-benefit quantification</li>
-                <li>• Return on investment analysis</li>
-              </ul>
-            </div>
-            
-            <div class="bg-gray-50 p-6 rounded-lg">
-              <div class="w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center mb-4">
-                <i class="fas fa-shopping-cart text-xl"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-3">Consumer Spending</h3>
-              <p class="text-gray-600 mb-4">Custom surveys and analysis to understand spending patterns and economic flows.</p>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Survey design and implementation</li>
-                <li>• Spending pattern analysis</li>
-                <li>• Local economic multipliers</li>
+              <h4 class="text-lg font-semibold text-gray-900 mb-3">Economic Impact Assessment</h4>
+              <ul class="text-gray-600 text-sm leading-relaxed space-y-1">
+                <li>• <strong>Visitor-spending research & profiling:</strong> Triangulate literature-based benchmarks, custom surveys, and credit-card data for robust spend profiles</li>
+                <li>• <strong>Regional input-output modeling (IMPLAN / RIMS II):</strong> Convert direct spending into jobs, labor income, GDP/value-added, and supply-chain effects</li>
+                <li>• <strong>Fiscal impact analysis:</strong> Estimate state & local tax revenues plus potential infrastructure cost offsets for budget officers</li>
+                <li>• <strong>Non-market valuation & health/ecosystem benefits:</strong> Measure consumer surplus, avoided healthcare costs, and ecosystem-service values</li>
+                <li>• <strong>Interactive dashboards & data-visualization:</strong> Deliver web-based dashboards and presentation-ready graphics for scenario exploration</li>
               </ul>
             </div>
           </div>
 
-          <!-- Methodology -->
-          <div class="bg-radbridge-blue/5 p-8 rounded-lg mb-12">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Methodology</h3>
-            <p class="text-lg text-gray-600 leading-relaxed mb-4">
-              We use industry-standard tools like IMPLAN and BEA RIMS II multipliers, combined with primary data collection and advanced statistical analysis to provide robust, defensible economic impact estimates.
-            </p>
-            <div class="grid md:grid-cols-2 gap-6 mt-6">
+          <!-- Application Areas -->
+          <h2 class="text-base font-semibold text-gray-600 mb-3">Application Areas</h2>
+          <div class="bg-gray-50 p-8 rounded-lg mb-12">
+            <div class="grid md:grid-cols-3 gap-6">
               <div class="flex items-start gap-3">
-                <i class="fas fa-database text-radbridge-blue text-xl mt-1"></i>
+                <i class="fas fa-hiking text-radbridge-blue text-xl mt-1"></i>
                 <div>
-                  <h4 class="font-semibold mb-2">Data-Driven Analysis</h4>
-                  <p class="text-gray-600">Comprehensive data collection and statistical modeling for accurate impact estimates.</p>
+                  <h4 class="font-semibold mb-2">Outdoor Recreation</h4>
+                  <p class="text-gray-600">Local, state, and national parks & trails, adventure parks, and whitewater parks</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
-                <i class="fas fa-chart-bar text-radbridge-blue text-xl mt-1"></i>
+                <i class="fas fa-leaf text-radbridge-blue text-xl mt-1"></i>
                 <div>
-                  <h4 class="font-semibold mb-2">Industry Standards</h4>
-                  <p class="text-gray-600">Following best practices and peer-reviewed methodologies for credible results.</p>
+                  <h4 class="font-semibold mb-2">Restoration Projects</h4>
+                  <p class="text-gray-600">Watershed restoration, habitat enhancement, green infrastructure investments</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fas fa-building text-radbridge-blue text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-2">Infrastructure Investments</h4>
+                  <p class="text-gray-600">Transportation, utilities, community facilities, resilience projects</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- CTA -->
-          <div class="text-center mt-12">
-            <a href="index.html#contact" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block mr-4">
-              Get Started
-            </a>
-            <a href="index.html#contact" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
-              Learn More
-            </a>
-          </div>
+
         </div>
       </div>
 

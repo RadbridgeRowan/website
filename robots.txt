@@ -1,0 +1,17 @@
+# www.radbridge.com robots.txt
+
+User-agent: *
+Allow: /
+Allow: /about.html
+Allow: /services.html
+Allow: /projects.html
+Allow: /tools.html
+Allow: /public/assets/images/
+Allow: /public/assets/videos/
+
+# Prevent access to any potential sensitive areas
+Disallow: /projectSheets/
+Disallow: /src/
+
+# Add sitemap once generated
+# Sitemap: https://www.radbridge.com/sitemap.xml 

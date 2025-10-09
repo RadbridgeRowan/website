@@ -62,4 +62,22 @@
   .project-card {
     @apply transition duration-300 hover:shadow-xl;
   }
+
+  /* Sidebar navigation for parkbeat page */
+  .sidebar-link {
+    @apply block py-2 px-3 text-base text-gray-700 hover:text-radbridge-blue hover:bg-gray-50 rounded transition duration-200;
+  }
+  
+  .sidebar-link.active {
+    @apply text-radbridge-blue bg-gray-50 font-medium border-l-2 border-radbridge-blue pl-2.5;
+  }
+
+  /* Park size selector buttons */
+  .park-size-btn {
+    @apply bg-white text-gray-700 border border-gray-300 hover:border-radbridge-blue hover:text-radbridge-blue;
+  }
+  
+  .park-size-btn.active {
+    @apply bg-radbridge-blue text-white border-radbridge-blue;
+  }
 }

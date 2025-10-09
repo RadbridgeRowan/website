@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLPW1XP7RK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HLPW1XP7RK');
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parkbeat - Radbridge</title>
+  <meta name="description" content="Introducing Parkbeat, a new tool from Radbridge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="font-lato">
+  <!-- Navigation -->
+  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
+    <div class="container-custom flex items-center justify-between">
+      <div class="text-white text-xl font-semibold">
+        <a href="index.html"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
+      </div>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-white hover:text-radbridge-gold p-2 z-50" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <div class="hidden md:flex space-x-8">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="tools.html" class="nav-link">Tools</a>
+        <a href="parkbeat.html" class="nav-link relative text-radbridge-gold">
+          Parkbeat
+          <span class="absolute -top-4 -right-4 bg-radbridge-gold text-white text-xs font-semibold px-2 py-0.5 rounded-full">NEW</span>
+        </a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-[96px] left-0 right-0 bg-radbridge-blue shadow-lg z-50 transition-all duration-300 ease-in-out">
+      <div class="px-4 py-4 space-y-3">
+        <a href="services.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Services</a>
+        <a href="projects.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Projects</a>
+        <a href="tools.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">Tools</a>
+        <a href="parkbeat.html" class="block py-3 text-white hover:text-radbridge-gold text-lg relative">
+          Parkbeat
+          <span class="absolute top-1 right-4 bg-radbridge-gold text-white text-xs font-semibold px-2 py-0.5 rounded-full">NEW</span>
+        </a>
+        <a href="about.html" class="block py-3 text-white hover:text-radbridge-gold text-lg">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="bg-light-grey relative z-20 -mt-8 max-w-[90%] mx-auto shadow-md">
+    <div class="container-custom flex justify-between items-stretch pr-0">
+      <nav class="text-sm py-3">
+        <a href="index.html" class="text-radbridge-blue font-medium hover:underline">Home</a>
+        <span class="mx-2 text-gray-600">/</span>
+        <span class="text-gray-800 font-medium">Parkbeat</span>
+      </nav>
+      <button onclick="openContactModal()" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm cursor-pointer">
+        Contact us →
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="bg-white">
+    <!-- Hero Section -->
+    <section class="relative bg-white overflow-hidden">
+      <div class="absolute hidden lg:block inset-y-0 right-[-6rem] w-3/5">
+        <img src="assets/images/h3map1.jpg" alt="Map visualization of park data" class="w-full h-full object-cover" style="-webkit-mask-image: linear-gradient(to right, transparent, black 75%); mask-image: linear-gradient(to right, transparent, black 75%);">
+      </div>
+      <div class="relative container-custom py-8 lg:py-12">
+        <div class="w-full lg:w-2/5">
+          <div class="inline-block mb-5">
+            <span class="bg-blue-50 text-radbridge-blue text-sm font-semibold px-4 py-2 rounded-full">3-Day Delivery</span>
+          </div>
+          <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+              Park Visitation Snapshot
+          </h1>
+          <p class="text-xl text-gray-500 mb-10 leading-relaxed">
+              Understand when people visit, how long they stay, and where they come from. Delivered as an 8–10 page report for one or more parks.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button onclick="openRequestModal()" class="inline-flex items-center justify-center bg-radbridge-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-blue-200 transition duration-300 cursor-pointer">
+              Submit Request
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </button>
+            <a href="#sample-report" class="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-700 font-semibold px-6 py-3 rounded-lg border-2 border-gray-300 hover:border-radbridge-blue transition duration-300">
+              View Sample Outputs
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex">
+      <!-- Left Sidebar Navigation -->
+      <aside class="hidden lg:block w-64 bg-white border-r border-gray-200 sticky top-0 h-screen overflow-y-auto">
+        <nav class="py-8 px-6">
+          <ul class="space-y-1">
+            <li><a href="#overview" class="sidebar-link active">Overview</a></li>
+            <li><a href="#who-its-for" class="sidebar-link">Who It's For</a></li>
+            <li><a href="#what-you-receive" class="sidebar-link">What You Receive</a></li>
+            <li><a href="#how-it-works" class="sidebar-link">How It Works</a></li>
+            <li><a href="#what-it-shows" class="sidebar-link">What It Shows</a></li>
+            <li><a href="#pricing" class="sidebar-link">Pricing</a></li>
+            <li><a href="#faq" class="sidebar-link">FAQ</a></li>
+            <li><a href="#get-started" class="sidebar-link">Get Started</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 max-w-5xl mx-auto px-6 py-12 lg:px-12 lg:py-16">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="mb-20 scroll-mt-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-8">You receive an 8–10 page PDF with key findings and a limited-time dashboard login for basic exploration.</p>
+        </section>
+
+        <!-- Who It's For Section -->
+        <section id="who-its-for" class="mb-20 scroll-mt-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Who this is for</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded border border-gray-200">
+              <h3 class="font-semibold text-gray-900 mb-3">Park & Open-Space Managers</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Need credible numbers for briefings or quick decisions</p>
+            </div>
+            <div class="bg-white p-6 rounded border border-gray-200">
+              <h3 class="font-semibold text-gray-900 mb-3">City & County Agencies</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Preparing budget or grant materials</p>
+            </div>
+            <div class="bg-white p-6 rounded border border-gray-200">
+              <h3 class="font-semibold text-gray-900 mb-3">Conservancies & Nonprofits</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Making the case for maintenance, improvements, or programming</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- What You Receive Section -->
+        <section id="what-you-receive" class="mb-20 scroll-mt-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">What you receive</h2>
+          <div class="bg-white p-8 rounded border border-gray-200">
+            <h3 class="font-semibold text-gray-900 mb-4">8–10 page PDF report with:</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Visitation patterns (hourly, daily, monthly)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Typical length of stay (dwell time)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Visitor origins and travel distance</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Neighborhood-based demographics (aggregated)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Clear notes on what the data suggests for operations and outreach</span>
+              </li>
+            </ul>
+            <div class="border-t border-gray-200 pt-6 space-y-3">
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Dashboard access (introductory) to view the core charts for your park</span>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Briefing-ready graphics suitable for boards, councils, and grant attachments</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="mb-20 scroll-mt-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">How it works</h2>
+          <div class="space-y-6">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-900 mb-2">Define the park</h3>
+                <p class="text-gray-600 leading-relaxed">Provide a boundary file or let us confirm/draw one with you.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-900 mb-2">Process the data</h3>
+                <p class="text-gray-600 leading-relaxed">We run your site through our established mobile-location ETL pipeline. We filter pass-through traffic, remove obvious non-visitor signals, and aggregate results to protect privacy.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-900 mb-2">Deliver the results</h3>
+                <p class="text-gray-600 leading-relaxed">We prepare the PDF and enable dashboard access. Most projects are completed within three business days of scope confirmation.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- What the Report Shows Section -->
+        <section id="what-it-shows" class="mb-20 scroll-mt-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">What the report shows</h2>
+          <div class="bg-white p-8 rounded border border-gray-200">
+            <ul class="space-y-4 mb-6">
+              <li class="pb-4 border-b border-gray-100">
+                <h3 class="font-semibold text-gray-900 mb-1">When people visit</h3>
+                <p class="text-gray-600 text-sm">Peaks by hour and day; simple seasonality</p>
+              </li>
+              <li class="pb-4 border-b border-gray-100">
+                <h3 class="font-semibold text-gray-900 mb-1">How long they stay</h3>
+                <p class="text-gray-600 text-sm">Dwell-time ranges</p>
+              </li>
+              <li class="pb-4 border-b border-gray-100">
+                <h3 class="font-semibold text-gray-900 mb-1">Where visitors come from</h3>
+                <p class="text-gray-600 text-sm">Drive distance and origin areas</p>
+              </li>
+              <li class="pb-4 border-b border-gray-100">
+                <h3 class="font-semibold text-gray-900 mb-1">Who you're reaching</h3>
+                <p class="text-gray-600 text-sm">Neighborhood-level demographics, aggregated</p>
+              </li>
+              <li>
+                <h3 class="font-semibold text-gray-900 mb-1">Manager takeaways</h3>
+                <p class="text-gray-600 text-sm">Succinct notes about staffing windows, facility pressure points, communications, and grant language</p>
+              </li>
+            </ul>
+            <div id="sample-report" class="pt-4 border-t border-gray-200">
+              <a href="#" class="text-radbridge-blue hover:text-opacity-80 font-medium inline-flex items-center">
+                View the sample report (Jefferson Memorial)
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="mb-20 scroll-mt-8">
+          <style>
+            .pricing-card-new {
+              background: white;
+              border: 1px solid #e0e0e0;
+              border-radius: 8px;
+              padding: 32px 28px;
+              display: flex;
+              flex-direction: column;
+              transition: all 0.2s;
+            }
+
+            .pricing-card-new:hover {
+              border-color: #000;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+
+            .pricing-card-new.recommended {
+              border: 1.5px solid #000;
+              position: relative;
+            }
+
+            .pricing-recommended-badge {
+              position: absolute;
+              top: -12px;
+              left: 50%;
+              transform: translateX(-50%);
+              background: #000;
+              color: white;
+              padding: 3px 14px;
+              border-radius: 12px;
+              font-size: 11px;
+              font-weight: 600;
+              letter-spacing: 0.5px;
+            }
+
+            .pricing-card-header {
+              padding-bottom: 20px;
+              border-bottom: 1px solid #f0f0f0;
+              margin-bottom: 20px;
+            }
+
+            .pricing-card-icon {
+              width: 36px;
+              height: 36px;
+              margin-bottom: 16px;
+              stroke: #333;
+              stroke-width: 1.5;
+            }
+
+            .pricing-card-name {
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 6px;
+              color: #000;
+              font-family: 'Lato', sans-serif;
+            }
+
+            .pricing-card-description {
+              color: #666;
+              font-size: 13px;
+              line-height: 1.4;
+            }
+
+            .pricing-price-section {
+              margin-bottom: 24px;
+            }
+
+            .pricing-card-price {
+              font-size: 36px;
+              font-weight: 400;
+              color: #000;
+              line-height: 1;
+              margin-bottom: 6px;
+              font-family: 'Lato', sans-serif;
+            }
+
+            .pricing-card-price .currency {
+              font-size: 22px;
+              vertical-align: super;
+            }
+
+            .pricing-card-billing {
+              color: #666;
+              font-size: 13px;
+              min-height: 20px;
+            }
+
+            .pricing-card-button {
+              width: 100%;
+              padding: 12px;
+              background: #000;
+              color: white;
+              border: 1px solid #000;
+              border-radius: 6px;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+              transition: all 0.2s;
+              margin-bottom: 28px;
+              font-family: 'Lato', sans-serif;
+            }
+
+            .pricing-card-button:hover {
+              background: #333;
+              border-color: #333;
+              transform: translateY(-1px);
+            }
+
+            .pricing-card-button.secondary {
+              background: white;
+              color: #000;
+            }
+
+            .pricing-card-button.secondary:hover {
+              background: #f7f7f7;
+              transform: translateY(-1px);
+            }
+
+            .pricing-features-list {
+              flex-grow: 1;
+            }
+
+            .pricing-feature-item {
+              display: flex;
+              align-items: flex-start;
+              margin-bottom: 10px;
+              font-size: 13px;
+              color: #333;
+              line-height: 1.5;
+            }
+
+            .pricing-feature-check {
+              width: 16px;
+              height: 16px;
+              margin-right: 10px;
+              flex-shrink: 0;
+              margin-top: 2px;
+              stroke: #000;
+              stroke-width: 2;
+            }
+
+            .pricing-note {
+              text-align: center;
+              color: #666;
+              font-size: 13px;
+              margin-top: 32px;
+            }
+
+            @media (max-width: 768px) {
+              .pricing-card-new {
+                padding: 24px 20px;
+              }
+            }
+          </style>
+
+          <h2 class="text-3xl font-bold text-gray-900 mb-4" style="font-weight: 400; font-size: 28px;">Pricing</h2>
+          
+          <!-- Park Size Selector -->
+          <div class="flex justify-start mb-12">
+            <div class="p-3 border border-gray-200 rounded-lg inline-flex items-center gap-3 transition hover:border-gray-400">
+              <label for="park-size-selector" class="text-sm font-medium text-gray-800">Park size:</label>
+              <select onchange="selectParkSize(this.value)" id="park-size-selector" class="text-sm border-gray-300 rounded-md shadow-sm focus:border-black focus:ring-black">
+                <option value="small" selected>Small-Medium Park (0-459 acres)</option>
+                <option value="medium">Medium-Large Park (460-799 acres)</option>
+                <option value="large">Large-Extra Large Park (800-4,500 acres)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Pricing Cards -->
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            
+            <!-- Single Park Card -->
+            <div class="pricing-card-new">
+              <div class="pricing-card-header">
+                <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 22V12h6v10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="pricing-card-name">Single Park</div>
+                <div class="pricing-card-description">3-day delivery</div>
+              </div>
+              <div class="pricing-price-section">
+                <div class="pricing-card-price"><span class="currency">$</span><span id="price-single">3,000</span></div>
+                <div class="pricing-card-billing"></div>
+              </div>
+              <button onclick="openContactModal()" class="pricing-card-button">
+                Request Quote
+              </button>
+              <div class="pricing-features-list">
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>8-10 page PDF report</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Introductory dashboard access</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Visitation patterns & demographics</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Briefing-ready graphics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Two Parks Card -->
+            <div class="pricing-card-new recommended">
+              <span class="pricing-recommended-badge">MOST POPULAR</span>
+              <div class="pricing-card-header">
+                <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 22V12h6v10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="pricing-card-name">Two Parks</div>
+                <div class="pricing-card-description">Same tier</div>
+              </div>
+              <div class="pricing-price-section">
+                <div class="pricing-card-price"><span class="currency">$</span><span id="price-two">5,000</span></div>
+                <div class="pricing-card-billing"></div>
+              </div>
+              <button onclick="openContactModal()" class="pricing-card-button">
+                Request Quote
+              </button>
+              <div class="pricing-features-list">
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Two complete park analyses</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>PDF reports for each park</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Dashboard access for both sites</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Cross-park comparisons</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Three+ Parks Card -->
+            <div class="pricing-card-new">
+              <div class="pricing-card-header">
+                <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="pricing-card-name">Three+ Parks</div>
+                <div class="pricing-card-description">Volume discounts</div>
+              </div>
+              <div class="pricing-price-section">
+                <div class="pricing-card-price" style="font-size: 22px;">Get in touch</div>
+                <div class="pricing-card-billing">Volume discounts apply</div>
+              </div>
+              <button onclick="openContactModal()" class="pricing-card-button secondary">
+                Contact Us
+              </button>
+              <div class="pricing-features-list">
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>System-wide analysis</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Custom dashboards</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Comprehensive comparison reports</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
+                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Dedicated support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="pricing-note">All packages include PDF report and introductory dashboard access.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="mb-20 scroll-mt-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently asked questions</h2>
+          <div class="space-y-4">
+            
+            <div class="bg-white border border-gray-200 rounded overflow-hidden">
+              <button onclick="toggleFaq(1)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
+                <span class="font-semibold text-gray-900">Is this a headcount?</span>
+                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div id="faq-content-1" class="hidden px-6 pb-6">
+                <p class="text-gray-600 leading-relaxed">No. Mobile-location data are best for patterns and comparisons (when people visit, where they come from, how long they stay). We do not present it as a precise turnstile count.</p>
+              </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded overflow-hidden">
+              <button onclick="toggleFaq(2)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
+                <span class="font-semibold text-gray-900">How is privacy handled?</span>
+                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div id="faq-content-2" class="hidden px-6 pb-6">
+                <p class="text-gray-600 leading-relaxed">All results are anonymized and aggregated. We do not identify individual devices or people.</p>
+              </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded overflow-hidden">
+              <button onclick="toggleFaq(3)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
+                <span class="font-semibold text-gray-900">What do you need from us to start?</span>
+                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div id="faq-content-3" class="hidden px-6 pb-6">
+                <p class="text-gray-600 leading-relaxed">A park boundary (if available), a short confirmation of the study period, and a point of contact for quick questions.</p>
+              </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded overflow-hidden">
+              <button onclick="toggleFaq(4)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
+                <span class="font-semibold text-gray-900">Can you add economic impact or more sites later?</span>
+                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div id="faq-content-4" class="hidden px-6 pb-6">
+                <p class="text-gray-600 leading-relaxed">Yes. We can extend this analysis with visitor spending and impact estimates, or scale up to a multi-site or system-wide study.</p>
+              </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded overflow-hidden">
+              <button onclick="toggleFaq(5)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
+                <span class="font-semibold text-gray-900">How do the dashboard and PDF relate?</span>
+                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div id="faq-content-5" class="hidden px-6 pb-6">
+                <p class="text-gray-600 leading-relaxed">The PDF is the formal deliverable. The dashboard provides an easy way to review the same core metrics interactively.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Get Started Section -->
+        <section id="get-started" class="mb-12 scroll-mt-8">
+          <div class="bg-white border border-gray-200 rounded-lg p-10 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to begin?</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Share your park boundary and preferred start date. We'll confirm scope and deliver your Single Park Rapid Analysis within 3 days.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <button onclick="openContactModal()" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-8 py-3 rounded transition cursor-pointer">
+                Request a Quote
+              </button>
+              <button onclick="openContactModal()" class="border border-gray-300 hover:border-radbridge-blue text-radbridge-blue font-medium px-8 py-3 rounded transition cursor-pointer">
+                Schedule a Brief Call
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold text-radbridge-blue">Contact Us</h3>
+        <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close contact form">
+          <i class="fas fa-times w-6 h-6"></i>
+        </button>
+      </div>
+      <form action="https://formspree.io/f/xwpbkgyo" method="POST" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea name="message" id="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition hover:bg-radbridge-blue/90">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Request Form Modal -->
+  <div id="requestModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold text-radbridge-blue">Submit Request</h3>
+        <button onclick="closeRequestModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close request form">
+          <i class="fas fa-times w-6 h-6"></i>
+        </button>
+      </div>
+      <form action="https://formspree.io/f/xwpbkgyo" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <input type="hidden" name="_subject" value="New Parkbeat Analysis Request">
+        <div>
+          <label for="request-name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" name="name" id="request-name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="request-email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" name="email" id="request-email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="request-organization" class="block text-sm font-medium text-gray-700">Organization / Agency</label>
+          <input type="text" name="organization" id="request-organization" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="request-location" class="block text-sm font-medium text-gray-700">Location (e.g. City, State)</label>
+          <input type="text" name="location" id="request-location" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="request-park-name" class="block text-sm font-medium text-gray-700">Park Name</label>
+          <input type="text" name="park-name" id="request-park-name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+        </div>
+        <div>
+          <label for="request-file" class="block text-sm font-medium text-gray-700">Park Boundary File (optional)</label>
+          <p class="text-xs text-gray-500">e.g., shapefile (.zip), KML, GeoJSON</p>
+          <input type="file" name="upload" id="request-file" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-radbridge-blue hover:file:bg-blue-100">
+        </div>
+        <button type="submit" class="w-full bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition hover:bg-radbridge-blue/90">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container-custom">
+      <div class="text-center mb-8">
+        <a href="index.html">
+          <img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10 mx-auto">
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-center space-x-8 mb-8">
+        <a href="services.html" class="hover:text-radbridge-gold transition duration-300">Services</a>
+        <a href="projects.html" class="hover:text-radbridge-gold transition duration-300">Projects</a>
+        <a href="tools.html" class="hover:text-radbridge-gold transition duration-300">Tools</a>
+        <a href="parkbeat.html" class="hover:text-radbridge-gold transition duration-300">Parkbeat</a>
+        <a href="about.html" class="hover:text-radbridge-gold transition duration-300">About</a>
+      </div>
+      <div class="text-center text-gray-400">
+        © 2025 Radbridge Incorporated.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

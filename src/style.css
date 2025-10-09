@@ -80,4 +80,10 @@
   .park-size-btn.active {
     @apply bg-radbridge-blue text-white border-radbridge-blue;
   }
+
+  .page-section-heading {
+    @apply text-gray-900;
+    font-weight: 400;
+    font-size: 28px;
+  }
 }

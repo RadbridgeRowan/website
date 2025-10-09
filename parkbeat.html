@@ -78,7 +78,7 @@
     <!-- Hero Section -->
     <section class="relative bg-white overflow-hidden">
       <div class="absolute hidden lg:block inset-y-0 right-[-6rem] w-3/5">
-        <img src="assets/images/h3map1.jpg" alt="Map visualization of park data" class="w-full h-full object-cover" style="-webkit-mask-image: linear-gradient(to right, transparent, black 75%); mask-image: linear-gradient(to right, transparent, black 75%);">
+        <img src="assets/images/h3map2.jpg" alt="Map visualization of park data" class="w-full h-full object-cover" style="-webkit-mask-image: linear-gradient(to right, transparent, black 30%); mask-image: linear-gradient(to right, transparent, black 30%);">
       </div>
       <div class="relative container-custom py-8 lg:py-12">
         <div class="w-full lg:w-2/5">
@@ -131,146 +131,120 @@
         
         <!-- Overview Section -->
         <section id="overview" class="mb-20 scroll-mt-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
-          <p class="text-lg text-gray-600 leading-relaxed mb-8">You receive an 8–10 page PDF with key findings and a limited-time dashboard login for basic exploration.</p>
+          <h2 class="page-section-heading mb-6">Overview</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-4">Radbridge conducts visitation and economic impact assessments for parks and open space. While much of our work has been system- or state-wide, recent improvements to our data pipeline and processing infrastructure now let us deliver site-specific analyses for one or more parks on a short timeline.</p>
+          <p class="text-lg text-gray-600 leading-relaxed">A Park Visitation Snapshot applies our established ETL and quality-control process to anonymized mobile location data and produces a concise 8–10 page PDF for each park. The report summarizes temporal visitation patterns, dwell-time ranges, and visitor origin and travel-distance profiles. Results are presented in clear charts with key takeaways to support agency decision making.</p>
         </section>
 
-        <!-- Who It's For Section -->
-        <section id="who-its-for" class="mb-20 scroll-mt-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Who this is for</h2>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded border border-gray-200">
-              <h3 class="font-semibold text-gray-900 mb-3">Park & Open-Space Managers</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">Need credible numbers for briefings or quick decisions</p>
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="mb-20 scroll-mt-8">
+          <h2 class="page-section-heading mb-8">How it works</h2>
+          <div class="grid md:grid-cols-3 gap-12">
+            <div class="text-center md:text-left">
+              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">1. Define the park</h3>
+              <p class="text-gray-600 leading-relaxed">Provide a boundary file or let us confirm/draw one with you.</p>
             </div>
-            <div class="bg-white p-6 rounded border border-gray-200">
-              <h3 class="font-semibold text-gray-900 mb-3">City & County Agencies</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">Preparing budget or grant materials</p>
+            <div class="text-center md:text-left">
+              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">2. Process the data</h3>
+              <p class="text-gray-600 leading-relaxed">We run your site through our established mobile-location ETL pipeline, filtering pass-through traffic and removing non-visitor signals to protect privacy.</p>
             </div>
-            <div class="bg-white p-6 rounded border border-gray-200">
-              <h3 class="font-semibold text-gray-900 mb-3">Conservancies & Nonprofits</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">Making the case for maintenance, improvements, or programming</p>
+            <div class="text-center md:text-left">
+              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">3. Deliver the results</h3>
+              <p class="text-gray-600 leading-relaxed">We prepare the PDF and enable dashboard access, typically within three business days of scope confirmation.</p>
             </div>
           </div>
         </section>
 
         <!-- What You Receive Section -->
         <section id="what-you-receive" class="mb-20 scroll-mt-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">What you receive</h2>
-          <div class="bg-white p-8 rounded border border-gray-200">
-            <h3 class="font-semibold text-gray-900 mb-4">8–10 page PDF report with:</h3>
-            <ul class="space-y-3 mb-6">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          <h2 class="page-section-heading mb-8">What you receive</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- PDF Report Card -->
+            <div class="pricing-card-new h-full">
+              <div class="pricing-card-header !border-b-0">
+                <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
                 </svg>
-                <span class="text-gray-700">Visitation patterns (hourly, daily, monthly)</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-gray-700">Typical length of stay (dwell time)</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-gray-700">Visitor origins and travel distance</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-gray-700">Neighborhood-based demographics (aggregated)</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-gray-700">Clear notes on what the data suggests for operations and outreach</span>
-              </li>
-            </ul>
-            <div class="border-t border-gray-200 pt-6 space-y-3">
-              <div class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-gray-700">Dashboard access (introductory) to view the core charts for your park</span>
+                <div class="pricing-card-name">PDF Report</div>
+                <div class="pricing-card-description">An 8–10 page, briefing-ready analysis.</div>
               </div>
-              <div class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-gray-700">Briefing-ready graphics suitable for boards, councils, and grant attachments</span>
+              <div class="pricing-features-list">
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Visitation patterns (hourly, daily, monthly)</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Typical length of stay (dwell time)</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Visitor origins and travel distance</span>
+                </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Neighborhood-based demographics</span>
+              </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Notes on operations and outreach</span>
               </div>
             </div>
+            <button class="pricing-card-button mt-auto" onclick="document.getElementById('what-it-shows').scrollIntoView({ behavior: 'smooth' });">See example</button>
           </div>
-        </section>
 
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="mb-20 scroll-mt-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">How it works</h2>
-          <div class="space-y-6">
-            <div class="flex gap-6">
-              <div class="flex-shrink-0 w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
-              <div class="flex-1">
-                <h3 class="font-semibold text-gray-900 mb-2">Define the park</h3>
-                <p class="text-gray-600 leading-relaxed">Provide a boundary file or let us confirm/draw one with you.</p>
-              </div>
-            </div>
-            <div class="flex gap-6">
-              <div class="flex-shrink-0 w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
-              <div class="flex-1">
-                <h3 class="font-semibold text-gray-900 mb-2">Process the data</h3>
-                <p class="text-gray-600 leading-relaxed">We run your site through our established mobile-location ETL pipeline. We filter pass-through traffic, remove obvious non-visitor signals, and aggregate results to protect privacy.</p>
-              </div>
-            </div>
-            <div class="flex gap-6">
-              <div class="flex-shrink-0 w-12 h-12 bg-radbridge-blue text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
-              <div class="flex-1">
-                <h3 class="font-semibold text-gray-900 mb-2">Deliver the results</h3>
-                <p class="text-gray-600 leading-relaxed">We prepare the PDF and enable dashboard access. Most projects are completed within three business days of scope confirmation.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- What the Report Shows Section -->
-        <section id="what-it-shows" class="mb-20 scroll-mt-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">What the report shows</h2>
-          <div class="bg-white p-8 rounded border border-gray-200">
-            <ul class="space-y-4 mb-6">
-              <li class="pb-4 border-b border-gray-100">
-                <h3 class="font-semibold text-gray-900 mb-1">When people visit</h3>
-                <p class="text-gray-600 text-sm">Peaks by hour and day; simple seasonality</p>
-              </li>
-              <li class="pb-4 border-b border-gray-100">
-                <h3 class="font-semibold text-gray-900 mb-1">How long they stay</h3>
-                <p class="text-gray-600 text-sm">Dwell-time ranges</p>
-              </li>
-              <li class="pb-4 border-b border-gray-100">
-                <h3 class="font-semibold text-gray-900 mb-1">Where visitors come from</h3>
-                <p class="text-gray-600 text-sm">Drive distance and origin areas</p>
-              </li>
-              <li class="pb-4 border-b border-gray-100">
-                <h3 class="font-semibold text-gray-900 mb-1">Who you're reaching</h3>
-                <p class="text-gray-600 text-sm">Neighborhood-level demographics, aggregated</p>
-              </li>
-              <li>
-                <h3 class="font-semibold text-gray-900 mb-1">Manager takeaways</h3>
-                <p class="text-gray-600 text-sm">Succinct notes about staffing windows, facility pressure points, communications, and grant language</p>
-              </li>
-            </ul>
-            <div id="sample-report" class="pt-4 border-t border-gray-200">
-              <a href="#" class="text-radbridge-blue hover:text-opacity-80 font-medium inline-flex items-center">
-                View the sample report (Jefferson Memorial)
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            <!-- Dashboard Access Card -->
+            <div class="pricing-card-new h-full">
+              <div class="pricing-card-header !border-b-0">
+                <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M18 20V10m-6 10V4M6 20v-4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-              </a>
+                <div class="pricing-card-name">Dashboard Access</div>
+                <div class="pricing-card-description">1 year of complimentary access.</div>
+              </div>
+              <div class="pricing-features-list">
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Explore your data interactively</span>
             </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>View core charts for your park</span>
+              </div>
+                <div class="pricing-feature-item">
+                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Export briefing-ready graphics</span>
+              </div>
+            </div>
+            <button class="pricing-card-button mt-auto" onclick="openContactModal()">See example</button>
           </div>
+        </div>
         </section>
 
         <!-- Pricing Section -->
@@ -430,7 +404,7 @@
             }
           </style>
 
-          <h2 class="text-3xl font-bold text-gray-900 mb-4" style="font-weight: 400; font-size: 28px;">Pricing</h2>
+          <h2 class="page-section-heading mb-4">Pricing</h2>
           
           <!-- Park Size Selector -->
           <div class="flex justify-start mb-12">
@@ -460,7 +434,7 @@
               <div class="pricing-price-section">
                 <div class="pricing-card-price"><span class="currency">$</span><span id="price-single">3,000</span></div>
                 <div class="pricing-card-billing"></div>
-              </div>
+                </div>
               <button onclick="openContactModal()" class="pricing-card-button">
                 Request Quote
               </button>
@@ -470,7 +444,7 @@
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <span>8-10 page PDF report</span>
-                </div>
+              </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -506,7 +480,7 @@
               <div class="pricing-price-section">
                 <div class="pricing-card-price"><span class="currency">$</span><span id="price-two">5,000</span></div>
                 <div class="pricing-card-billing"></div>
-              </div>
+                </div>
               <button onclick="openContactModal()" class="pricing-card-button">
                 Request Quote
               </button>
@@ -516,7 +490,7 @@
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <span>Two complete park analyses</span>
-                </div>
+              </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -552,7 +526,7 @@
               <div class="pricing-price-section">
                 <div class="pricing-card-price" style="font-size: 22px;">Get in touch</div>
                 <div class="pricing-card-billing">Volume discounts apply</div>
-              </div>
+                </div>
               <button onclick="openContactModal()" class="pricing-card-button secondary">
                 Contact Us
               </button>
@@ -562,7 +536,7 @@
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <span>System-wide analysis</span>
-                </div>
+              </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -590,7 +564,7 @@
 
         <!-- FAQ Section -->
         <section id="faq" class="mb-20 scroll-mt-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently asked questions</h2>
+          <h2 class="page-section-heading mb-8">Frequently asked questions</h2>
           <div class="space-y-4">
             
             <div class="bg-white border border-gray-200 rounded overflow-hidden">
@@ -659,7 +633,7 @@
         <!-- Get Started Section -->
         <section id="get-started" class="mb-12 scroll-mt-8">
           <div class="bg-white border border-gray-200 rounded-lg p-10 text-center">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to begin?</h2>
+            <h2 class="page-section-heading mb-4">Ready to begin?</h2>
             <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Share your park boundary and preferred start date. We'll confirm scope and deliver your Single Park Rapid Analysis within 3 days.</p>
             <div class="flex flex-wrap justify-center gap-4">
               <button onclick="openContactModal()" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-8 py-3 rounded transition cursor-pointer">

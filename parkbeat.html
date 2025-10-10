@@ -115,13 +115,10 @@
         <nav class="py-8 px-6">
           <ul class="space-y-1">
             <li><a href="#overview" class="sidebar-link active">Overview</a></li>
-            <li><a href="#who-its-for" class="sidebar-link">Who It's For</a></li>
-            <li><a href="#what-you-receive" class="sidebar-link">What You Receive</a></li>
             <li><a href="#how-it-works" class="sidebar-link">How It Works</a></li>
-            <li><a href="#what-it-shows" class="sidebar-link">What It Shows</a></li>
+            <li><a href="#what-you-receive" class="sidebar-link">What You Receive</a></li>
             <li><a href="#pricing" class="sidebar-link">Pricing</a></li>
             <li><a href="#faq" class="sidebar-link">FAQ</a></li>
-            <li><a href="#get-started" class="sidebar-link">Get Started</a></li>
           </ul>
         </nav>
       </aside>
@@ -192,32 +189,32 @@
                   <line x1="16" y1="17" x2="8" y2="17"></line>
                 </svg>
                 <div class="pricing-card-name">PDF Report</div>
-                <div class="pricing-card-description">An 8–10 page, briefing-ready analysis.</div>
+                <div class="pricing-card-description">An 8–10 page, fully designed report with clear charts, context, and brief interpretive notes.</div>
               </div>
               <div class="pricing-features-list">
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Visitation patterns (hourly, daily, monthly)</span>
+                  <span>Visitation patterns and length of stay (hourly/daily/monthly; dwell-time ranges)</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Typical length of stay (dwell time)</span>
+                  <span>Visitor origins and travel distance (local vs. regional draw)</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Visitor origins and travel distance</span>
+                  <span>Neighborhood-level demographics (inferred from visitors' home census block; aggregated—not individual profiles)</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Neighborhood-based demographics</span>
+                  <span>Comparisons to regional/state benchmarks (where available)</span>
               </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Notes on operations and outreach</span>
+                  <span>Methods & data notes (concise methodology and data limitations)</span>
               </div>
+              </div>
+              <a href="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?utm_content=DAG0CYlioPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha861b037a5" target="_blank" rel="noopener noreferrer" class="pricing-card-button mt-auto !mb-0 block text-center no-underline">See example</a>
             </div>
-            <button class="pricing-card-button mt-auto" onclick="document.getElementById('what-it-shows').scrollIntoView({ behavior: 'smooth' });">See example</button>
-          </div>
 
             <!-- Dashboard Access Card -->
             <div class="pricing-card-new h-full">
@@ -231,20 +228,20 @@
               <div class="pricing-features-list">
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Explore your data interactively</span>
+                  <span>Explore interactively — zoom/pan maps and filter by date, season, or time-of-day beyond what's possible in the PDF</span>
             </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>View core charts for your park</span>
+                  <span>View spatial and temporal charts for your park(s) in one place</span>
               </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Export briefing-ready graphics</span>
+                  <span>Export custom PDF summaries using your current filters</span>
               </div>
+              </div>
+              <button class="pricing-card-button mt-auto !mb-0" onclick="openContactModal()">See example</button>
             </div>
-            <button class="pricing-card-button mt-auto" onclick="openContactModal()">See example</button>
           </div>
-        </div>
         </section>
 
         <!-- Pricing Section -->
@@ -405,6 +402,7 @@
           </style>
 
           <h2 class="page-section-heading mb-4">Pricing</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-8">Our pricing is structured to provide cost-effective insights for one or more parks. Listed prices include data procurement, analysis, and report preparation. For a limited time, 1 year of dashboard access is included with any purchase.</p>
           
           <!-- Park Size Selector -->
           <div class="flex justify-start mb-12">
@@ -435,8 +433,8 @@
                 <div class="pricing-card-price"><span class="currency">$</span><span id="price-single">3,000</span></div>
                 <div class="pricing-card-billing"></div>
                 </div>
-              <button onclick="openContactModal()" class="pricing-card-button">
-                Request Quote
+              <button onclick="openRequestModal()" class="pricing-card-button">
+                Submit Request
               </button>
               <div class="pricing-features-list">
                 <div class="pricing-feature-item">
@@ -468,21 +466,21 @@
 
             <!-- Two Parks Card -->
             <div class="pricing-card-new recommended">
-              <span class="pricing-recommended-badge">MOST POPULAR</span>
+              <span class="pricing-recommended-badge">AMAZING VALUE</span>
               <div class="pricing-card-header">
                 <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M9 22V12h6v10" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="pricing-card-name">Two Parks</div>
-                <div class="pricing-card-description">Same tier</div>
+                <div class="pricing-card-description">5 day delivery</div>
               </div>
               <div class="pricing-price-section">
                 <div class="pricing-card-price"><span class="currency">$</span><span id="price-two">5,000</span></div>
                 <div class="pricing-card-billing"></div>
                 </div>
-              <button onclick="openContactModal()" class="pricing-card-button">
-                Request Quote
+              <button onclick="openRequestModal()" class="pricing-card-button">
+                Submit Request
               </button>
               <div class="pricing-features-list">
                 <div class="pricing-feature-item">
@@ -527,8 +525,8 @@
                 <div class="pricing-card-price" style="font-size: 22px;">Get in touch</div>
                 <div class="pricing-card-billing">Volume discounts apply</div>
                 </div>
-              <button onclick="openContactModal()" class="pricing-card-button secondary">
-                Contact Us
+              <button onclick="openRequestModal()" class="pricing-card-button secondary">
+                Submit Request
               </button>
               <div class="pricing-features-list">
                 <div class="pricing-feature-item">
@@ -565,84 +563,68 @@
         <!-- FAQ Section -->
         <section id="faq" class="mb-20 scroll-mt-8">
           <h2 class="page-section-heading mb-8">Frequently asked questions</h2>
-          <div class="space-y-4">
+          <div class="border-t border-gray-200">
             
-            <div class="bg-white border border-gray-200 rounded overflow-hidden">
-              <button onclick="toggleFaq(1)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
-                <span class="font-semibold text-gray-900">Is this a headcount?</span>
-                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            <div class="border-b border-gray-200 py-6">
+              <button onclick="toggleFaq(1)" class="w-full text-left flex justify-between items-center gap-4">
+                <span class="font-medium text-gray-900">Is this a headcount?</span>
+                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
-              <div id="faq-content-1" class="hidden px-6 pb-6">
+              <div id="faq-content-1" class="hidden pt-4">
                 <p class="text-gray-600 leading-relaxed">No. Mobile-location data are best for patterns and comparisons (when people visit, where they come from, how long they stay). We do not present it as a precise turnstile count.</p>
               </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded overflow-hidden">
-              <button onclick="toggleFaq(2)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
-                <span class="font-semibold text-gray-900">How is privacy handled?</span>
-                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            <div class="border-b border-gray-200 py-6">
+              <button onclick="toggleFaq(2)" class="w-full text-left flex justify-between items-center gap-4">
+                <span class="font-medium text-gray-900">How is privacy handled?</span>
+                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
-              <div id="faq-content-2" class="hidden px-6 pb-6">
+              <div id="faq-content-2" class="hidden pt-4">
                 <p class="text-gray-600 leading-relaxed">All results are anonymized and aggregated. We do not identify individual devices or people.</p>
               </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded overflow-hidden">
-              <button onclick="toggleFaq(3)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
-                <span class="font-semibold text-gray-900">What do you need from us to start?</span>
-                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            <div class="border-b border-gray-200 py-6">
+              <button onclick="toggleFaq(3)" class="w-full text-left flex justify-between items-center gap-4">
+                <span class="font-medium text-gray-900">What do you need from us to start?</span>
+                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
-              <div id="faq-content-3" class="hidden px-6 pb-6">
+              <div id="faq-content-3" class="hidden pt-4">
                 <p class="text-gray-600 leading-relaxed">A park boundary (if available), a short confirmation of the study period, and a point of contact for quick questions.</p>
               </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded overflow-hidden">
-              <button onclick="toggleFaq(4)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
-                <span class="font-semibold text-gray-900">Can you add economic impact or more sites later?</span>
-                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            <div class="border-b border-gray-200 py-6">
+              <button onclick="toggleFaq(4)" class="w-full text-left flex justify-between items-center gap-4">
+                <span class="font-medium text-gray-900">Can you add economic impact or more sites later?</span>
+                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
-              <div id="faq-content-4" class="hidden px-6 pb-6">
+              <div id="faq-content-4" class="hidden pt-4">
                 <p class="text-gray-600 leading-relaxed">Yes. We can extend this analysis with visitor spending and impact estimates, or scale up to a multi-site or system-wide study.</p>
               </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded overflow-hidden">
-              <button onclick="toggleFaq(5)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
-                <span class="font-semibold text-gray-900">How do the dashboard and PDF relate?</span>
-                <svg class="w-5 h-5 text-gray-500 transform transition-transform" id="faq-icon-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            <div class="border-b border-gray-200 py-6">
+              <button onclick="toggleFaq(5)" class="w-full text-left flex justify-between items-center gap-4">
+                <span class="font-medium text-gray-900">How do the dashboard and PDF relate?</span>
+                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
-              <div id="faq-content-5" class="hidden px-6 pb-6">
+              <div id="faq-content-5" class="hidden pt-4">
                 <p class="text-gray-600 leading-relaxed">The PDF is the formal deliverable. The dashboard provides an easy way to review the same core metrics interactively.</p>
               </div>
             </div>
 
-          </div>
-        </section>
-
-        <!-- Get Started Section -->
-        <section id="get-started" class="mb-12 scroll-mt-8">
-          <div class="bg-white border border-gray-200 rounded-lg p-10 text-center">
-            <h2 class="page-section-heading mb-4">Ready to begin?</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Share your park boundary and preferred start date. We'll confirm scope and deliver your Single Park Rapid Analysis within 3 days.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-              <button onclick="openContactModal()" class="bg-radbridge-blue hover:bg-opacity-90 text-white font-medium px-8 py-3 rounded transition cursor-pointer">
-                Request a Quote
-              </button>
-              <button onclick="openContactModal()" class="border border-gray-300 hover:border-radbridge-blue text-radbridge-blue font-medium px-8 py-3 rounded transition cursor-pointer">
-                Schedule a Brief Call
-              </button>
-            </div>
           </div>
         </section>
 

@@ -164,7 +164,7 @@ window.toggleFaq = (id) => {
   
   if (content.classList.contains('hidden')) {
     content.classList.remove('hidden');
-    icon.style.transform = 'rotate(180deg)';
+    icon.style.transform = 'rotate(45deg)';
   } else {
     content.classList.add('hidden');
     icon.style.transform = 'rotate(0deg)';

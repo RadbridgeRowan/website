@@ -199,6 +199,25 @@
         </form>
       </div>
     </div>
+
+    <!-- Parkbeat Announcement Modal -->
+    <div id="parkbeat-modal" class="hidden fixed bottom-6 right-6 max-w-sm w-full bg-white rounded-lg shadow-2xl p-6 z-50">
+      <div class="flex items-start gap-5">
+        <div class="flex-shrink-0 h-12 w-12 bg-radbridge-blue rounded-full flex items-center justify-center">
+          <i class="fas fa-tree text-white text-xl"></i>
+        </div>
+        <div class="flex-1">
+          <span class="inline-block text-xs font-semibold px-2 py-0.5 rounded-full border border-radbridge-gold text-radbridge-gold mb-2">New</span>
+          <h4 class="font-bold text-gray-900 text-lg mb-1">Park Visitation Snapshot</h4>
+          <p class="text-gray-600 text-sm">Get visitor insights for one or more individual parks. Understand when people visit, how long they stay, and where they come from. Report delivered in 3 days. Starting at $3,000.</p>
+          <a href="parkbeat.html" class="inline-block mt-4 bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-opacity-90 transition">Learn More</a>
+        </div>
+        <button id="close-parkbeat-modal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 p-1 rounded-full" aria-label="Close">
+          <i class="fas fa-times w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+    
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

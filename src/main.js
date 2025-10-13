@@ -33,6 +33,32 @@ window.closeRequestModal = () => {
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM Content Loaded');
   
+  // Parkbeat modal functionality
+  const parkbeatModal = document.getElementById('parkbeat-modal');
+  const closeParkbeatModal = document.getElementById('close-parkbeat-modal');
+
+  if (parkbeatModal && closeParkbeatModal) {
+    // Show modal after a delay if it hasn't been closed
+    if (sessionStorage.getItem('parkbeatModalClosed') !== 'true') {
+      setTimeout(() => {
+        parkbeatModal.classList.remove('hidden');
+        // Add class to trigger transition
+        setTimeout(() => {
+          parkbeatModal.classList.add('visible');
+        }, 10);
+      }, 2000);
+    }
+
+    // Close and remember
+    closeParkbeatModal.addEventListener('click', () => {
+      parkbeatModal.classList.remove('visible');
+      setTimeout(() => {
+        parkbeatModal.classList.add('hidden');
+      }, 300); // Wait for transition to finish
+      sessionStorage.setItem('parkbeatModalClosed', 'true');
+    });
+  }
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

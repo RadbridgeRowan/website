@@ -89,7 +89,7 @@
               Park Visitation Snapshot
           </h1>
           <p class="text-xl text-gray-500 mb-10 leading-relaxed">
-              Understand when people visit, how long they stay, and where they come from. Delivered as an 8–10 page report for one or more parks.
+            Understand when people visit, how long they stay, where they come from, and spatial usage patterns across your park. Delivered as an 8–10 page report for one or more parks.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <button onclick="openRequestModal()" class="inline-flex items-center justify-center bg-radbridge-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-blue-200 transition duration-300 cursor-pointer">
@@ -118,6 +118,7 @@
             <li><a href="#how-it-works" class="sidebar-link">How It Works</a></li>
             <li><a href="#what-you-receive" class="sidebar-link">What You Receive</a></li>
             <li><a href="#pricing" class="sidebar-link">Pricing</a></li>
+            <li><a href="#team" class="sidebar-link">Meet the Team</a></li>
             <li><a href="#faq" class="sidebar-link">FAQ</a></li>
           </ul>
         </nav>
@@ -159,7 +160,7 @@
                   <line x1="1" y1="14" x2="4" y2="14"></line>
               </svg>
               <h3 class="text-lg font-semibold text-gray-900 mb-3">2. Process the data</h3>
-              <p class="text-gray-600 leading-relaxed">We run your site through our established mobile-location ETL pipeline, filtering pass-through traffic and removing non-visitor signals to protect privacy.</p>
+              <p class="text-gray-600 leading-relaxed">We acquire anonymized mobile location data and run it through our established ETL pipeline, removing noise and isolating genuine park visits to analyze when, where, and how people use your site.</p>
             </div>
             <div class="text-center md:text-left">
               <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -202,7 +203,7 @@
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Neighborhood-level demographics (inferred from visitors' home census block; aggregated—not individual profiles)</span>
+                  <span>Visitor demographics (inferred from visitors' home census blocks; aggregated—not individual profiles)</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -213,7 +214,10 @@
                   <span>Methods & data notes (concise methodology and data limitations)</span>
               </div>
               </div>
-              <a href="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?utm_content=DAG0CYlioPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha861b037a5" target="_blank" rel="noopener noreferrer" class="pricing-card-button mt-auto !mb-0 block text-center no-underline">See example</a>
+              <a href="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?utm_content=DAG0CYlioPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha861b037a5" target="_blank" rel="noopener noreferrer" class="pricing-card-button secondary mt-auto !mb-0 inline-flex items-center justify-center no-underline">
+                <span>See example</span>
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
             </div>
 
             <!-- Dashboard Access Card -->
@@ -223,7 +227,7 @@
                   <path d="M18 20V10m-6 10V4M6 20v-4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div class="pricing-card-name">Dashboard Access</div>
-                <div class="pricing-card-description">1 year of complimentary access.</div>
+                <div class="pricing-card-description">1 year of complimentary access with any Park Visitation Snapshot. Offer available for a limited time only.</div>
               </div>
               <div class="pricing-features-list">
                 <div class="pricing-feature-item">
@@ -236,10 +240,13 @@
               </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Export custom PDF summaries using your current filters</span>
+                  <span>Export custom PDF excerpts using custom filters, share with colleagues, decision makers, and stakeholders</span>
               </div>
               </div>
-              <button class="pricing-card-button mt-auto !mb-0" onclick="openContactModal()">See example</button>
+              <a href="https://app.parkbeat.com/?t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqbS1mb3Jlc3QtMjAyNSIsImV4cCI6MTc2NzE2NzM4Niwic2NvcGVzIjpbInJlYWQ6dmlzaXRzIl0sImlhdCI6MTc1OTM5MTM4Nn0.8vWaQ1YapbIle5yhZsnftSjm4mmnTag4KK-Du1cNGDI" target="_blank" rel="noopener noreferrer" class="pricing-card-button secondary mt-auto !mb-0 inline-flex items-center justify-center no-underline">
+                <span>See example</span>
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
             </div>
           </div>
         </section>
@@ -336,9 +343,9 @@
             .pricing-card-button {
               width: 100%;
               padding: 12px;
-              background: #000;
+              background: #28506C;
               color: white;
-              border: 1px solid #000;
+              border: 1px solid #28506C;
               border-radius: 6px;
               font-size: 14px;
               font-weight: 500;
@@ -349,18 +356,20 @@
             }
 
             .pricing-card-button:hover {
-              background: #333;
-              border-color: #333;
+              background: #214259;
+              border-color: #214259;
               transform: translateY(-1px);
             }
 
             .pricing-card-button.secondary {
               background: white;
-              color: #000;
+              color: #28506C;
+              border-color: #e0e0e0;
             }
 
             .pricing-card-button.secondary:hover {
               background: #f7f7f7;
+              border-color: #28506C;
               transform: translateY(-1px);
             }
 
@@ -446,13 +455,13 @@
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Introductory dashboard access</span>
+                  <span>Dashboard access</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Visitation patterns & demographics</span>
+                  <span>Visitation patterns & origins</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
@@ -486,25 +495,25 @@
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Two complete park analyses</span>
+                  <span>2 x 8-10 page PDF reports</span>
               </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>PDF reports for each park</span>
+                  <span>Dashboard access</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Dashboard access for both sites</span>
+                  <span>Visitation patterns & origins</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Cross-park comparisons</span>
+                  <span>Briefing-ready graphics</span>
                 </div>
               </div>
             </div>
@@ -519,33 +528,33 @@
                   <i class="fas fa-plus text-2xl ml-1"></i>
                 </div>
                <div class="pricing-card-name">Three+ Parks</div>
-               <div class="pricing-card-description">Volume discounts</div>
+               <div class="pricing-card-description">Volume Discounts Apply</div>
              </div>
-              <div class="pricing-price-section">
-                <div class="pricing-card-price" style="font-size: 22px;">Get in touch</div>
-                <div class="pricing-card-billing">Volume discounts apply</div>
-                </div>
-              <button onclick="openRequestModal()" class="pricing-card-button secondary">
-                Submit Request
-              </button>
+             <div class="pricing-price-section">
+              <div class="pricing-card-price"><span class="currency">$</span><span id="price-two">Get in touch</span></div>
+              <div class="pricing-card-billing"></div>
+              </div>
+            <button onclick="openRequestModal()" class="pricing-card-button">
+              Submit Request
+            </button>
               <div class="pricing-features-list">
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>System-wide analysis</span>
+                  <span>Multi-park or system-wide</span>
               </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Custom dashboards</span>
+                  <span>Customized dashboards</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Comprehensive comparison reports</span>
+                  <span>Comprehensive reports</span>
                 </div>
                 <div class="pricing-feature-item">
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
@@ -556,72 +565,129 @@
               </div>
             </div>
           </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section id="team" class="mb-20 scroll-mt-8">
+          <h2 class="page-section-heading mb-8">Meet the Radbridge Team</h2>
           
-          <p class="pricing-note">All packages include PDF report and introductory dashboard access.</p>
+          <div class="mb-12">
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">Radbridge was founded by Rowan Schmidt and Johnny Mojica, who have worked together for more than a decade advancing outdoor recreation, economic development, and community resilience. Before launching Radbridge in 2022, they spent years supporting government agencies across the country with visitation studies, economic impact assessments, and benefit-cost analyses.</p>
+            <p class="text-lg text-gray-600 leading-relaxed">Together, they've processed hundreds of billions of mobile location records, pioneered new methods for measuring the benefits of parks, built software products, and helped agencies secure hundreds of millions in funding for resilience projects. Their work combines rigorous data science with a deep understanding of what government and nonprofit clients need—clear answers, defensible methods, and insights that support real-world decision making.</p>
+          </div>
+
+          <!-- Team Photos -->
+          <div class="flex justify-start gap-12 mb-16">
+            <div class="text-center">
+              <img src="assets/images/Headshot_Rowan.jpg" alt="Rowan Schmidt" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gray-200">
+              <div class="font-semibold text-gray-900">Rowan Schmidt</div>
+              <div class="text-sm text-gray-600">CEO</div>
+            </div>
+            <div class="text-center">
+              <img src="assets/images/Headshot_Johnny.jpg" alt="Johnny Mojica" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gray-200">
+              <div class="font-semibold text-gray-900">Johnny Mojica</div>
+              <div class="text-sm text-gray-600">COO & Recreation Economist</div>
+            </div>
+          </div>
+
+          <!-- Project Examples -->
+          <div class="mt-12">
+            <h3 class="text-xl font-semibold text-gray-900 mb-6">Selected Projects</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              
+              <!-- Project 1 -->
+              <div class="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:border-black hover:shadow-lg">
+                <img src="assets/images/nevada.jpg" alt="Outdoor Recreation in Nevada" class="w-full h-48 object-cover border-b border-gray-200">
+                <div class="p-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">Outdoor Recreation in Nevada</h4>
+                  <p class="text-sm text-gray-600 leading-relaxed">Statewide assessment for Nevada Division of Outdoor Recreation. Processed 80 billion mobile location records to quantify $7.67B in economic output and 159 million annual visits across 1,500 recreation sites.</p>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:border-black hover:shadow-lg">
+                <img src="assets/images/edwa.jpg" alt="Upper American River Watershed Analysis" class="w-full h-48 object-cover border-b border-gray-200">
+                <div class="p-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">Upper American River Watershed</h4>
+                  <p class="text-sm text-gray-600 leading-relaxed">Comprehensive recreation analysis for El Dorado Water Agency. Processed 560 million mobile records and used machine learning to estimate 7 million annual visits generating $348M in economic impact.</p>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:border-black hover:shadow-lg">
+                <img src="assets/images/icon.png" alt="ICON Water Trails Analysis" class="w-full h-48 object-cover border-b border-gray-200">
+                <div class="p-6">
+                  <h4 class="font-semibold text-gray-900 mb-2">ICON Water Trails Network</h4>
+                  <p class="text-sm text-gray-600 leading-relaxed">Economic benefits and visitation analysis for 150-mile river network in Central Iowa. Pioneered methodology to differentiate river users from shore-based visitors across 2.6 billion mobile records.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </section>
 
         <!-- FAQ Section -->
         <section id="faq" class="mb-20 scroll-mt-8">
-          <h2 class="page-section-heading mb-8">Frequently asked questions</h2>
+          <h2 class="page-section-heading mb-8">FAQ</h2>
           <div class="border-t border-gray-200">
             
             <div class="border-b border-gray-200 py-6">
               <button onclick="toggleFaq(1)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">Is this a headcount?</span>
+                <span class="font-medium text-gray-900">How is visitor privacy protected?</span>
                 <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
               <div id="faq-content-1" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">No. Mobile-location data are best for patterns and comparisons (when people visit, where they come from, how long they stay). We do not present it as a precise turnstile count.</p>
+                <p class="text-gray-600 leading-relaxed">All data is fully anonymized and aggregated. Individual devices cannot be identified, and all processing adheres to strict privacy protocols. We only report aggregate statistics that meet minimum threshold requirements.</p>
               </div>
             </div>
 
             <div class="border-b border-gray-200 py-6">
               <button onclick="toggleFaq(2)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">How is privacy handled?</span>
+                <span class="font-medium text-gray-900">Can you analyze multiple parks?</span>
                 <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
               <div id="faq-content-2" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">All results are anonymized and aggregated. We do not identify individual devices or people.</p>
+                <p class="text-gray-600 leading-relaxed">Yes! We offer volume discounts for 2, 3, or more parks. Contact us for custom multi-park pricing that fits your system's needs.</p>
               </div>
             </div>
 
             <div class="border-b border-gray-200 py-6">
               <button onclick="toggleFaq(3)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">What do you need from us to start?</span>
+                <span class="font-medium text-gray-900">What if my park boundaries are complex?</span>
                 <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
               <div id="faq-content-3" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">A park boundary (if available), a short confirmation of the study period, and a point of contact for quick questions.</p>
+                <p class="text-gray-600 leading-relaxed">We work with you to define appropriate boundaries using GIS data, satellite imagery, and your input. Our spatial cleaning process accounts for roads, private inholdings, and other exclusions.</p>
               </div>
             </div>
 
             <div class="border-b border-gray-200 py-6">
               <button onclick="toggleFaq(4)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">Can you add economic impact or more sites later?</span>
+                <span class="font-medium text-gray-900">Do you provide economic impact analysis?</span>
                 <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
               <div id="faq-content-4" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">Yes. We can extend this analysis with visitor spending and impact estimates, or scale up to a multi-site or system-wide study.</p>
+                <p class="text-gray-600 leading-relaxed">Economic impact assessment is available as an add-on service. This includes visitor spending estimates, job support calculations, and tax revenue modeling based on established methods.</p>
               </div>
             </div>
 
             <div class="border-b border-gray-200 py-6">
               <button onclick="toggleFaq(5)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">How do the dashboard and PDF relate?</span>
+                <span class="font-medium text-gray-900">How is this different from your larger studies?</span>
                 <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </button>
               <div id="faq-content-5" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">The PDF is the formal deliverable. The dashboard provides an easy way to review the same core metrics interactively.</p>
+                <p class="text-gray-600 leading-relaxed">Our comprehensive studies, such as our recent statwide study in Nevada, can include systemwide coverage, calibration of visitation data through machine learning modeling, economic impact analysis, and extensive stakeholder engagement. The Park Visitation Snapshot focuses on one or a few locations with a streamlined process and fixed deliverables, making it quick and cost effective.</p>
               </div>
             </div>
 
@@ -664,7 +730,7 @@
 
   <!-- Request Form Modal -->
   <div id="requestModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-    <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4">
+    <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-[75vh] overflow-y-auto">
       <div class="flex justify-between items-center mb-6">
         <h3 class="text-2xl font-bold text-radbridge-blue">Submit Request</h3>
         <button onclick="closeRequestModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close request form">
@@ -673,7 +739,10 @@
       </div>
       <form action="https://formspree.io/f/xwpbkgyo" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="New Parkbeat Analysis Request">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 gap-6">
+          <div class="block text-sm font-medium text-gray-700">
+          <span class="text-red-500">*</span> indicates a required field
+          </div>
           <div>
             <label for="request-name" class="block text-sm font-medium text-gray-700">Name <span class="text-red-500">*</span></label>
             <input type="text" name="name" id="request-name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue">
@@ -683,36 +752,30 @@
             <input type="email" name="email" id="request-email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue">
           </div>
           <div>
-            <label for="request-organization" class="block text-sm font-medium text-gray-700">Agency / Organization</label>
+            <label for="request-organization" class="block text-sm font-medium text-gray-700">Organization</label>
             <input type="text" name="organization" id="request-organization" class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue">
           </div>
           <div>
             <label for="request-analysis-tier" class="block text-sm font-medium text-gray-700">Analysis Tier</label>
             <select id="request-analysis-tier" name="analysis-tier" class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue">
+              <option selected></option>
               <option>Single Park</option>
               <option>Two Parks</option>
               <option>Three+ Parks</option>
-              <option selected>Not sure / TBD</option>
+              <option>Not sure / TBD</option>
             </select>
           </div>
           <div>
-            <label for="request-park-size" class="block text-sm font-medium text-gray-700">Anticipated Park Size</label>
+            <label for="request-park-size" class="block text-sm font-medium text-gray-700">Park Size(s)</label>
             <select id="request-park-size" name="park-size" class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue">
+              <option selected></option>
               <option>Small-Medium Park (0-459 acres)</option>
               <option>Medium-Large Park (460-799 acres)</option>
               <option>Large-Extra Large Park (800-4,500 acres)</option>
-              <option selected>Not sure / TBD</option>
+              <option>Not sure / TBD</option>
             </select>
           </div>
           <div>
-            <label for="request-park-name" class="block text-sm font-medium text-gray-700">Park Name</label>
-            <input type="text" name="park-name" id="request-park-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue">
-          </div>
-          <div class="sm:col-span-2">
-            <label for="request-location" class="block text-sm font-medium text-gray-700">Location (e.g. city/state or lat/lon)</label>
-            <input type="text" name="location" id="request-location" class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue">
-          </div>
-          <div class="sm:col-span-2">
             <label for="request-comments" class="block text-sm font-medium text-gray-700">Additional Comments / Questions</label>
             <textarea name="comments" id="request-comments" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-radbridge-blue focus:ring-radbridge-blue"></textarea>
           </div>

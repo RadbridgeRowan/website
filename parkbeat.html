@@ -211,7 +211,7 @@
         <section id="what-you-receive" class="mb-20 scroll-mt-8">
           <h2 class="page-section-heading mb-8">What you receive</h2>
           <div class="grid md:grid-cols-2 gap-6">
-            <!-- PDF Report Card -->
+            <!-- TL: PDF Report Card (unchanged) -->
             <div class="pricing-card-new h-full">
               <div class="pricing-card-header !border-b-0">
                 <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -245,13 +245,22 @@
                   <span>Methods & data notes (concise methodology and data limitations)</span>
               </div>
               </div>
-              <a href="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?utm_content=DAG0CYlioPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha861b037a5" target="_blank" rel="noopener noreferrer" class="pricing-card-button secondary mt-auto !mb-0 inline-flex items-center justify-center no-underline">
-                <span>See example</span>
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
             </div>
 
-            <!-- Dashboard Access Card -->
+            <!-- TR: Embedded Canva preview -->
+            <div class="pricing-card-new h-full">
+              <div class="rounded-md overflow-hidden border border-gray-200">
+                <iframe src="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?embed" title="PDF Report Preview" loading="lazy" allowfullscreen style="width:100%; height:360px; border:0;"></iframe>
+              </div>
+              <div class="mt-4">
+                <a href="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?utm_content=DAG0CYlioPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha861b037a5" target="_blank" rel="noopener noreferrer" class="pricing-card-button !mb-0 inline-flex items-center justify-center no-underline">
+                  <span>FULL SCREEN VIEW</span>
+                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- BL: Dashboard Access Card -->
             <div class="pricing-card-new h-full">
               <div class="pricing-card-header !border-b-0">
                 <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -274,10 +283,21 @@
                   <span>Export custom PDF excerpts using custom filters, share with colleagues, decision makers, and stakeholders</span>
               </div>
               </div>
-              <a href="https://app.parkbeat.com" target="_blank" rel="noopener noreferrer" class="pricing-card-button secondary mt-auto !mb-0 inline-flex items-center justify-center no-underline">
-                <span>See example</span>
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
+            </div>
+
+            <!-- BR: Dashboard GIF -->
+            <div class="pricing-card-new h-full flex flex-col justify-center items-center">
+              <div>
+                <div class="rounded-md overflow-hidden border border-gray-200">
+                  <img src="assets/videos/parkbeat.gif" alt="Dashboard demo" class="w-full object-contain">
+                </div>
+                <div class="mt-4">
+                  <a href="https://app.parkbeat.com" target="_blank" rel="noopener noreferrer" class="pricing-card-button !mb-0 inline-flex items-center justify-center no-underline">
+                    <span>TRY IT OUT</span>
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -439,6 +459,11 @@
                 padding: 24px 20px;
               }
             }
+
+            /* Inline variant for header-aligned buttons */
+            .pricing-card-button.inline {
+              width: auto;
+            }
           </style>
 
           <h2 class="page-section-heading mb-4">Pricing</h2>
@@ -590,7 +615,7 @@
                   <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
                     <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                  <span>Dedicated support</span>
+                  <span>Add-on services (see below)</span>
                 </div>
               </div>
             </div>
@@ -630,7 +655,7 @@
           <h2 class="page-section-heading mb-8">Meet the Team</h2>
           
           <div class="mb-12">
-            <p class="text-lg text-gray-600 leading-relaxed mb-4">Radbridge was founded by Rowan Schmidt and Johnny Mojica, who have worked together for more than a decade advancing outdoor recreation, economic development, and community resilience. Before launching Radbridge in 2022, they spent years supporting government agencies across the country with visitation studies, economic impact assessments, and benefit-cost analyses.</p>
+            <p class="text-lg text-gray-600 leading-relaxed mb-4">Radbridge was founded by Rowan Schmidt and Johnny Mojica, who have worked together for more than a decade advancing outdoor recreation, economic development, and community resilience. Before launching Radbridge in 2022, they worked together for 8 years in the nonprofit sector, supporting government agencies across the country with visitation studies, economic impact assessments, and benefit-cost analyses.</p>
             <p class="text-lg text-gray-600 leading-relaxed">Together, they've processed hundreds of billions of mobile location records, pioneered new methods for measuring the benefits of parks, built software products, and helped agencies secure hundreds of millions in funding for resilience projects. Their work combines rigorous data science with a deep understanding of what government and nonprofit clients need—clear answers, defensible methods, and insights that support real-world decision making.</p>
           </div>
 

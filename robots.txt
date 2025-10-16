@@ -2,10 +2,11 @@
 
 User-agent: *
 Allow: /
-Allow: /about.html
-Allow: /services.html
-Allow: /projects.html
-Allow: /tools.html
+Allow: /about
+Allow: /services
+Allow: /projects
+Allow: /tools
+Allow: /parkbeat
 Allow: /public/assets/images/
 Allow: /public/assets/videos/
 

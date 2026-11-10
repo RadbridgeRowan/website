@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Local backups (keep untracked)
+*.zip
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,3 +27,4 @@ dist-ssr
 *.sw?
 
 README.md
+CURRENT_SITE_CONTENT.md

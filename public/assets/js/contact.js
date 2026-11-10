@@ -3,7 +3,7 @@
   const form = document.querySelector('#contact-form');
   if (!form || form.dataset.enhanced) return;
   form.dataset.enhanced = 'true';
-  const fields = [...form.querySelectorAll('input, textarea')];
+  const fields = [...form.querySelectorAll('input:not([name="_gotcha"]), textarea')];
   const button = form.querySelector('button[type="submit"]');
   const status = form.querySelector('#contact-status');
   let pending = false;

@@ -1,0 +1,11 @@
+/* work-directory components */
+html.work-directory-page { scroll-behavior: auto; scroll-padding-top: var(--work-scroll-offset, 9rem); }
+.work-directory-page .site-main > .work-intro-band { padding-bottom: 0; }
+.work-directory-page .work-parks-band { padding-top: 2.5rem; }
+.work-directory-page .directory-section h2:focus-visible { outline: 2px solid var(--blue); outline-offset: 6px; }
+@media (max-width: 800px) {
+html.work-directory-page { scroll-padding-top: var(--work-scroll-offset, 2rem); }
+}
+@media (prefers-reduced-motion: no-preference) {
+html.work-directory-page { scroll-behavior: smooth; }
+}

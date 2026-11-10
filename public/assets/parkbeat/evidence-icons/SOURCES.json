@@ -1,0 +1,38 @@
+[
+  {
+    "name": "map-fold",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/map-travel/map-fold.svg"
+  },
+  {
+    "name": "phone-mobile-phone",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/phone/phone-mobile-phone.svg"
+  },
+  {
+    "name": "user-multiple-group",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/interface-essential/user-multiple-group.svg"
+  },
+  {
+    "name": "search-visual",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/interface-essential/search-visual.svg"
+  },
+  {
+    "name": "chat-two-bubbles-oval",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/mail/chat-two-bubbles-oval.svg"
+  },
+  {
+    "name": "store-1",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/money-shopping/store-1.svg"
+  },
+  {
+    "name": "clipboard-check",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/interface-essential/clipboard-check.svg"
+  },
+  {
+    "name": "decent-work-and-economic-growth",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/nature-ecology/decent-work-and-economic-growth.svg"
+  },
+  {
+    "name": "backpack",
+    "source": "https://github.com/webalys-hq/streamline-vectors/blob/main/core/duo/money-shopping/backpack.svg"
+  }
+]

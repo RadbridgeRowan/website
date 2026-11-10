@@ -1,223 +1,217 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLPW1XP7RK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-HLPW1XP7RK');
     </script>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Radbridge - Resilience. Automated.</title>
-    <meta name="description" content="We help partners define, measure, and invest in resilience through data-driven solutions, innovative technology, and deep sector knowledge.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/src/style.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Radbridge | Public-sector economics consulting</title>
+    <meta content="Radbridge helps public agencies assess benefits, compare costs, and weigh investment options." name="description">
+    <meta content="index, follow, max-image-preview:large" name="robots">
+    <meta content="#28506c" name="theme-color">
+    <link href="assets/css/site.css" rel="stylesheet">
+    <link href="assets/css/home.css" rel="stylesheet">
+    <script defer="" src="assets/js/site-header.js"></script>
+    <link href="https://www.radbridge.com/" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Radbridge" property="og:site_name">
+    <meta content="en_US" property="og:locale">
+    <meta content="Radbridge | Public-sector economics consulting" property="og:title">
+    <meta content="Radbridge helps public agencies assess benefits, compare costs, and weigh investment options." property="og:description">
+    <meta content="https://www.radbridge.com/" property="og:url">
+    <meta content="https://www.radbridge.com/assets/park.jpg" property="og:image">
+    <meta content="People walking, cycling, and spending time beside a pond in a city park." property="og:image:alt">
+    <meta content="2400" property="og:image:width">
+    <meta content="1590" property="og:image:height">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Radbridge | Public-sector economics consulting" name="twitter:title">
+    <meta content="Radbridge helps public agencies assess benefits, compare costs, and weigh investment options." name="twitter:description">
+    <meta content="https://www.radbridge.com/assets/park.jpg" name="twitter:image">
+    <meta content="People walking, cycling, and spending time beside a pond in a city park." name="twitter:image:alt">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://www.radbridge.com/#webpage",
+      "@type": "WebPage",
+      "description": "Radbridge helps public agencies assess benefits, compare costs, and weigh investment options.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://www.radbridge.com/#website"
+      },
+      "name": "Radbridge | Public-sector economics consulting",
+      "publisher": {
+        "@id": "https://www.radbridge.com/#organization"
+      },
+      "url": "https://www.radbridge.com/"
+    },
+    {
+      "@id": "https://www.radbridge.com/#organization",
+      "@type": "Organization",
+      "description": "Radbridge helps public agencies assess benefits, compare costs, and weigh investment options.",
+      "legalName": "Radbridge Incorporated",
+      "logo": "https://www.radbridge.com/assets/logo.webp",
+      "name": "Radbridge",
+      "url": "https://www.radbridge.com/"
+    },
+    {
+      "@id": "https://www.radbridge.com/#website",
+      "@type": "WebSite",
+      "inLanguage": "en-US",
+      "name": "Radbridge",
+      "publisher": {
+        "@id": "https://www.radbridge.com/#organization"
+      },
+      "url": "https://www.radbridge.com/"
+    }
+  ]
+}</script>
   </head>
-  <body class="font-lato">
-    <div id="app">
-     <!-- Navigation -->
-  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
-    <div class="container-custom flex items-center justify-between">
-      <div class="text-white text-xl font-semibold">
-        <a href="/"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
-      </div>
-      <!-- Mobile menu button -->
-      <button id="mobile-menu-button" class="md:hidden text-white hover:text-radbridge-gold p-2 z-50" aria-label="Toggle navigation menu" aria-expanded="false">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-      <!-- Desktop Navigation -->
-      <div class="hidden md:flex space-x-8">
-        <a href="/services" class="nav-link">Services</a>
-        <a href="/projects" class="nav-link">Projects</a>
-        <a href="/tools" class="nav-link">Tools</a>
-        <a href="/parkbeat" class="nav-link relative">
-          Parkbeat
-          <span class="absolute -top-4 -right-4 bg-radbridge-gold text-white text-xs font-semibold px-2 py-0.5 rounded-full">NEW</span>
-        </a>
-        <a href="/about" class="nav-link">About</a>
-      </div>
-    </div>
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="hidden md:hidden fixed top-[96px] left-0 right-0 bg-radbridge-blue shadow-lg z-50 transition-all duration-300 ease-in-out">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/services" class="block py-3 text-white hover:text-radbridge-gold text-lg">Services</a>
-        <a href="/projects" class="block py-3 text-white hover:text-radbridge-gold text-lg">Projects</a>
-        <a href="/tools" class="block py-3 text-white hover:text-radbridge-gold text-lg">Tools</a>
-        <a href="/parkbeat" class="block py-3 text-white hover:text-radbridge-gold text-lg relative">
-          Parkbeat
-          <span class="absolute top-1 right-4 bg-radbridge-gold text-white text-xs font-semibold px-2 py-0.5 rounded-full">NEW</span>
-        </a>
-        <a href="/about" class="block py-3 text-white hover:text-radbridge-gold text-lg">About</a>
-      </div>
-    </div>
-  </nav>
-
-
-      <!-- Hero Section -->
-      <section class="relative bg-cover bg-bottom py-12 md:py-20 w-full min-h-[70vh] flex items-center" style="background-image: url('/assets/images/simon-berger-twukN12EN7c-unsplash.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent"></div>
-        <div class="container-custom w-full px-4 sm:px-6 lg:px-8 relative">
-          <div class="max-w-2xl">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-radbridge-blue">Resilience, Automated.</h1>
-            <p class="text-lg md:text-xl mb-6 text-gray-700">
-              We help partners define, measure, and invest in resilience.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#main-content" class="inline-block bg-radbridge-blue hover:bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-lg shadow transition text-base cursor-pointer text-center">Learn More</a>
-              <button onclick="openContactModal()" class="inline-block bg-radbridge-gold hover:bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-lg shadow transition text-base cursor-pointer text-center">Contact Us</button>
-            </div>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a aria-label="Radbridge home" class="brand" href="index.html"><img alt="Radbridge" height="1163" src="assets/radbridge-logo-white.webp" width="4032"></a>
+      <nav aria-label="Main navigation">
+        <a href="parks-recreation-open-space.html">Parks, recreation, &amp; open space</a>
+        <a href="community-resilience.html">Community resilience</a>
+        <a href="parkbeat.html">Parkbeat</a>
+        <a href="our-work.html">Our work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main class="site-main" id="main">
+      <div class="section-band tone-white">
+        <div class="wrap band-content">
+          <div class="home-opening">
+            <section class="home-intro">
+              <h1>Make the case for the places communities depend on.</h1>
+              <p>Radbridge helps public agencies assess benefits, compare costs, and weigh investment options.</p>
+            </section>
+            <figure class="landscape photo-credit">
+              <img alt="People walking, cycling, and spending time beside a pond in a city park." height="1590" src="assets/park.jpg" width="2400">
+              <figcaption>Photo: Kelly Sikkema / Unsplash</figcaption>
+            </figure>
           </div>
         </div>
-        <div class="absolute left-0 right-0 bottom-0 h-16 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-      </section>
-
-      <!-- Main Content Section -->
-      <section id="main-content" class="section-padding bg-gray-50">
-        <div class="container-custom">
-          <div class="grid lg:grid-cols-2 gap-12 items-start">
+      </div>
+      <div class="section-band tone-limestone">
+        <div class="wrap band-content">
+          <section aria-labelledby="practice-areas-heading" class="home-section">
+            <div class="section-heading">
+              <h2 id="practice-areas-heading">Our practice areas</h2>
+            </div>
+            <div class="pillars">
+              <article>
+                <h3>Parks, recreation, &amp; open space</h3>
+                <p>We study visitor use, economic contributions, and the benefits of parks and open spaces.</p>
+                <a aria-label="View practice details: Parks, recreation, &amp; open space" class="practice-detail-link" href="parks-recreation-open-space.html">View practice details <span aria-hidden="true">→</span></a>
+              </article>
+              <article>
+                <h3>Community resilience</h3>
+                <p>We evaluate how green and gray infrastructure investments help communities reduce risk, withstand disruption, and improve everyday life.</p>
+                <a aria-label="View practice details: Community resilience" class="practice-detail-link" href="community-resilience.html">View practice details <span aria-hidden="true">→</span></a>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="section-band tone-white">
+        <div class="wrap band-content">
+          <section aria-labelledby="approach-heading" class="home-section framework-columns">
+            <div class="section-heading">
+              <h2 id="approach-heading">Our approach</h2>
+            </div>
+            <div class="framework-steps">
+              <article>
+                <h3>Listen</h3>
+                <p>Our work with partners across the U.S. has shown us that every project brings different priorities, questions, and constraints. We listen to understand your situation and where our expertise can help.</p>
+              </article>
+              <article>
+                <h3>Analyze</h3>
+                <p>We combine data science with economic analysis to answer your questions—whether you’re looking to understand current conditions, assess benefits to your community, or weigh investment options.</p>
+              </article>
+              <article>
+                <h3>Communicate</h3>
+                <p>We share findings through reports, concise summaries, web-based tools, and spatial and tabular data you can use in planning, operations, budget and funding requests, and public discussions.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="section-band tone-limestone">
+        <div class="wrap band-content">
+          <section class="directory-section">
+            <div class="section-heading">
+              <h2>Selected work</h2>
+              <a href="our-work.html">All projects <span aria-hidden="true">→</span></a>
+            </div>
+            <ul class="project-list">
+              <li>
+                <a class="project-row" href="projects/tappan-lake.html">
+<span class="project-name">Tappan Lake Park Visitor and Market Profile<span class="project-client">Muskingum Watershed Conservancy District · Deersville, Ohio</span></span>
+<span class="project-focus">Visitor use; Market analysis</span>
+<span aria-hidden="true" class="row-arrow">→</span>
+</a>
+              </li>
+              <li>
+                <a class="project-row" href="projects/st-anthony-whitewater.html">
+<span class="project-name">St. Anthony Whitewater Park Economic Analysis<span class="project-client">City of St. Anthony · St. Anthony, Idaho</span></span>
+<span class="project-focus">Economic contributions; Recreation and public benefits</span>
+<span aria-hidden="true" class="row-arrow">→</span>
+</a>
+              </li>
+              <li>
+                <a class="project-row" href="projects/sonoma-valley-flood-risk.html">
+<span class="project-name">Sonoma Valley Flood Risk Assessment<span class="project-client">Sonoma Water · Sonoma County, California</span></span>
+<span class="project-focus">Flood loss assessment</span>
+<span aria-hidden="true" class="row-arrow">→</span>
+</a>
+              </li>
+              <li>
+                <a class="project-row" href="projects/chesapeake-parks-master-plan.html">
+<span class="project-name">Chesapeake Parks, Recreation and Tourism Master Plan<span class="project-client">City of Chesapeake · Chesapeake, Virginia</span></span>
+<span class="project-focus">Economic contributions; Recreation and public benefits</span>
+<span aria-hidden="true" class="row-arrow">→</span>
+</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="section-band tone-white">
+        <div class="wrap band-content">
+          <section class="home-section firm-note">
+            <div class="section-heading">
+              <h2>About Radbridge</h2>
+            </div>
             <div>
-              <h2 class="text-lg md:text-xl font-bold text-gray-900 mb-8">
-                We advance community resilience and health through data-driven solutions, innovative technology, and deep sector knowledge
-              </h2>
-              <div class="space-y-4 text-gray-700">
-                <p>
-                  Our mission at Radbridge is to accelerate and expand investments in community resilience. We do this by combining data, technology, and domain-specific expertise to bridge gaps between communication and their resilience goals. We empower clients and partners – and the communities they serve – through economic impact analysis, benefit-cost analysis, grant application support, and software solutions.
-                </p>
-                <p class="mb-4 text-gray-700">
-                  Our framework includes the following steps:
-                </p>
-                <ul class="list-disc pl-6 space-y-2 text-gray-700">
-                  <li><strong>Define:</strong> We help partners develop a rigorous framework to define resilience on their terms, from visioning and goal setting to the specific targets or metrics.</li>
-                  <li><strong>Measure:</strong> We help partners evaluate and prioritize future investments or track and manage existing assets.</li>
-                  <li><strong>Invest:</strong> We help partner organizations navigate the complex state and federal funding landscape and select investments in community resilience.</li>
-                </ul>
-              </div>
+              <p>We are a public-sector economics consulting firm working at local, regional, and statewide scales across the United States.</p>
+              <a href="about.html">About the firm <span aria-hidden="true">→</span></a>
             </div>
-            <div class="space-y-4">
-              <h3 class="text-xl font-semibold text-gray-800 mb-6">Explore Our Work</h3>
-              
-              <!-- Services Quick Link -->
-              <a 
-                href="/services"
-                class="service-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-5 hover:bg-opacity-15 border-l-4 border-gray-200 hover:border-radbridge-blue flex items-center gap-3"
-              >
-                <div class="text-gray-600 group-hover:text-radbridge-blue">
-                  <i class="fas fa-search h-6 w-6"></i>
-                </div>
-                <div>
-                  <div class="font-medium text-gray-800 group-hover:text-radbridge-blue">Services</div>
-                  <div class="text-sm text-gray-600">Including Economic Impact Analysis and Benefit-Cost Analysis</div>
-                </div>
-              </a>
-
-              <!-- Tools Quick Link -->
-              <a 
-                href="/tools"
-                class="service-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-5 hover:bg-opacity-15 border-l-4 border-gray-200 hover:border-radbridge-blue flex items-center gap-3"
-              >
-                <div class="text-gray-600 group-hover:text-radbridge-blue">
-                  <i class="fas fa-chart-bar h-6 w-6"></i>
-                </div>
-                <div>
-                  <div class="font-medium text-gray-800 group-hover:text-radbridge-blue">Tools</div>
-                  <div class="text-sm text-gray-600">Parkbeat, GrantSpan, and other specialized tools for resilience</div>
-                </div>
-              </a>
-
-              <!-- Projects Quick Link -->
-              <a 
-                href="/projects"
-                class="service-nav-item w-full text-left px-4 py-3 rounded-lg transition-all duration-300 bg-radbridge-blue bg-opacity-5 hover:bg-opacity-15 border-l-4 border-gray-200 hover:border-radbridge-blue flex items-center gap-3"
-              >
-                <div class="text-gray-600 group-hover:text-radbridge-blue">
-                  <i class="fas fa-project-diagram h-6 w-6"></i>
-                </div>
-                <div>
-                  <div class="font-medium text-gray-800 group-hover:text-radbridge-blue">Projects</div>
-                  <div class="text-sm text-gray-600">Case studies and success stories from our clients</div>
-                </div>
-              </a>
-            </div>
-          </div>
+          </section>
         </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="bg-gray-900 text-white py-12">
-        <div class="container-custom">
-          <div class="text-center mb-8">
-            <a href="index.html">
-              <img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10 mx-auto">
-            </a>
-          </div>
-          <div class="flex flex-wrap justify-center space-x-8 mb-8">
-            <a href="/services" class="hover:text-radbridge-gold transition duration-300">Services</a>
-            <a href="/projects" class="hover:text-radbridge-gold transition duration-300">Projects</a>
-            <a href="/tools" class="hover:text-radbridge-gold transition duration-300">Tools</a>
-            <a href="/parkbeat" class="hover:text-radbridge-gold transition duration-300">Parkbeat</a>
-            <a href="/about" class="hover:text-radbridge-gold transition duration-300">About</a>
-          </div>
-          <div class="text-center text-gray-400">
-            © 2025 Radbridge Incorporated.
-          </div>
-        </div>
-      </footer>
-    </div>
-    <!-- Contact Modal -->
-    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-      <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
-        <div class="flex justify-between items-center mb-6">
-          <h3 class="text-2xl font-bold text-radbridge-blue">Contact Us</h3>
-          <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close contact form">
-            <i class="fas fa-times w-6 h-6"></i>
-          </button>
-        </div>
-        <form action="https://formspree.io/f/xwpbkgyo" method="POST" class="space-y-4">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-            <textarea name="message" id="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition hover:bg-radbridge-blue/90">
-            Send Message
-          </button>
-        </form>
       </div>
-    </div>
-
-    <!-- Parkbeat Announcement Modal -->
-    <div id="parkbeat-modal" class="hidden fixed bottom-6 right-6 max-w-sm w-full bg-white rounded-lg shadow-2xl p-6 z-50">
-      <div class="flex items-start gap-5">
-        <div class="flex-shrink-0 h-12 w-12 bg-radbridge-blue rounded-full flex items-center justify-center">
-          <i class="fas fa-tree text-white text-xl"></i>
-        </div>
-        <div class="flex-1">
-          <span class="inline-block text-xs font-semibold px-2 py-0.5 rounded-full border border-radbridge-gold text-radbridge-gold mb-2">New</span>
-          <h4 class="font-bold text-gray-900 text-lg mb-1">Park Visitation Snapshot</h4>
-          <p class="text-gray-600 text-sm">Get visitor insights for one or more individual parks. Understand when people visit, how long they stay, and where they come from. Report delivered in 3 days. Starting at $3,000.</p>
-          <a href="/parkbeat" class="inline-block mt-4 bg-radbridge-blue text-white font-semibold px-4 py-2 rounded-md text-sm hover:bg-opacity-90 transition">Learn More</a>
-        </div>
-        <button id="close-parkbeat-modal" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 p-1 rounded-full" aria-label="Close">
-          <i class="fas fa-times w-4 h-4"></i>
-        </button>
+    </main>
+    <footer class="footer-band">
+      <div class="site-footer wrap">
+        <a aria-label="Radbridge home" class="footer-brand" href="index.html"><img alt="Radbridge" height="1163" src="assets/logo.webp" width="4032"></a>
+        <nav aria-label="Footer navigation">
+          <a href="parks-recreation-open-space.html">Parks, recreation, &amp; open space</a>
+          <a href="community-resilience.html">Community resilience</a>
+          <a href="parkbeat.html">Parkbeat</a>
+          <a href="our-work.html">Our work</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <p class="footer-copyright">© 2026 Radbridge Incorporated.</p>
       </div>
-    </div>
-    
-    <script type="module" src="/src/main.js"></script>
+    </footer>
   </body>
 </html>

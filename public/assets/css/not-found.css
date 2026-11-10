@@ -1,0 +1,73 @@
+/* 404 page layout. */
+.not-found-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found-page > .site-header,
+.not-found-page > .footer-band {
+  flex: none;
+}
+
+.not-found-main {
+  flex: 1;
+  display: grid;
+  align-items: center;
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.not-found-content {
+  max-width: 42rem;
+}
+
+.not-found-code {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.not-found-message {
+  margin-top: 1.25rem;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-top: 2rem;
+  color: var(--blue);
+}
+
+.not-found-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  min-height: 48px;
+  font-weight: 500;
+}
+
+.not-found-actions .not-found-home {
+  padding: .625rem 1.5rem;
+  border: 1px solid var(--blue);
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+}
+
+.not-found-actions .not-found-home:hover {
+  border-color: var(--dark-blue);
+  background: var(--dark-blue);
+}
+
+@media print {
+  .not-found-page {
+    min-height: auto;
+  }
+
+  .not-found-main {
+    padding-block: 2rem;
+  }
+}

@@ -1,921 +1,413 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLPW1XP7RK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-HLPW1XP7RK');
-  </script>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parkbeat - Radbridge</title>
-  <meta name="description" content="Introducing Parkbeat, a new tool from Radbridge.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="/src/style.css">
-</head>
-<body class="font-lato">
-  <!-- Navigation -->
-  <nav class="bg-radbridge-blue py-12 px-4 sm:px-6 lg:px-8">
-    <div class="container-custom flex items-center justify-between">
-      <div class="text-white text-xl font-semibold">
-        <a href="/"><img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10"></a>
-      </div>
-      <!-- Mobile menu button -->
-      <button id="mobile-menu-button" class="md:hidden text-white hover:text-radbridge-gold p-2 z-50" aria-label="Toggle navigation menu" aria-expanded="false">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-      <div class="hidden md:flex space-x-8">
-        <a href="/services" class="nav-link">Services</a>
-        <a href="/projects" class="nav-link">Projects</a>
-        <a href="/tools" class="nav-link">Tools</a>
-        <a href="/parkbeat" class="nav-link relative text-radbridge-gold">
-          Parkbeat
-          <span class="absolute -top-4 -right-4 bg-radbridge-gold text-white text-xs font-semibold px-2 py-0.5 rounded-full">NEW</span>
-        </a>
-        <a href="/about" class="nav-link">About</a>
-      </div>
-    </div>
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="hidden md:hidden fixed top-[96px] left-0 right-0 bg-radbridge-blue shadow-lg z-50 transition-all duration-300 ease-in-out">
-      <div class="px-4 py-4 space-y-3">
-        <a href="/services" class="block py-3 text-white hover:text-radbridge-gold text-lg">Services</a>
-        <a href="/projects" class="block py-3 text-white hover:text-radbridge-gold text-lg">Projects</a>
-        <a href="/tools" class="block py-3 text-white hover:text-radbridge-gold text-lg">Tools</a>
-        <a href="/parkbeat" class="block py-3 text-white hover:text-radbridge-gold text-lg relative">
-          Parkbeat
-          <span class="absolute top-1 right-4 bg-radbridge-gold text-white text-xs font-semibold px-2 py-0.5 rounded-full">NEW</span>
-        </a>
-        <a href="/about" class="block py-3 text-white hover:text-radbridge-gold text-lg">About</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Breadcrumb -->
-  <div class="bg-light-grey relative z-20 -mt-8 max-w-[90%] mx-auto shadow-md">
-    <div class="container-custom flex justify-between items-stretch pr-0">
-      <nav class="text-sm py-3">
-        <a href="/" class="text-radbridge-blue font-medium hover:underline">Home</a>
-        <span class="mx-2 text-gray-600">/</span>
-        <span class="text-gray-800 font-medium">Parkbeat</span>
+  <head>
+    <meta charset="utf-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLPW1XP7RK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HLPW1XP7RK');
+    </script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Parkbeat | Park data, surveys, and analysis | Radbridge</title>
+    <meta content="Helping park agencies and planners turn evidence about visitors, nearby communities, and park benefits into better decisions." name="description">
+    <meta content="index, follow, max-image-preview:large" name="robots">
+    <meta content="#28506c" name="theme-color">
+    <link href="assets/css/site.css" rel="stylesheet">
+    <link href="assets/css/parkbeat.css" rel="stylesheet">
+    <script defer="" src="assets/js/site-header.js"></script>
+    <script defer="" src="assets/js/parkbeat-evidence-flow.js"></script>
+    <script defer="" src="assets/js/parkbeat-journey.js"></script>
+    <script defer="" src="assets/js/parkbeat-partners.js"></script>
+    <link href="https://www.radbridge.com/parkbeat.html" rel="canonical">
+    <meta content="website" property="og:type">
+    <meta content="Radbridge" property="og:site_name">
+    <meta content="en_US" property="og:locale">
+    <meta content="Parkbeat | Park data, surveys, and analysis | Radbridge" property="og:title">
+    <meta content="Helping park agencies and planners turn evidence about visitors, nearby communities, and park benefits into better decisions." property="og:description">
+    <meta content="https://www.radbridge.com/parkbeat.html" property="og:url">
+    <meta content="https://www.radbridge.com/assets/parkbeat/lexington-dashboard-window.webp" property="og:image">
+    <meta content="Parkbeat dashboard for Lexington–Fayette Urban County Government Parks and Recreation, showing a system visitation comparison and a map of visits by park." property="og:image:alt">
+    <meta content="3024" property="og:image:width">
+    <meta content="1496" property="og:image:height">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Parkbeat | Park data, surveys, and analysis | Radbridge" name="twitter:title">
+    <meta content="Helping park agencies and planners turn evidence about visitors, nearby communities, and park benefits into better decisions." name="twitter:description">
+    <meta content="https://www.radbridge.com/assets/parkbeat/lexington-dashboard-window.webp" name="twitter:image">
+    <meta content="Parkbeat dashboard for Lexington–Fayette Urban County Government Parks and Recreation, showing a system visitation comparison and a map of visits by park." name="twitter:image:alt">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://www.radbridge.com/parkbeat.html#webpage",
+      "@type": "WebPage",
+      "description": "Helping park agencies and planners turn evidence about visitors, nearby communities, and park benefits into better decisions.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://www.radbridge.com/#website"
+      },
+      "name": "Parkbeat | Park data, surveys, and analysis | Radbridge",
+      "publisher": {
+        "@id": "https://www.radbridge.com/#organization"
+      },
+      "url": "https://www.radbridge.com/parkbeat.html"
+    }
+  ]
+}</script>
+  </head>
+  <body class="parkbeat-page">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a aria-label="Radbridge home" class="brand" href="index.html"><img alt="Radbridge" height="1163" src="assets/radbridge-logo-white.webp" width="4032"></a>
+      <nav aria-label="Main navigation">
+        <a href="parks-recreation-open-space.html">Parks, recreation, &amp; open space</a>
+        <a href="community-resilience.html">Community resilience</a>
+        <a aria-current="page" href="parkbeat.html">Parkbeat</a>
+        <a href="our-work.html">Our work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      <button onclick="openContactModal()" class="bg-radbridge-gold hover:bg-opacity-90 text-white font-medium px-4 flex items-center transition duration-300 text-sm cursor-pointer">
-        Contact us →
-      </button>
-    </div>
-  </div>
-
-  <!-- Main Content Area -->
-  <div class="bg-white">
-    <!-- Hero Section -->
-    <section class="relative bg-white overflow-hidden">
-      <div class="absolute hidden lg:block inset-y-0 right-[-6rem] w-3/5">
-        <img src="assets/images/h3map2.jpg" alt="Map visualization of park data" class="w-full h-full object-cover" style="-webkit-mask-image: linear-gradient(to right, transparent, black 30%); mask-image: linear-gradient(to right, transparent, black 30%);">
-      </div>
-      <div class="relative container-custom py-8 lg:py-12">
-        <div class="w-full lg:w-2/5">
-          <div class="inline-block mb-5">
-            <span class="bg-blue-50 text-radbridge-blue text-sm font-semibold px-4 py-2 rounded-full">3-Day Delivery</span>
-          </div>
-          <h1 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
-              Park Visitation Snapshot
-          </h1>
-          <p class="text-xl text-gray-500 mb-10 leading-relaxed">
-            Understand when people visit, how long they stay, where they come from, and spatial usage patterns across your park. Delivered as an 8–10 page report for one or more parks.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <button onclick="openRequestModal()" class="inline-flex items-center justify-center bg-radbridge-blue hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-blue-200 transition duration-300 cursor-pointer">
-              Submit Request
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
-            </button>
-            <a href="#what-you-receive" class="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-gray-700 font-semibold px-6 py-3 rounded-lg border-2 border-gray-300 hover:border-radbridge-blue transition duration-300">
-              View Sample Outputs
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-              </svg>
-            </a>
-          </div>
+    </header>
+    <main class="site-main section-sequence" id="main">
+      <div class="section-band pb-cover-band" data-surface="white">
+        <svg class="pb-cover-art pb-cover-art--left" viewBox="0 0 340 420" aria-hidden="true" focusable="false">
+      <g class="pb-cover-chart" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="153" cy="85" r="45" stroke="#e4eae4" stroke-width="15"/>
+        <path d="M153 40 A45 45 0 0 1 195 101" stroke="#9db7a8" stroke-width="15"/>
+        <path d="M190 111 A45 45 0 0 1 153 130" stroke="#d9bd7e" stroke-width="15"/>
+        <path d="M112 103 A45 45 0 0 1 116 59" stroke="#62859b" stroke-width="15"/>
+        <path d="M223 116 H294" stroke="#d5dfdf" stroke-width="2"/>
+        <path d="M233 104 V83 M254 104 V65 M275 104 V49" stroke="#9bb4c0" stroke-width="12"/>
+        <path d="M114 153 H188 M114 165 H159" stroke="#d7dfdc" stroke-width="3"/>
+      </g>
+      <g class="pb-cover-park" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M-20 243 C28 202 94 205 121 235 S180 231 213 260 S247 339 205 365 S123 374 90 403 H-20Z" fill="#e9eee5"/>
+        <path d="M-12 265 C43 223 91 237 119 260 S190 251 211 294 S178 352 131 352 S82 392 28 380" fill="none" stroke="#cad8ca" stroke-width="1.4"/>
+        <path d="M-8 284 C35 255 75 263 105 285 S161 276 182 306 S149 333 110 330 S61 367 9 350" fill="none" stroke="#cad8ca" stroke-width="1.4"/>
+        <path d="M31 292 C50 280 81 290 86 305 S68 332 48 327 S16 308 31 292Z" fill="#c9dce1"/>
+        <path d="M159 255 V280 M150 268 L159 255 L168 268 M151 260 L159 247 L167 260" fill="none" stroke="#8ca797" stroke-width="2"/>
+        <path d="M102 358 V379 M94 368 L102 355 L110 368" fill="none" stroke="#8ca797" stroke-width="2"/>
+        <circle cx="199" cy="340" r="7" fill="#d9bd7e"/>
+        <circle cx="199" cy="340" r="17" fill="none" stroke="#d9bd7e" opacity=".35"/>
+      </g>
+    </svg>
+        <svg class="pb-cover-art pb-cover-art--right" viewBox="0 0 340 420" aria-hidden="true" focusable="false">
+      <g class="pb-cover-chart" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M68 52 H280 M68 88 H280 M68 124 H280" fill="none" stroke="#dfe5e3" stroke-width="1"/>
+        <path d="M68 117 L111 99 L150 108 L191 74 L229 83 L280 44 V142 H68Z" fill="#e3ecee"/>
+        <path d="M68 117 L111 99 L150 108 L191 74 L229 83 L280 44" fill="none" stroke="#8cabb9" stroke-width="2.5"/>
+        <circle cx="191" cy="74" r="5" fill="#d9bd7e"/>
+        <path d="M70 161 H138 M70 173 H112" fill="none" stroke="#d7dfdc" stroke-width="3"/>
+      </g>
+      <g class="pb-cover-park" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M158 228 C193 194 227 214 249 201 S298 194 354 225 V407 H224 C212 365 174 372 156 339 S127 260 158 228Z" fill="#e9eee5"/>
+        <path d="M178 241 C206 218 227 241 254 225 S309 215 343 245 M166 272 C204 244 241 276 271 250 S318 248 350 269 M182 308 C216 284 256 312 285 286 S331 285 356 307" fill="none" stroke="#cad8ca" stroke-width="1.4"/>
+        <path d="M268 337 C290 313 322 315 341 333 V368 C315 379 286 365 268 337Z" fill="#cfdee2"/>
+        <path d="M227 279 V304 M218 292 L227 279 L236 292 M219 284 L227 271 L235 284" fill="none" stroke="#8ca797" stroke-width="2"/>
+        <circle cx="177" cy="327" r="7" fill="#62859b"/>
+        <circle cx="177" cy="327" r="17" fill="none" stroke="#62859b" opacity=".25"/>
+      </g>
+    </svg>
+        <svg class="pb-cover-trail" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0 72 C90 108 123 14 202 39 S316 123 430 91 S594 42 710 73 S846 111 950 78 S1116 19 1224 53 S1353 102 1440 45" fill="none" stroke="#e6e3d6" stroke-width="9"/>
+      <path class="pb-trail-draw" pathLength="1" d="M0 72 C90 108 123 14 202 39 S316 123 430 91 S594 42 710 73 S846 111 950 78 S1116 19 1224 53 S1353 102 1440 45" fill="none" stroke="#9eaf9d" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+        <div class="wrap band-content pb-cover-inner">
+          <section aria-labelledby="parkbeat-title" class="pb-cover-copy">
+            <h1 id="parkbeat-title">parkbeat</h1>
+            <p class="pb-cover-tagline">Helping park agencies and planners turn evidence about visitors, nearby communities, and park benefits into better decisions.</p>
+          </section>
         </div>
       </div>
-    </section>
-
-    <div class="flex">
-      <!-- Left Sidebar Navigation -->
-      <aside class="hidden lg:block w-64 bg-white border-r border-gray-200 sticky top-0 h-screen overflow-y-auto">
-        <nav class="py-8 px-6">
-          <ul class="space-y-1">
-            <li><a href="#overview" class="sidebar-link active">Overview</a></li>
-            <li><a href="#use-cases" class="sidebar-link">Use Cases & Benefits</a></li>
-            <li><a href="#how-it-works" class="sidebar-link">How It Works</a></li>
-            <li><a href="#what-you-receive" class="sidebar-link">What You Receive</a></li>
-            <li><a href="#pricing" class="sidebar-link">Pricing</a></li>
-            <li><a href="#team" class="sidebar-link">Meet the Team</a></li>
-            <li><a href="#faq" class="sidebar-link">FAQ</a></li>
-          </ul>
-        </nav>
-      </aside>
-
-      <!-- Main Content -->
-      <main class="flex-1 max-w-5xl mx-auto px-6 py-12 lg:px-12 lg:py-16">
-        
-        <!-- Overview Section -->
-        <section id="overview" class="mb-20 scroll-mt-8">
-          <h2 class="page-section-heading mb-6">Overview</h2>
-          <p class="text-lg text-gray-600 leading-relaxed mb-4">Radbridge conducts visitation and economic impact assessments for parks and open space. While much of our work has been system- or state-wide, recent improvements to our data pipeline and processing infrastructure now let us deliver site-specific analyses for one or more parks on a short timeline.</p>
-          <p class="text-lg text-gray-600 leading-relaxed">A Park Visitation Snapshot applies our established ETL (Extract, Transform, Load) and quality-control process to anonymized mobile location data and produces a concise 8–10 page PDF for each park. The report summarizes temporal visitation patterns, dwell-time ranges, and visitor origin and travel-distance profiles. Results are presented in clear charts with key takeaways to support agency decision making. For a limited time, 1 year of dashboard access is included with any Park Visitation Snapshot.</p>
-        </section>
-
-        <!-- Use Cases and Benefits Section -->
-        <section id="use-cases" class="mb-20 scroll-mt-8">
-          <h2 class="page-section-heading mb-8">Use Cases and Benefits</h2>
-          <div class="grid md:grid-cols-3 gap-12">
-            <div class="text-center md:text-left">
-              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 20V10m-6 10V4M6 20v-4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">Data-Driven Decisions</h3>
-              <p class="text-gray-600 leading-relaxed">Use real visitation patterns—not guesses—to guide master planning, operations, and programming. Short, clear charts show when people come, how long they stay, and where they come from.</p>
+      <div class="section-band" data-surface="white">
+        <div class="wrap band-content">
+          <section aria-labelledby="dashboard-heading" class="pb-evidence pb-evidence--inputs" id="park-data-platform">
+            <div class="pb-section-intro pb-copy">
+              <h2 id="dashboard-heading">Park data, surveys, and analysis</h2>
+              <p>Parkbeat brings park and community data, survey findings, and Radbridge’s economic analyses into one dashboard.</p>
             </div>
-            <div class="text-center md:text-left">
-              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">Community Access & Experience</h3>
-              <p class="text-gray-600 leading-relaxed">See who you’re reaching (via neighborhood-level demographics) and how use varies across the site. Spot gaps, improve access, and make small changes that lift the visitor experience.</p>
+            <div class="pb-evidence-flow">
+              <svg class="pb-source-connections" aria-hidden="true" focusable="false"></svg>
+              <ul aria-label="Data sources brought together in the Parkbeat dashboard" class="pb-source-pills">
+                <li class="pb-source-pill pb-source-pill--parks">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/map-fold.svg" width="24"></span>
+                  <span>Park inventories and maps</span>
+                </li>
+                <li class="pb-source-pill pb-source-pill--reviews">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/chat-two-bubbles-oval.svg" width="24"></span>
+                  <span>Public reviews</span>
+                </li>
+                <li class="pb-source-pill pb-source-pill--mobile">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/phone-mobile-phone.svg" width="24"></span>
+                  <span>Mobile location data</span>
+                </li>
+                <li class="pb-source-pill pb-source-pill--business">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/store-1.svg" width="24"></span>
+                  <span>Google Business Profile data</span>
+                </li>
+                <li class="pb-source-pill pb-source-pill--community">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/user-multiple-group.svg" width="24"></span>
+                  <span>Community and service-area data</span>
+                </li>
+                <li class="pb-source-pill pb-source-pill--surveys">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/clipboard-check.svg" width="24"></span>
+                  <span>Parkbeat Surveys</span>
+                </li>
+                <li class="pb-source-pill pb-source-pill--search">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/search-visual.svg" width="24"></span>
+                  <span>Search keywords and trends</span>
+                </li>
+                <li class="pb-source-pill pb-source-pill--economics">
+                  <span class="pb-source-symbol"><img alt="" height="24" loading="lazy" src="assets/parkbeat/evidence-icons/decent-work-and-economic-growth.svg" width="24"></span>
+                  <span>Economic and environmental data</span>
+                </li>
+              </ul>
+              <figure class="pb-figure pb-evidence-dashboard">
+                <a aria-label="View the Parkbeat dashboard receiving these data sources at full size" class="pb-image-link pb-app-window" href="assets/parkbeat/lexington-dashboard-window.webp">
+<span aria-hidden="true" class="pb-dashboard-bar"><span class="pb-window-dots"><i></i><i></i><i></i></span><span>app.parkbeat.com</span></span>
+<img alt="Parkbeat dashboard for Lexington–Fayette Urban County Government Parks and Recreation, showing a system visitation comparison and a map of visits by park." height="1496" loading="lazy" src="assets/parkbeat/lexington-dashboard-window.webp" width="3024">
+</a>
+              </figure>
             </div>
-            <div class="text-center md:text-left">
-              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">Justify Funding & Investment</h3>
-              <p class="text-gray-600 leading-relaxed">Provide concrete numbers for grants, budget proposals, and briefings—visitation over time, regional draw, and high-level demographics—with publication-ready visuals and a robust method.</p>
+          </section>
+        </div>
+      </div>
+      <div class="section-band pb-included-band" data-surface="limestone">
+        <div class="wrap band-content">
+          <section aria-labelledby="included-heading" class="pb-included">
+            <div class="pb-section-intro">
+              <h2 id="included-heading">What you can learn about your parks</h2>
+              <p>Park planners, managers, and advocates use parkbeat to understand patterns of use, learn about the communities their parks serve, and assess the benefits they provide.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="mb-20 scroll-mt-8">
-          <h2 class="page-section-heading mb-8">How it works</h2>
-          <div class="grid md:grid-cols-3 gap-12">
-            <div class="text-center md:text-left">
-              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">1. Define the park</h3>
-              <p class="text-gray-600 leading-relaxed">Provide a boundary file or let us confirm/draw one with you. We'll then schedule a kickoff meeting to confirm your scope and goals, execute a simple agreement, and get started.</p>
+            <div class="pb-included-rows">
+              <svg class="pb-journey-trail" aria-hidden="true" focusable="false"></svg>
+              <section aria-labelledby="use-heading" class="pb-included-row">
+                <div class="pb-topic-copy">
+                  <h3 id="use-heading">How your parks are used</h3>
+                  <p>Compare estimated visitation across your system and examine individual parks and facilities. Understand where use is concentrated and how often visitors return to inform management and planning.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View the system visitation comparison and map at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/system-visitation-reference.webp" style="--capture-ratio:1800/866;--capture-width:122.222222%;--capture-left:-14.555556%;--capture-top:-25.404157%"><img alt="Parkbeat system visitation comparison for Lexington, with parks ranked by estimated visits beside a map." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/system-visitation-reference.webp" width="2200"></a>
+                  <figcaption>System visitation comparison · Lexington</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="timing-heading" class="pb-included-row pb-included-row--reverse">
+                <div class="pb-topic-copy">
+                  <h3 id="timing-heading">When people visit and how long they stay</h3>
+                  <p>Understand when people visit, how long they stay, and how use changes through the week and year. Use these findings to inform operating hours, staffing, and programming.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View the monthly and weekday visit charts at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/visits-month-week-reference.webp" style="--capture-ratio:1415/836;--capture-width:155.477032%;--capture-left:-31.095406%;--capture-top:-8.133971%"><img alt="Parkbeat charts showing estimated visits by month and day of week." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/visits-month-week-reference.webp" width="2200"></a>
+                  <a aria-label="View the hourly presence and visit-duration charts at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/hourly-presence-duration-reference.webp" style="--capture-ratio:1415/889;--capture-width:155.477032%;--capture-left:-31.095406%;--capture-top:-7.311586%"><img alt="Parkbeat charts showing visitor presence by hour and how long recorded visits last." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/hourly-presence-duration-reference.webp" width="2200"></a>
+                  <figcaption>Monthly and weekday visits, hourly presence, and visit duration · Laredo</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="communities-heading" class="pb-included-row">
+                <div class="pb-topic-copy">
+                  <h3 id="communities-heading">Where your visitors come from</h3>
+                  <p>Understand where visitors come from, how far they travel, and how local and nonlocal use compare. Review the characteristics of visitors’ home areas to inform outreach.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View the visitor-origins and travel-pattern dashboard at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/visitor-origins-reference.webp" style="--capture-ratio:1415/632;--capture-width:155.477032%;--capture-left:-31.095406%;--capture-top:-30.696203%"><img alt="Parkbeat visitor-origins map and table of visit shares by visitors’ estimated home census block groups." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/visitor-origins-reference.webp" width="2200"></a>
+                  <figcaption>Visitor origins · Laredo</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="community-context-heading" class="pb-included-row pb-included-row--reverse">
+                <div class="pb-topic-copy">
+                  <h3 id="community-context-heading">The communities around your parks</h3>
+                  <p>Study the communities within walking or driving distance of each park, including population, household characteristics, health, and access. Compare these areas with local and regional benchmarks, and consider the findings alongside visitor origins to inform services and outreach.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View walking areas and community characteristics at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/community-context-reference.webp" style="--capture-ratio:1064/796;--capture-width:206.766917%;--capture-left:-56.578947%;--capture-top:-7.788945%"><img alt="Parkbeat map of a half-mile walking area, with population, household characteristics, and health comparisons." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/community-context-reference.webp" width="2200"></a>
+                  <figcaption>Walking areas and community characteristics · North Central Fitness Center</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="search-heading" class="pb-included-row">
+                <div class="pb-topic-copy">
+                  <h3 id="search-heading">What recreation people are looking for</h3>
+                  <p>Study online search patterns to understand interest in recreation activities and how it changes through the year. Use the findings to inform programming and outreach.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View the recreation search heatmap at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/search-interest-reference.webp" style="--capture-ratio:1798/724;--capture-width:122.358176%;--capture-left:-14.571746%;--capture-top:-27.900552%"><img alt="Parkbeat heatmap showing monthly search patterns for recreation activities in Houston." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/search-interest-reference.webp" width="2200"></a>
+                  <figcaption>Recreation search interest · Houston</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="reviews-heading" class="pb-included-row pb-included-row--reverse">
+                <div class="pb-topic-copy">
+                  <h3 id="reviews-heading">What people say about their experience</h3>
+                  <p>Understand what people appreciate about your parks and where they report problems. Review recurring themes in public ratings and comments to inform service improvements.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View Buffalo Bayou Park’s public ratings at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/buffalo-bayou-reviews-reference.webp" style="--capture-ratio:1798/212;--capture-width:122.358176%;--capture-left:-14.571746%;--capture-top:-236.792453%"><img alt="Buffalo Bayou Park’s public Google rating, review count, and source information in Parkbeat." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/buffalo-bayou-reviews-reference.webp" width="2200"></a>
+                  <a aria-label="View Buffalo Bayou Park’s public-review topics at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/buffalo-bayou-reviews-reference.webp" style="--capture-ratio:882/338;--capture-width:249.433107%;--capture-left:-133.219955%;--capture-top:-221.005917%"><img alt="Recurring public-review topics for Buffalo Bayou Park, including trails and biking." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/buffalo-bayou-reviews-reference.webp" width="2200"></a>
+                  <figcaption>Public ratings and review topics · Buffalo Bayou Park</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="benefits-heading" class="pb-included-row">
+                <div class="pb-topic-copy">
+                  <h3 id="benefits-heading">Economic contributions and public benefits</h3>
+                  <p>Use economic analysis to assess park benefits and communicate their value in budget and funding discussions.</p>
+                  <div class="pb-value-explanation">
+                    <div>
+                      <h4>Economic contributions</h4>
+                      <p>Estimate how visitor spending, park operations, and capital investment contribute to jobs, income, and tax revenue.</p>
+                    </div>
+                    <div>
+                      <h4>Recreation and public benefits</h4>
+                      <p>Assess the value people receive from recreation beyond what they spend, along with benefits to public health, property values, and the environment.</p>
+                    </div>
+                  </div>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View Shillito Park’s economic contributions at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/economic-health-reference.webp" style="--capture-ratio:1415/372;--capture-width:155.477032%;--capture-left:-31.095406%;--capture-top:-94.086022%"><img alt="Shillito Park economic contributions in Parkbeat, including visitor spending, regional output, earnings, and jobs." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/economic-health-reference.webp" width="2200"></a>
+                  <a aria-label="View Shillito Park’s health benefits at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/economic-health-reference.webp" style="--capture-ratio:1415/230;--capture-width:155.477032%;--capture-left:-31.095406%;--capture-top:-325.217391%"><img alt="Shillito Park’s estimated public health value from active recreation in Parkbeat." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/economic-health-reference.webp" width="2200"></a>
+                  <figcaption>Economic contributions and public health benefits · Shillito Park</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="surveys-heading" class="pb-included-row pb-included-row--reverse pb-included-surveys" id="parkbeat-surveys">
+                <div class="pb-topic-copy">
+                  <h3 id="surveys-heading">What visitors and residents value</h3>
+                  <p>Use Parkbeat Surveys to ask visitors and residents about activities, experiences, barriers, and priorities. Include people who do not currently visit, and review mapped responses alongside visitation and community data.</p>
+                </div>
+                <figure class="pb-figure pb-survey-pair pb-topic-visual">
+                  <div class="pb-survey-previews">
+                    <div>
+                      <a aria-label="View the demonstration survey activity question at full size" class="pb-image-link" href="assets/parkbeat/surveys-activities-preview.webp"><img alt="Demonstration Parkbeat Survey asking about activities at the fictional Foxtail Ridge Park." height="1396" loading="lazy" src="assets/parkbeat/surveys-activities-preview.webp" width="1618"></a>
+                      <p><a href="assets/parkbeat/surveys-activities-preview.webp">Ask about activities <span aria-hidden="true">↗</span></a></p>
+                    </div>
+                    <div>
+                      <a aria-label="View the demonstration survey map question at full size" class="pb-image-link" href="assets/parkbeat/surveys-map-preview.webp"><img alt="Demonstration survey with a fishing point and a biking and walking route marked on a map." height="1581" loading="lazy" src="assets/parkbeat/surveys-map-preview.webp" width="1618"></a>
+                      <p><a href="assets/parkbeat/surveys-map-preview.webp">Connect feedback to places <span aria-hidden="true">↗</span></a></p>
+                    </div>
+                  </div>
+                  <figcaption>Demonstration survey · example questions and mapped responses.</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="documents-heading" class="pb-included-row" id="park-data-documents">
+                <div class="pb-topic-copy">
+                  <h3 id="documents-heading">Park data and documents</h3>
+                  <p>We keep all of the tabular and spatial data, reports, and shared planning documents together in one place so that staff and project partners can access these resources whenever they need.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-captures pb-reference-captures">
+                  <a aria-label="View the Parkbeat Data and Resources panel at full size" class="pb-image-link pb-capture-window" href="assets/parkbeat/dashboard-captures/data-resources-reference.webp" style="--capture-ratio:1798/650;--capture-width:122.358176%;--capture-left:-14.571746%;--capture-top:-23.076923%"><img alt="Parkbeat Data &amp; Resources panel with a visitation workbook and GIS layers for park boundaries, walking areas, drive-time areas, and visitor origins." height="1556" loading="lazy" src="assets/parkbeat/dashboard-captures/data-resources-reference.webp" width="2200"></a>
+                  <figcaption>Data &amp; Resources · Lexington</figcaption>
+                </figure>
+              </section>
+              <section aria-labelledby="report-heading" class="pb-included-row pb-included-row--reverse" id="parkbeat-reports">
+                <div class="pb-topic-copy">
+                  <h3 id="report-heading">Reports and data you can use</h3>
+                  <p>Access Parkbeat Reports for an individual park or your entire system. Export reports, maps, charts, and tables for planning, operations, budget and funding requests, and public discussions. Download workbooks and GIS layers for your own analysis.</p>
+                </div>
+                <figure class="pb-figure pb-topic-visual pb-dashboard-report">
+                  <div class="pb-report-stack">
+                    <div class="pb-report-sheet pb-report-cover">
+                      <a aria-label="View the Laredo Recreation Center System report cover at full size" class="pb-image-link" href="assets/parkbeat/laredo-system-report-cover.webp">
+<img alt="Full cover page of the Laredo Recreation Center System report, with its title and a map of the recreation-center system." height="2376" loading="lazy" src="assets/parkbeat/laredo-system-report-cover.webp" width="1836">
+</a>
+                      <p class="pb-report-sheet-label"><strong>Laredo</strong>System report · Cover</p>
+                    </div>
+                    <div class="pb-report-sheet pb-report-origins">
+                      <a aria-label="View page five of the Jacobson Park visitor-origins report at full size" class="pb-image-link" href="assets/parkbeat/jacobson-visitor-origins-page.webp">
+<img alt="Visitor-origins map from the Jacobson Park report, showing estimated home areas and their shares of visits." height="1266" loading="lazy" src="assets/parkbeat/jacobson-visitor-origins-preview.webp" width="1836">
+</a>
+                      <p class="pb-report-sheet-label"><strong>Jacobson Park</strong>Visitor origins · Page 5</p>
+                    </div>
+                  </div>
+                  <figcaption>
+<span>Select either report page to view it at full size.</span>
+</figcaption>
+                </figure>
+              </section>
             </div>
-            <div class="text-center md:text-left">
-              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                  <rect x="9" y="9" width="6" height="6"></rect>
-                  <line x1="9" y1="1" x2="9" y2="4"></line>
-                  <line x1="15" y1="1" x2="15" y2="4"></line>
-                  <line x1="9" y1="20" x2="9" y2="23"></line>
-                  <line x1="15" y1="20" x2="15" y2="23"></line>
-                  <line x1="20" y1="9" x2="23" y2="9"></line>
-                  <line x1="20" y1="14" x2="23" y2="14"></line>
-                  <line x1="1" y1="9" x2="4" y2="9"></line>
-                  <line x1="1" y1="14" x2="4" y2="14"></line>
-              </svg>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">2. Process the data</h3>
-              <p class="text-gray-600 leading-relaxed">We acquire anonymized mobile location data and run it through our established ETL pipeline, removing noise and isolating genuine park visits to analyze when, where, and how people use your site.</p>
-            </div>
-            <div class="text-center md:text-left">
-              <svg class="w-12 h-12 mb-4 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              <h3 class="text-lg font-semibold text-gray-900 mb-3">3. Deliver the results</h3>
-              <p class="text-gray-600 leading-relaxed">We prepare the PDF and enable dashboard access, typically within three business days of scope confirmation and agreement execution.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- What You Receive Section -->
-        <section id="what-you-receive" class="mb-20 scroll-mt-8">
-          <h2 class="page-section-heading mb-8">What you receive</h2>
-          <div class="grid md:grid-cols-2 gap-6">
-            <!-- TL: PDF Report Card (unchanged) -->
-            <div class="pricing-card-new h-full">
-              <div class="pricing-card-header !border-b-0">
-                <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                </svg>
-                <div class="pricing-card-name">PDF Report</div>
-                <div class="pricing-card-description">An 8–10 page, fully designed report with clear charts, context, and brief interpretive notes.</div>
-              </div>
-              <div class="pricing-features-list">
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Visitation patterns and length of stay (hourly/daily/monthly; dwell-time ranges)</span>
+          </section>
+        </div>
+      </div>
+      <div class="section-band pb-partners-band" data-surface="white">
+        <div class="wrap band-content">
+          <section aria-labelledby="partners-heading" class="pb-partners" id="parkbeat-partners">
+            <h2 id="partners-heading">Agencies and partners we’ve worked with</h2>
+            <ul aria-label="Agencies and partners" class="pb-partner-list" id="parkbeat-partner-list" tabindex="0">
+              <li class="pb-partner">
+                <div aria-hidden="true" class="pb-partner-mark pb-partner-mark--buffalo">
+                  <img alt="" height="50" loading="lazy" src="assets/parkbeat/partners/buffalo-bayou-symbol.svg" width="40">
+                  <img alt="" height="44" loading="lazy" src="assets/parkbeat/partners/buffalo-bayou-wordmark.svg" width="145">
                 </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Visitor origins and travel distance (local vs. regional draw)</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Visitor demographics (inferred from visitors' home census blocks; aggregated—not individual profiles)</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Comparisons to regional/state benchmarks (where available)</span>
-              </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Methods & data notes (concise methodology and data limitations)</span>
-              </div>
-              </div>
-            </div>
-
-            <!-- TR: Embedded Canva preview -->
-            <div class="pricing-card-new h-full">
-              <div class="rounded-md overflow-hidden border border-gray-200">
-                <iframe src="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?embed" title="PDF Report Preview" loading="lazy" allowfullscreen style="width:100%; height:360px; border:0;"></iframe>
-              </div>
-              <div class="mt-4">
-                <a href="https://www.canva.com/design/DAG0CYlioPE/FEVIEaJXnsEllkr9OCKLfA/view?utm_content=DAG0CYlioPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha861b037a5" target="_blank" rel="noopener noreferrer" class="pricing-card-button !mb-0 inline-flex items-center justify-center no-underline">
-                  <span>FULL SCREEN VIEW</span>
-                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- BL: Dashboard Access Card -->
-            <div class="pricing-card-new h-full">
-              <div class="pricing-card-header !border-b-0">
-                <svg class="pricing-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M18 20V10m-6 10V4M6 20v-4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="pricing-card-name">Dashboard Access</div>
-                <div class="pricing-card-description">1 year of complimentary access with any Park Visitation Snapshot. Offer available for a limited time only.</div>
-              </div>
-              <div class="pricing-features-list">
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Explore interactively — zoom/pan maps and filter by date, season, or time-of-day beyond what's possible in the PDF</span>
-            </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>View spatial and temporal charts for your park(s) in one place</span>
-              </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none"><path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Export custom PDF excerpts using custom filters, share with colleagues, decision makers, and stakeholders</span>
-              </div>
-              </div>
-            </div>
-
-            <!-- BR: Dashboard GIF -->
-            <div class="pricing-card-new h-full flex flex-col justify-center items-center">
-              <div>
-                <div class="rounded-md overflow-hidden border border-gray-200">
-                  <img src="assets/videos/parkbeat.gif" alt="Dashboard demo" class="w-full object-contain">
-                </div>
-                <div class="mt-4">
-                  <a href="https://app.parkbeat.com" target="_blank" rel="noopener noreferrer" class="pricing-card-button !mb-0 inline-flex items-center justify-center no-underline">
-                    <span>TRY IT OUT</span>
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section id="pricing" class="mb-20 scroll-mt-8">
-          <style>
-            .pricing-card-new {
-              background: white;
-              border: 1px solid #e0e0e0;
-              border-radius: 8px;
-              padding: 32px 28px;
-              display: flex;
-              flex-direction: column;
-              transition: all 0.2s;
-            }
-
-            .pricing-card-new:hover {
-              border-color: #000;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            }
-
-            .pricing-card-new.recommended {
-              border: 1.5px solid #000;
-              position: relative;
-            }
-
-            .pricing-recommended-badge {
-              position: absolute;
-              top: -12px;
-              left: 50%;
-              transform: translateX(-50%);
-              background: #000;
-              color: white;
-              padding: 3px 14px;
-              border-radius: 12px;
-              font-size: 11px;
-              font-weight: 600;
-              letter-spacing: 0.5px;
-            }
-
-            .pricing-card-header {
-              padding-bottom: 20px;
-              border-bottom: 1px solid #f0f0f0;
-              margin-bottom: 20px;
-            }
-
-            .pricing-card-icon {
-              width: 36px;
-              height: 36px;
-              margin-bottom: 16px;
-              stroke: #333;
-              stroke-width: 1.5;
-            }
-
-            .pricing-card-name {
-              font-size: 20px;
-              font-weight: 600;
-              margin-bottom: 6px;
-              color: #000;
-              font-family: 'Lato', sans-serif;
-            }
-
-            .pricing-card-description {
-              color: #666;
-              font-size: 13px;
-              line-height: 1.4;
-            }
-
-            .pricing-price-section {
-              margin-bottom: 24px;
-            }
-
-            .pricing-card-price {
-              font-size: 36px;
-              font-weight: 400;
-              color: #000;
-              line-height: 1;
-              margin-bottom: 6px;
-              font-family: 'Lato', sans-serif;
-            }
-
-            .pricing-card-price .currency {
-              font-size: 22px;
-              vertical-align: super;
-            }
-
-            .pricing-card-billing {
-              color: #666;
-              font-size: 13px;
-              min-height: 20px;
-            }
-
-            .pricing-card-button {
-              width: 100%;
-              padding: 12px;
-              background: #28506C;
-              color: white;
-              border: 1px solid #28506C;
-              border-radius: 6px;
-              font-size: 14px;
-              font-weight: 500;
-              cursor: pointer;
-              transition: all 0.2s;
-              margin-bottom: 28px;
-              font-family: 'Lato', sans-serif;
-            }
-
-            .pricing-card-button:hover {
-              background: #214259;
-              border-color: #214259;
-              transform: translateY(-1px);
-            }
-
-            .pricing-card-button.secondary {
-              background: white;
-              color: #28506C;
-              border-color: #e0e0e0;
-            }
-
-            .pricing-card-button.secondary:hover {
-              background: #f7f7f7;
-              border-color: #28506C;
-              transform: translateY(-1px);
-            }
-
-            .pricing-features-list {
-              flex-grow: 1;
-            }
-
-            .pricing-feature-item {
-              display: flex;
-              align-items: flex-start;
-              margin-bottom: 10px;
-              font-size: 13px;
-              color: #333;
-              line-height: 1.5;
-            }
-
-            .pricing-feature-check {
-              width: 16px;
-              height: 16px;
-              margin-right: 10px;
-              flex-shrink: 0;
-              margin-top: 2px;
-              stroke: #000;
-              stroke-width: 2;
-            }
-
-            .pricing-note {
-              text-align: center;
-              color: #666;
-              font-size: 13px;
-              margin-top: 32px;
-            }
-
-            @media (max-width: 768px) {
-              .pricing-card-new {
-                padding: 24px 20px;
-              }
-            }
-
-            /* Inline variant for header-aligned buttons */
-            .pricing-card-button.inline {
-              width: auto;
-            }
-          </style>
-
-          <h2 class="page-section-heading mb-4">Pricing</h2>
-          <p class="text-lg text-gray-600 leading-relaxed mb-8">Our pricing is structured to provide cost-effective insights for one or more parks. Listed prices include data procurement, analysis, and report preparation. For a limited time, 1 year of dashboard access is included with any purchase.</p>
-          
-          <!-- Park Size Selector -->
-          <div class="flex justify-start mb-12">
-            <div class="p-3 border border-gray-200 rounded-lg inline-flex items-center gap-3 transition hover:border-gray-400">
-              <label for="park-size-selector" class="text-sm font-medium text-gray-800">Park size:</label>
-              <select onchange="selectParkSize(this.value)" id="park-size-selector" class="text-sm border-gray-300 rounded-md shadow-sm focus:border-black focus:ring-black">
-                <option value="small" selected>Small-Medium Park (0-459 acres)</option>
-                <option value="medium">Medium-Large Park (460-799 acres)</option>
-                <option value="large">Large-Extra Large Park (800-4,500 acres)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Pricing Cards -->
-          <div class="grid md:grid-cols-3 gap-6 mb-8">
-            
-            <!-- Single Park Card -->
-            <div class="pricing-card-new">
-              <div class="pricing-card-header">
-                <div class="text-3xl text-gray-700 mb-4" style="height: 36px;">
-                  <i class="fas fa-tree"></i>
-                </div>
-                <div class="pricing-card-name">Single Park</div>
-                <div class="pricing-card-description">3-day delivery</div>
-              </div>
-              <div class="pricing-price-section">
-                <div class="pricing-card-price"><span class="currency">$</span><span id="price-single">3,000</span></div>
-                <div class="pricing-card-billing"></div>
-                </div>
-              <button onclick="openRequestModal()" class="pricing-card-button">
-                Submit Request
-              </button>
-              <div class="pricing-features-list">
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>8-10 page PDF report</span>
-              </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Dashboard access</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Visitation patterns & origins</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Briefing-ready graphics</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Two Parks Card -->
-            <div class="pricing-card-new">
-              <div class="pricing-card-header">
-                <div class="text-3xl text-gray-700 mb-4 space-x-2" style="height: 36px;">
-                  <i class="fas fa-tree"></i>
-                  <i class="fas fa-tree"></i>
-                </div>
-               <div class="pricing-card-name">Two Parks</div>
-               <div class="pricing-card-description">5 day delivery</div>
-             </div>
-              <div class="pricing-price-section">
-                <div class="pricing-card-price"><span class="currency">$</span><span id="price-two">5,000</span></div>
-                <div class="pricing-card-billing"></div>
-                </div>
-              <button onclick="openRequestModal()" class="pricing-card-button">
-                Submit Request
-              </button>
-              <div class="pricing-features-list">
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>2 x 8-10 page PDF reports</span>
-              </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Dashboard access</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Visitation patterns & origins</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Briefing-ready graphics</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Three+ Parks Card -->
-            <div class="pricing-card-new">
-              <div class="pricing-card-header">
-                <div class="text-3xl text-gray-700 mb-4 space-x-2 flex items-center" style="height: 36px;">
-                  <i class="fas fa-tree"></i>
-                  <i class="fas fa-tree"></i>
-                  <i class="fas fa-tree"></i>
-                  <i class="fas fa-plus text-2xl ml-1"></i>
-                </div>
-               <div class="pricing-card-name">Three+ Parks</div>
-               <div class="pricing-card-description">Volume Discounts Apply</div>
-             </div>
-             <div class="pricing-price-section">
-              <div class="pricing-card-price"><span class="currency">$</span><span id="price-two">Get in touch</span></div>
-              <div class="pricing-card-billing"></div>
-              </div>
-            <button onclick="openRequestModal()" class="pricing-card-button">
-              Submit Request
-            </button>
-              <div class="pricing-features-list">
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Multi-park or system-wide</span>
-              </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Customized dashboards</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Comprehensive reports</span>
-                </div>
-                <div class="pricing-feature-item">
-                  <svg class="pricing-feature-check" viewBox="0 0 14 14" fill="none">
-                    <path d="M11.5 4L5.5 10L2.5 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Add-on services (see below)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-16">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Add-on Services</h3>
-            <p class="text-gray-700 leading-relaxed mb-6">Beyond single-park snapshots, we also offer system-wide, regional, and state-level analyses. Contact us to discuss custom scopes and add-on services, including:</p>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                <div>
-                  <h4 class="font-semibold text-gray-800">Economic Impact Analysis</h4>
-                  <p class="text-gray-600">Estimate visitor spending, job support, and tax revenue using established methods.</p>
-                </div>
+                <span class="pb-partner-name">Buffalo Bayou Partnership</span>
               </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                <div>
-                  <h4 class="font-semibold text-gray-800">Public Health Benefits Analysis</h4>
-                  <p class="text-gray-600">Measure non-market values like consumer surplus and avoided healthcare costs.</p>
+              <li class="pb-partner">
+                <div aria-hidden="true" class="pb-partner-mark pb-partner-mark--iowa">
+                  <img alt="" height="376" loading="lazy" src="assets/parkbeat/partners/iowa-dnr.webp" width="499">
                 </div>
+                <span class="pb-partner-name">Iowa Department of Natural Resources</span>
               </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-radbridge-blue mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                <div>
-                  <h4 class="font-semibold text-gray-800">Environmental Benefits Analysis</h4>
-                  <p class="text-gray-600">Quantify ecosystem service values associated with your park or open space.</p>
+              <li class="pb-partner">
+                <div aria-hidden="true" class="pb-partner-mark">
+                  <img alt="" height="356" loading="lazy" src="assets/parkbeat/partners/pros-consulting.jpeg" width="909">
                 </div>
+                <span class="pb-partner-name">PROS Consulting</span>
+              </li>
+              <li class="pb-partner">
+                <div aria-hidden="true" class="pb-partner-mark">
+                  <div class="pb-partner-wordmark">
+                    <span>CITY OF</span>
+                    <strong>
+                      LAREDO
+                    </strong>
+                    <span>TEXAS</span>
+                  </div>
+                </div>
+                <span class="pb-partner-name">City of Laredo</span>
+              </li>
+              <li class="pb-partner">
+                <div aria-hidden="true" class="pb-partner-mark">
+                  <img alt="" height="110" loading="lazy" src="assets/parkbeat/partners/lexington.webp" width="482">
+                </div>
+                <span class="pb-partner-name">Lexington Parks &amp; Recreation</span>
+              </li>
+              <li class="pb-partner">
+                <div aria-hidden="true" class="pb-partner-mark">
+                  <img alt="" height="93" loading="lazy" src="assets/parkbeat/partners/open-space-authority.svg" width="377">
+                </div>
+                <span class="pb-partner-name">Santa Clara Valley Open Space Authority</span>
               </li>
             </ul>
-          </div>
-        </section>
-
-        <!-- Meet the Team Section -->
-        <section id="team" class="mb-20 scroll-mt-8">
-          <h2 class="page-section-heading mb-8">Meet the Team</h2>
-          
-          <div class="mb-12">
-            <p class="text-lg text-gray-600 leading-relaxed mb-4">Radbridge was founded by Rowan Schmidt and Johnny Mojica, who have worked together for more than a decade advancing outdoor recreation, economic development, and community resilience. Before launching Radbridge in 2022, they worked together for 8 years in the nonprofit sector, supporting government agencies across the country with visitation studies, economic impact assessments, and benefit-cost analyses.</p>
-            <p class="text-lg text-gray-600 leading-relaxed">Together, they've processed hundreds of billions of mobile location records, pioneered new methods for measuring the benefits of parks, built software products, and helped agencies secure hundreds of millions in funding for resilience projects. Their work combines rigorous data science with a deep understanding of what government and nonprofit clients need—clear answers, defensible methods, and insights that support real-world decision making.</p>
-          </div>
-
-          <!-- Team Photos -->
-          <div class="flex justify-start gap-12 mb-16">
-            <div class="text-center">
-              <img src="assets/images/Headshot_Rowan.jpg" alt="Rowan Schmidt" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gray-200">
-              <div class="font-semibold text-gray-900">Rowan Schmidt</div>
-              <div class="text-sm text-gray-600">CEO</div>
+            <div class="pb-partner-controls" hidden="">
+              <span aria-atomic="true" aria-live="polite" class="pb-partner-position">1 / 6</span>
+              <button aria-controls="parkbeat-partner-list" aria-label="Previous organization" class="pb-partner-control" data-direction="previous" type="button"><span aria-hidden="true">←</span></button>
+              <button aria-controls="parkbeat-partner-list" aria-label="Next organization" class="pb-partner-control" data-direction="next" type="button"><span aria-hidden="true">→</span></button>
             </div>
-            <div class="text-center">
-              <img src="assets/images/Headshot_Johnny.jpg" alt="Johnny Mojica" class="w-32 h-32 rounded-full object-cover mx-auto mb-3 border-2 border-gray-200">
-              <div class="font-semibold text-gray-900">Johnny Mojica</div>
-              <div class="text-sm text-gray-600">COO & Recreation Economist</div>
-            </div>
-          </div>
-
-          <!-- Project Examples -->
-          <div class="mt-12">
-            <h3 class="text-xl font-semibold text-gray-900 mb-6">Selected Projects</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-              
-              <!-- Project 1 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:border-black hover:shadow-lg">
-                <img src="assets/images/nevada.jpg" alt="Outdoor Recreation in Nevada" class="w-full h-48 object-cover border-b border-gray-200">
-                <div class="p-6">
-                  <h4 class="font-semibold text-gray-900 mb-2">Outdoor Recreation in Nevada</h4>
-                  <p class="text-sm text-gray-600 leading-relaxed">Statewide assessment for Nevada Division of Outdoor Recreation. Processed 80 billion mobile location records to quantify $7.67B in economic output and 159 million annual visits across 1,500 recreation sites.</p>
-                </div>
-              </div>
-
-              <!-- Project 2 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:border-black hover:shadow-lg">
-                <img src="assets/images/edwa.jpg" alt="Upper American River Watershed Analysis" class="w-full h-48 object-cover border-b border-gray-200">
-                <div class="p-6">
-                  <h4 class="font-semibold text-gray-900 mb-2">Upper American River Watershed</h4>
-                  <p class="text-sm text-gray-600 leading-relaxed">Comprehensive recreation analysis for El Dorado Water Agency. Processed 560 million mobile records and used machine learning to estimate 7 million annual visits generating $348M in economic impact.</p>
-                </div>
-              </div>
-
-              <!-- Project 3 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200 hover:border-black hover:shadow-lg">
-                <img src="assets/images/icon.png" alt="ICON Water Trails Analysis" class="w-full h-48 object-cover border-b border-gray-200">
-                <div class="p-6">
-                  <h4 class="font-semibold text-gray-900 mb-2">ICON Water Trails Network</h4>
-                  <p class="text-sm text-gray-600 leading-relaxed">Economic benefits and visitation analysis for 150-mile river network in Central Iowa. Pioneered methodology to differentiate river users from shore-based visitors across 2.6 billion mobile records.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="mb-20 scroll-mt-8">
-          <h2 class="page-section-heading mb-8">FAQ</h2>
-          <div class="border-t border-gray-200">
-            
-            <div class="border-b border-gray-200 py-6">
-              <button onclick="toggleFaq(1)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">How is visitor privacy protected?</span>
-                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </button>
-              <div id="faq-content-1" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">All data is fully anonymized and aggregated. Individual devices cannot be identified, and all processing adheres to strict privacy protocols. We only report aggregate statistics that meet minimum threshold requirements.</p>
-              </div>
-            </div>
-
-            <div class="border-b border-gray-200 py-6">
-              <button onclick="toggleFaq(2)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">Can you analyze multiple parks?</span>
-                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </button>
-              <div id="faq-content-2" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">Yes! We offer volume discounts for 2, 3, or more parks. Contact us for custom multi-park pricing that fits your system's needs.</p>
-              </div>
-            </div>
-
-            <div class="border-b border-gray-200 py-6">
-              <button onclick="toggleFaq(3)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">What if my park boundaries are complex?</span>
-                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </button>
-              <div id="faq-content-3" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">We work with you to define appropriate boundaries using GIS data, satellite imagery, and your input. Our spatial cleaning process accounts for roads, private inholdings, and other exclusions.</p>
-              </div>
-            </div>
-
-            <div class="border-b border-gray-200 py-6">
-              <button onclick="toggleFaq(4)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">Do you provide economic impact analysis?</span>
-                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </button>
-              <div id="faq-content-4" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">Economic impact assessment is available as an add-on service. This includes visitor spending estimates, job support calculations, and tax revenue modeling based on established methods.</p>
-              </div>
-            </div>
-
-            <div class="border-b border-gray-200 py-6">
-              <button onclick="toggleFaq(5)" class="w-full text-left flex justify-between items-center gap-4">
-                <span class="font-medium text-gray-900">How is this different from your larger studies?</span>
-                <svg class="w-4 h-4 text-gray-700 transition-transform transform flex-shrink-0" id="faq-icon-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </button>
-              <div id="faq-content-5" class="hidden pt-4">
-                <p class="text-gray-600 leading-relaxed">Our comprehensive studies, such as our recent statwide study in Nevada, can include systemwide coverage, calibration of visitation data through machine learning modeling, economic impact analysis, and extensive stakeholder engagement. The Park Visitation Snapshot focuses on one or a few locations with a streamlined process and fixed deliverables, making it quick and cost effective.</p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-      </main>
-    </div>
-  </div>
-
-
-  <!-- Contact Modal -->
-  <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-    <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold text-radbridge-blue">Contact Us</h3>
-        <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close contact form">
-          <i class="fas fa-times w-6 h-6"></i>
-        </button>
-      </div>
-      <form action="https://formspree.io/f/xwpbkgyo" method="POST" class="space-y-4">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
+          </section>
         </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue">
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-          <textarea name="message" id="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-radbridge-blue focus:ring-radbridge-blue"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition hover:bg-radbridge-blue/90">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Request Form Modal -->
-    <style>
-        .form-input-new {
-            margin-top: 0.25rem;
-            display: block;
-            width: 100%;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            box-shadow: none;
-            transition: all 0.2s;
-        }
-        .form-input-new:hover {
-            background-color: #ebf8ff;
-            border-color: #3182ce;
-        }
-        .form-input-new:focus {
-            outline: none;
-            border-color: #3182ce;
-            box-shadow: 0 0 0 1px #3182ce;
-        }
-        .form-input-new::placeholder {
-            color: #a0aec0;
-        }
-    </style>
-  <div id="requestModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-    <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-[75vh] overflow-y-auto">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold text-radbridge-blue">Submit Request</h3>
-        <button onclick="closeRequestModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close request form">
-          <i class="fas fa-times w-6 h-6"></i>
-        </button>
       </div>
-      <form action="https://formspree.io/f/xwpbkgyo" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="New Parkbeat Analysis Request">
-        <div class="grid grid-cols-1 gap-6">
-          <div class="block text-sm font-medium text-gray-700">
-          <span class="text-red-500">*</span> indicates a required field
-          </div>
-          <div>
-            <label for="request-name" class="block text-sm font-medium text-gray-700">Name <span class="text-red-500">*</span></label>
-            <input type="text" name="name" id="request-name" required class="form-input-new">
-          </div>
-          <div>
-            <label for="request-email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
-            <input type="email" name="email" id="request-email" required class="form-input-new">
-          </div>
-          <div>
-            <label for="request-organization" class="block text-sm font-medium text-gray-700">Organization</label>
-            <input type="text" name="organization" id="request-organization" class="form-input-new">
-          </div>
-          <div>
-            <label for="request-analysis-tier" class="block text-sm font-medium text-gray-700">Analysis Tier</label>
-            <select id="request-analysis-tier" name="analysis-tier" class="form-input-new">
-              <option selected></option>
-              <option>Single Park</option>
-              <option>Two Parks</option>
-              <option>Three+ Parks</option>
-              <option>Not sure / TBD</option>
-            </select>
-          </div>
-          <div>
-            <label for="request-park-size" class="block text-sm font-medium text-gray-700">Park Size(s)</label>
-            <select id="request-park-size" name="park-size" class="form-input-new">
-              <option selected></option>
-              <option>Small-Medium Park (0-459 acres)</option>
-              <option>Medium-Large Park (460-799 acres)</option>
-              <option>Large-Extra Large Park (800-4,500 acres)</option>
-              <option>Not sure / TBD</option>
-            </select>
-          </div>
-          <div>
-            <label for="request-comments" class="block text-sm font-medium text-gray-700">Additional Comments / Questions</label>
-            <textarea name="comments" id="request-comments" rows="2" class="form-input-new" placeholder="Enter your comments or questions here..."></textarea>
-          </div>
+      <div class="section-band" data-surface="white">
+        <div class="wrap band-content">
+          <section aria-labelledby="next-heading" class="pb-close" id="reports-access">
+            <h2 id="next-heading">Discuss your project</h2>
+            <div class="pb-close-copy">
+              <p>Tell us about your parks and what you need to understand. We’ll help you understand what data is available, discuss potential surveys, and develop analyses that fit your project. Parkbeat can be accessed via a one-time report or through ongoing dashboard access.</p>
+              <a class="pb-link" href="contact.html">Talk with the Parkbeat team <span aria-hidden="true">→</span></a>
+              <a class="pb-secondary-link" href="parks-recreation-open-space.html">Our parks and recreation work <span aria-hidden="true">→</span></a>
+            </div>
+          </section>
         </div>
-        <div class="mt-8">
-          <button type="submit" class="w-full bg-radbridge-blue text-white font-semibold px-6 py-3 rounded-lg shadow transition hover:bg-radbridge-blue/90">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="container-custom">
-      <div class="text-center mb-8">
-        <a href="/">
-          <img src="assets/images/Radbridge_logo_white_PNG.png" alt="Radbridge Logo" class="h-10 mx-auto">
-        </a>
       </div>
-      <div class="flex flex-wrap justify-center space-x-8 mb-8">
-        <a href="/services" class="hover:text-radbridge-gold transition duration-300">Services</a>
-        <a href="/projects" class="hover:text-radbridge-gold transition duration-300">Projects</a>
-        <a href="/tools" class="hover:text-radbridge-gold transition duration-300">Tools</a>
-        <a href="/parkbeat" class="hover:text-radbridge-gold transition duration-300">Parkbeat</a>
-        <a href="/about" class="hover:text-radbridge-gold transition duration-300">About</a>
+    </main>
+    <footer class="footer-band">
+      <div class="site-footer wrap">
+        <a aria-label="Radbridge home" class="footer-brand" href="index.html"><img alt="Radbridge" height="1163" src="assets/logo.webp" width="4032"></a>
+        <nav aria-label="Footer navigation">
+          <a href="parks-recreation-open-space.html">Parks, recreation, &amp; open space</a>
+          <a href="community-resilience.html">Community resilience</a>
+          <a href="parkbeat.html">Parkbeat</a>
+          <a href="our-work.html">Our work</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <p class="footer-copyright">© 2026 Radbridge Incorporated.</p>
+        <a class="pb-icon-credit" href="assets/parkbeat/evidence-icons/credits.html">Icon credits</a>
       </div>
-      <div class="text-center text-gray-400">
-        © 2025 Radbridge Incorporated.
-      </div>
-    </div>
-  </footer>
-
-  <script type="module" src="/src/main.js"></script>
-</body>
+    </footer>
+  </body>
 </html>

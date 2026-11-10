@@ -1,0 +1,35 @@
+/* contact components */
+.contact-content { display: grid; gap: var(--space-content-group); }
+.contact-content > .page-heading { padding-block: 0; }
+.contact-form { width: 100%; max-width: 52rem; display: grid; gap: 1.5rem; }
+.contact-form .contact-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.contact-form .contact-field { display: grid; align-content: start; gap: .5rem; min-width: 0; }
+.contact-form label { color: var(--blue); font-weight: 500; }
+.contact-form label span { color: var(--muted); font-size: .875rem; font-weight: 400; }
+.contact-form :is(input, textarea) { box-sizing: border-box; width: 100%; min-width: 0; min-height: 48px; padding: .625rem .75rem; border: 1px solid var(--muted); border-radius: 0; background: #fff; color: var(--ink); font: inherit; line-height: 1.5; }
+.contact-form textarea { min-height: 168px; resize: vertical; }
+.contact-form :is(input, textarea, button):focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.contact-form [aria-invalid="true"] { border-width: 2px; padding: calc(.625rem - 1px) calc(.75rem - 1px); }
+.contact-form .contact-error { margin: 0; color: var(--ink); font-size: 1rem; line-height: 1.5; }
+.contact-form [hidden] { display: none; }
+.contact-form .contact-submit { min-height: 48px; padding: .625rem 1.5rem; border: 1px solid var(--blue); border-radius: 0; background: var(--blue); color: #fff; font: inherit; font-weight: 500; cursor: pointer; }
+.contact-form .contact-submit:hover { background: var(--dark-blue); border-color: var(--dark-blue); }
+.contact-form .contact-submit:disabled { cursor: not-allowed; }
+.contact-form[aria-busy="true"] .contact-submit { cursor: wait; }
+.contact-form .contact-status { margin: 1rem 0 0; color: var(--ink); }
+.contact-form .contact-status:empty { display: none; }
+@media (min-width: 601px) {
+.contact-form .contact-pair { row-gap: .5rem; }
+.contact-form .contact-pair > .contact-field { display: contents; }
+.contact-form .contact-pair > .contact-field:first-child > * { grid-column: 1; }
+.contact-form .contact-pair > .contact-field:last-child > * { grid-column: 2; }
+.contact-form .contact-pair label { grid-row: 1; align-self: start; }
+.contact-form .contact-pair input { grid-row: 2; align-self: start; }
+.contact-form .contact-pair .contact-error { grid-row: 3; align-self: start; }
+}
+@media (max-width: 800px) {
+.contact-content { gap: var(--space-intro-content); }
+}
+@media (max-width: 600px) {
+.contact-form .contact-pair { grid-template-columns: minmax(0, 1fr); }
+}

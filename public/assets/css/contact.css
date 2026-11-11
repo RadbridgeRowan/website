@@ -18,6 +18,8 @@
 .contact-form[aria-busy="true"] .contact-submit { cursor: wait; }
 .contact-form .contact-status { margin: 1rem 0 0; color: var(--ink); }
 .contact-form .contact-status:empty { display: none; }
+.contact-form .contact-privacy { margin: 0; color: var(--muted); font-size: .9375rem; line-height: 1.5; }
+.contact-form .contact-privacy a { color: var(--blue); }
 @media (min-width: 601px) {
 .contact-form .contact-pair { row-gap: .5rem; }
 .contact-form .contact-pair > .contact-field { display: contents; }

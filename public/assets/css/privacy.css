@@ -1,0 +1,24 @@
+/* Privacy notice layout */
+.privacy-policy {
+  display: grid;
+  gap: var(--space-content-group);
+  max-width: var(--measure-prose);
+}
+
+.privacy-policy > section {
+  display: grid;
+  gap: .75rem;
+}
+
+.privacy-policy h2 {
+  margin: 0;
+}
+
+.privacy-policy p {
+  margin: 0;
+}
+
+.privacy-policy code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .92em;
+}

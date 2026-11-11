@@ -957,7 +957,7 @@ h2 {
   }
 }
 
-.pillars .practice-detail-link {
+:is(.pillars, .practice-service) .practice-detail-link {
   display: inline-block;
   margin-top: 1.2rem;
   color: var(--blue);
@@ -966,11 +966,11 @@ h2 {
   text-decoration: none;
 }
 
-.pillars .practice-detail-link:hover {
+:is(.pillars, .practice-service) .practice-detail-link:hover {
   text-decoration: underline;
 }
 
-.pillars .practice-detail-link span {
+:is(.pillars, .practice-service) .practice-detail-link span {
   display: inline-block;
   margin-left: .35rem;
 }

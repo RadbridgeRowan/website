@@ -1,0 +1,36 @@
+# Radbridge
+
+> Radbridge (Radbridge Incorporated) is a public-sector economics consulting firm founded in 2022. We help public agencies across the United States assess benefits, compare costs, and weigh investment options for parks, recreation, open space, and community resilience.
+
+Our clients include park and recreation agencies, state outdoor recreation and natural resource agencies, water and flood control agencies, utilities, nonprofits, and planning and engineering teams. We work at local, regional, and statewide scales, combining data science with economic analysis. We share findings through reports, concise summaries, maps, web-based tools, and datasets.
+
+## Services
+
+- [Economic impact analysis](https://www.radbridge.com/economic-impact-analysis.html): Economic impact and economic contribution studies for parks, trails, waterways, and outdoor recreation, covering visitor spending, jobs, labor income, value added, and tax revenue.
+- [Benefit-cost analysis](https://www.radbridge.com/benefit-cost-analysis.html): Benefit-cost analysis for flood, wildfire, drought, and other resilience investments, including FEMA hazard mitigation grant applications and nature-based solutions.
+- [Visitor use studies](https://www.radbridge.com/visitor-use-studies.html): Visitation estimates, visitor origins, seasonal patterns, and surveys for parks, trails, rivers, and public lands, using mobile location data and agency records.
+- [Recreation value and public benefits](https://www.radbridge.com/recreation-value.html): The value of recreation beyond what visitors spend (consumer surplus), plus the health, property value, and environmental benefits of parks and open space.
+- [Parkbeat](https://www.radbridge.com/parkbeat.html): Our platform that brings visitor information, survey findings, and park benefits together, offered as one-time reports, surveys, and dashboards.
+
+## Practice areas
+
+- [Parks, recreation & open space](https://www.radbridge.com/parks-recreation-open-space.html)
+- [Community resilience](https://www.radbridge.com/community-resilience.html)
+
+## Selected projects
+
+- [Chesapeake Parks, Recreation and Tourism Master Plan](https://www.radbridge.com/projects/chesapeake-parks-master-plan.html): City of Chesapeake, Virginia. Economic contributions, recreation value, and health benefits for the Path to Play master plan, adopted in February 2026.
+- [Statewide Analysis of Outdoor Recreation in Nevada](https://www.radbridge.com/projects/nevada-outdoor-recreation.html): Nevada Division of Outdoor Recreation. County-level economic contributions using data from about 1,500 recreation sites.
+- [Yolo Bypass Recreation Analysis](https://www.radbridge.com/projects/yolo-bypass.html): Sacramento Area Flood Control Agency. Visitor spending supported an estimated $3.62 million in business activity and 20 jobs.
+- [St. Anthony Whitewater Park Economic Analysis](https://www.radbridge.com/projects/st-anthony-whitewater.html): City of St. Anthony, Idaho. Visitation scenarios and visitor spending for a proposed whitewater park.
+- [Outdoor Recreation in the Upper American River Watershed](https://www.radbridge.com/projects/upper-american-river.html): El Dorado Water Agency, California. An estimated 7 million recreation visitor-days in 2022.
+- [ICON Water Trails](https://www.radbridge.com/projects/icon-water-trails.html): Des Moines, Iowa. Visitation, visitor spending, and recreation value for a river access network.
+- [Iowa DNR Little Sioux River Visitor Trends](https://www.radbridge.com/projects/little-sioux-river.html): Iowa Department of Natural Resources. Recreation use across a 200-mile river corridor.
+- [Arroyo Mocho Flood Risk Reduction](https://www.radbridge.com/projects/arroyo-mocho.html): Zone 7 Water Agency, California. Benefit-cost analysis of flood reduction alternatives.
+- [Sonoma Valley Flood Risk Assessment](https://www.radbridge.com/projects/sonoma-valley-flood-risk.html): Sonoma Water, California. Flood loss assessment for more than 4,000 structures.
+- [All projects](https://www.radbridge.com/our-work.html)
+
+## Company
+
+- [About Radbridge](https://www.radbridge.com/about.html): Founded in 2022 by Johnny Mojica (Chief Operating Officer) and Rowan Schmidt (Chief Executive Officer).
+- [Contact](https://www.radbridge.com/contact.html)

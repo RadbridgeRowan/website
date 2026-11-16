@@ -106,7 +106,7 @@
     {
       "@id": "https://www.radbridge.com/about.html#johnny-mojica",
       "@type": "Person",
-      "description": "Johnny specializes in measuring and communicating the benefits that parks and public spaces bring to communities. His work includes visitor use studies and economic impact analyses for park systems, along with benefit-cost analyses for community resilience investments. He has completed the E-Verify Knowledge Test.",
+      "description": "Johnny specializes in measuring and communicating the benefits that parks and public spaces bring to communities. His work includes visitor use studies and economic impact analyses for park systems, along with benefit-cost analyses for community resilience investments.",
       "image": "https://www.radbridge.com/assets/johnny.jpg",
       "jobTitle": "Chief Operating Officer",
       "name": "Johnny Mojica",
@@ -159,7 +159,6 @@
                   <h3>Johnny Mojica</h3>
                   <p class="role">Chief Operating Officer</p>
                   <p>Johnny specializes in measuring and communicating the benefits that parks and public spaces bring to communities. His work includes visitor use studies and economic impact analyses for park systems, along with benefit-cost analyses for community resilience investments.</p>
-                  <p>He has completed the <button aria-controls="mojica-certificate-dialog" aria-haspopup="dialog" class="cert-trigger" type="button">E-Verify Knowledge Test</button>.</p>
                 </div>
               </article>
             </div>
@@ -182,29 +181,5 @@
         <p class="footer-copyright">© 2026 Radbridge Incorporated.</p>
       </div>
     </footer>
-    <dialog aria-labelledby="mojica-certificate-title" class="cert-dialog" id="mojica-certificate-dialog">
-      <div class="cert-dialog-header">
-        <h2 id="mojica-certificate-title">E-Verify Knowledge Test</h2>
-        <form method="dialog">
-          <button aria-label="Close certificate" class="cert-dialog-close" type="submit">Close</button>
-        </form>
-      </div>
-      <img alt="E-Verify Knowledge Test certificate for John Mojica showing a 100% score, completed November 16, 2026" height="900" src="assets/mojica-certificate.png" width="1200">
-    </dialog>
-    <script>
-      (function () {
-        var dialog = document.getElementById('mojica-certificate-dialog');
-        var trigger = document.querySelector('.cert-trigger[aria-controls="mojica-certificate-dialog"]');
-        if (!dialog || !trigger) return;
-
-        trigger.addEventListener('click', function () {
-          dialog.showModal();
-        });
-
-        dialog.addEventListener('click', function (event) {
-          if (event.target === dialog) dialog.close();
-        });
-      })();
-    </script>
   </body>
 </html>

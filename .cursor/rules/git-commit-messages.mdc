@@ -1,0 +1,14 @@
+---
+description: Use generic commit messages because this repo is public
+alwaysApply: true
+---
+
+# Git commit messages
+
+This repository is public. When creating git commits, use only this message:
+
+```
+updates
+```
+
+Do not write descriptive commit subjects or bodies. Do not mention files, features, fixes, or rationale in the commit message.

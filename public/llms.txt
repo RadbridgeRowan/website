@@ -28,6 +28,8 @@ Our clients include park and recreation agencies, state outdoor recreation and n
 - [Iowa DNR Little Sioux River Visitor Trends](https://www.radbridge.com/projects/little-sioux-river.html): Iowa Department of Natural Resources. Recreation use across a 200-mile river corridor.
 - [Arroyo Mocho Flood Risk Reduction](https://www.radbridge.com/projects/arroyo-mocho.html): Zone 7 Water Agency, California. Benefit-cost analysis of flood reduction alternatives.
 - [Sonoma Valley Flood Risk Assessment](https://www.radbridge.com/projects/sonoma-valley-flood-risk.html): Sonoma Water, California. Flood loss assessment for more than 4,000 structures.
+- [FutureWeather](https://www.radbridge.com/projects/futureweather.html): A Radbridge-developed tool for climate-adjusted EPW, DDY and STAT weather files for building performance modeling, used by hundreds of people for locations worldwide.
+- [Climate Data Download](https://www.radbridge.com/projects/climatedatadownload.html): A Radbridge-developed tool that delivers NASA NEX-GDDP-CMIP6 climate projections for any location as CSV or Excel files.
 - [All projects](https://www.radbridge.com/our-work.html)
 
 ## Company
@@ -35,3 +37,4 @@ Our clients include park and recreation agencies, state outdoor recreation and n
 - [About Radbridge](https://www.radbridge.com/about.html): Founded in 2022 by Johnny Mojica (Chief Operating Officer) and Rowan Schmidt (Chief Executive Officer).
 - [Contact](https://www.radbridge.com/contact.html)
 - [LinkedIn](https://www.linkedin.com/company/radbridge)
+- Radbridge also develops two separately branded tools: [FutureWeather.co](https://futureweather.co/), for climate-adjusted building energy modeling weather files, and [ClimateDataDownload.com](https://www.climatedatadownload.com/), for NASA CMIP6 climate projections as CSV or Excel.

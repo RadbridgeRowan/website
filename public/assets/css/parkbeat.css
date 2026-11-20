@@ -74,10 +74,15 @@
   text-align: center;
 }
 .parkbeat-page #main .pb-cover-copy h1 {
-  font-size: clamp(4.5rem, 7.25vw, 6.5rem);
-  line-height: 1.05;
-  letter-spacing: -.055em;
+  margin: 0;
+  line-height: 0;
   text-align: center;
+}
+.parkbeat-page #main .pb-cover-copy h1 img {
+  display: block;
+  width: min(100%, 520px);
+  height: auto;
+  margin-inline: auto;
 }
 .parkbeat-page #main .pb-cover-copy > .pb-cover-tagline {
   max-width: 620px;
@@ -130,7 +135,7 @@
 .parkbeat-page .pb-cover-art--right { right: -55px; }
 .parkbeat-page .pb-cover-chart { display: none; }
 .parkbeat-page .pb-cover-trail { bottom: 10px; height: 100px; }
-.parkbeat-page #main .pb-cover-copy h1 { font-size: clamp(4.5rem, 12vw, 6rem); }
+.parkbeat-page #main .pb-cover-copy h1 img { width: min(100%, 420px); }
 .parkbeat-page #main .pb-cover-copy > .pb-cover-tagline { font-size: 1.25rem; }
 }
 @media (max-width: 540px) {
@@ -147,7 +152,7 @@
 .parkbeat-page .pb-cover-inner { min-height: 0; padding-bottom: 0; }
 .parkbeat-page .pb-cover-art,
 .parkbeat-page .pb-cover-trail { display: none; }
-.parkbeat-page #main .pb-cover-copy h1 { font-size: 42pt; }
+.parkbeat-page #main .pb-cover-copy h1 img { width: 320pt; }
 }
 .parkbeat-page .pb-dashboard-bar {
   display: flex;
